@@ -1,0 +1,12 @@
+#!/usr/bin/python
+#!python
+import shutil
+import glob
+
+rootFromDir = "./reports/xsecs/"
+rootToDir = "./build/xsecs/"
+
+xsecsFileList = glob.glob(rootFromDir + "*_org*")
+for filepath in xsecsFileList:
+	shutil.copyfile(filepath, rootToDir + filepath[16:])
+	print filepath, "copied ->", rootToDir + filepath[16:]
