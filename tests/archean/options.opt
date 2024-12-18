@@ -1,0 +1,6 @@
+cellsNumber 	= 100
+photoBinsNumber = 6800
+network 	= tests/archean/archean.ntw
+energyMin 	= 1.549802411501
+energyMax	= 10.3320160766702
+usePhotochemistry = T
