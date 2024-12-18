@@ -1,0 +1,47 @@
+#!/usr/bin/python
+#!python
+import sys
+import os
+
+with open("./chem_header.darr") as f:
+    header = f.readline()
+    hdrs = header.split(',')
+    hdrs = []
+    for raw_header in header.split(','):
+        if "DMS" in raw_header:
+            hdrs.append("CH3SCH3")
+        elif "SSA" in raw_header:
+            hdrs.append("SO4")
+        else:
+            hdrs.append(raw_header)
+
+with open("./allNDs.dat") as f:
+    dat_hdrs = [c.strip() for c in f.readline().split()]
+    all_ND_data = [[hdr] for hdr in dat_hdrs]
+    for line in f:
+        elems = [c.strip() for c in line.split()]
+        all_ND_data = [acc + [elem] for (acc, elem) in zip(all_ND_data, elems)]
+
+res_hdrs = []
+for dat_hdr in dat_hdrs:
+    if dat_hdr not in hdrs:
+        res_hdrs.append(dat_hdr)
+
+output = []
+for hdr in hdrs:
+    for row in all_ND_data:
+        if row[0] == hdr:
+            output.append(row)
+            break
+for rhdr in res_hdrs:
+    for row in all_ND_data:
+        if "layer" in row[0]:
+            break
+        elif row[0] == rhdr:
+            output.append(row)
+            break
+
+with open("./allNDs_arr.dat", mode='w') as fo:
+    for n in range(len(output[0])):
+        fo.write(','.join([elem[n] for elem in output]))
+        fo.write(os.linesep)
