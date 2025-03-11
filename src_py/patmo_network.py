@@ -627,7 +627,7 @@ class network:
 			plt.savefig(fnamePNG)
 
 	#*********************
-	def buildODE(self):
+	def buildODE(self,options):
 
 		ODEdict = dict()
 		for reaction in (self.reactions+self.photoReactions+self.reverseReactions):
@@ -639,14 +639,51 @@ class network:
 				key = "dn(:,"+product.label+")"
 				if(not(key in ODEdict)): ODEdict[key] = []
 				ODEdict[key].append(" + " + reaction.getRHS())
+		
 		fullODE = ""
-		for (ode,RHS) in ODEdict.items():
-			fullODE += ode + " = &\n" + (" &\n".join(RHS))+"\n\n"
+		for ode, RHS in ODEdict.items():
+			species = ode.split(":")[1].split(")")[0].split("_")[2].strip()  # Extract species from the key
+			if species not in options.constant_species:
+				fullODE += ode + " = &\n" + (" &\n".join(RHS)) + "\n\n"
+			
+		const_spec = ""
+		for species in options.constant_species:
+			const_spec +="dn(:,patmo_idx_"+species+") = 0d0"+"\n"
 
-		pragmaList = ["#PATMO_ODE"]
-		replaceList = [fullODE]
+		#if no species rise error
+		if(self.options.drydep_species=={} or self.options.emission_species=={}):
+				print ("ERROR: No dry deposition or emission data in option file")
+				sys.exit()
+		
+		
+		drydep = ""
+		for idx, val in options.drydep_species.items():
+			drydep += (
+				f"if (n(1,patmo_idx_{idx}) > {val}/1d5) then\n"
+				f"  dn(1,patmo_idx_{idx}) = dn(1,patmo_idx_{idx}) - ({val}/1d5) * n(1,patmo_idx_{idx})\n"
+				f"end if\n"
+			)
+			if idx in ["CH4", "O2"]:
+				drydep += (
+					f"{idx}Flux = -1d5 * dn(1, patmo_idx_{idx})\n"
+					f"dn(1,patmo_idx_{idx}) = 0d0\n"
+				)
+			
+				
+		emis_spec = ""		
+		for idx, val in options.emission_species.items():
+			emis_spec +="dn(1,patmo_idx_"+idx+") = "+"dn(1,patmo_idx_"+idx+") + "+val+"\n"
+		
+        #replace pragma
+		pragmaList = ["#PATMO_ODE","#PATMO_constantspecies","#PATMO_drydeppecies","#PATMO_emissionspecies"]
+		replaceList = [fullODE,const_spec,drydep,emis_spec]
+
+		#condition pragmas
+		ifPragmas = ["#IFPATMO_useHescape"]
+		ifConditions = [options.useHescape]
+		
 		patmo_string.fileReplaceBuild("src_f90/patmo_ode.f90", "build/patmo_ode.f90", \
-			pragmaList, replaceList)
+			pragmaList, replaceList, ifPragmas, ifConditions)
 
 		#create verbatim file
 		self.createVerbatimFile()
