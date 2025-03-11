@@ -1,5 +1,5 @@
 import patmo_string
-# test abcd
+
 def buildCommons(network,options):
 
 	allReactions = network.reactions + network.photoReactions + network.reverseReactions
@@ -15,7 +15,7 @@ def buildCommons(network,options):
 	commonDict.append(["positionDummy", len(network.getSpecies())+2])
 	commonDict.append(["cellsNumber", options.cellsNumber])
 	commonDict.append(["photoBinsNumber", options.photoBinsNumber])
-
+	
 	#convert commons dictionary into f90 declarations
 	allCommons = ""
 	for variableName,value in commonDict:

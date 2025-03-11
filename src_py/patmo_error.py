@@ -1,5 +1,5 @@
 import sys,inspect
-# test abcd
+
 #error trigger, requirese fileName as __file__
 # and frame as inspect.currentframe()
 #Example call is

@@ -36,8 +36,8 @@ def buildMain(network,options):
 	replaceList = [allMassFunctions, allPhotoReactions, allJValues, allReactions, allReactionRates]
 
 	#condition pragmas
-	ifPragmas = ["#IFPATMO_use_opacity","#IFPATMO_usePhotochemistry"]
-	ifConditions = [options.usePhotochemistry, options.usePhotochemistry]
+	ifPragmas = ["#IFPATMO_use_opacity","#IFPATMO_usePhotochemistry", "#IFPATMO_useHescape", "#IFPATMO_useHescape_dump"]
+	ifConditions = [options.usePhotochemistry, options.usePhotochemistry, options.useHescape, options.useHescape]
 
 	patmo_string.fileReplaceBuild("src_f90/patmo.f90", "build/patmo.f90", \
 		pragmaList, replaceList, ifPragmas, ifConditions)
