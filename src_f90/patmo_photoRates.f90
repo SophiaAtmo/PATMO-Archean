@@ -29,7 +29,9 @@ contains
     !         /energyMid(:)*energySpan(:)*exp(-tau(:,j))) / planck_eV
     ! end do
 
-    dE = 0.1!nm
+    !dE = (wavelengMax-wavelengMin)/photoBinsNumber (nm)
+    #PATMO_resolution
+
     !loop on cells (stride photobins)
     do j=1,cellsNumber
           integrateXsec(j) = sum(xsecAll(:,index)*photoFlux(:)*exp(-2*tau(:,j))*dE)

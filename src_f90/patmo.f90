@@ -119,7 +119,9 @@ contains
     call computeRates(TgasAll(:))
     call computePhotoRates(tauAll(:,:))
     call computeReverseRates(TgasAll(:))
+#IFPATMO_useHescape 
     call computeHescape() 
+#ENDIFPATMO
     !compute tot density
     ntotAll(:) = sum(nall(:,1:chemSpeciesNumber),2)
 
@@ -577,7 +579,7 @@ contains
 
   !***************
   !set uniform grid spacing, cm
-  subroutine patmo_setGridSpacing(dz)
+ subroutine patmo_setGridSpacing(dz)
     use patmo_commons
     use patmo_parameters
     implicit none
@@ -594,22 +596,22 @@ contains
        zold = zold + gridSpace(j)
     end do
 
-  end subroutine patmo_setGridSpacing
+ end subroutine patmo_setGridSpacing
 
   !***************
   !set thermal diffusion
-  subroutine patmo_setThermalDiffusion(alpha)
+ subroutine patmo_setThermalDiffusion(alpha)
     use patmo_parameters
     implicit none
     real*8,intent(in)::alpha
 
     thermalDiffusionFactor = alpha
 
-  end subroutine patmo_setThermalDiffusion
+ end subroutine patmo_setThermalDiffusion
 
   !***************
   !set eddy Kzz coefficient of icell layer
-  subroutine patmo_setEddyKzz(icell,kzz)
+ subroutine patmo_setEddyKzz(icell,kzz)
     use patmo_parameters
     implicit none
     real*8,intent(in)::kzz
@@ -617,22 +619,22 @@ contains
 
     eddyKzz(icell) = kzz
 
-  end subroutine patmo_setEddyKzz
+ end subroutine patmo_setEddyKzz
 
   !***************
   !set eddy Kzz, same for all layers
-  subroutine patmo_setEddyKzzAll(kzz)
+ subroutine patmo_setEddyKzzAll(kzz)
     use patmo_parameters
     implicit none
     real*8,intent(in)::kzz
 
     eddyKzz(:) = kzz
 
-  end subroutine patmo_setEddyKzzAll
+ end subroutine patmo_setEddyKzzAll
 
   !***************
   !set diffusion Dzz for layer icell
-  subroutine patmo_setDiffusionDzz(icell,dzz)
+ subroutine patmo_setDiffusionDzz(icell,dzz)
     use patmo_parameters
     implicit none
     real*8,intent(in)::dzz
@@ -640,22 +642,22 @@ contains
 
     diffusionDzz(icell) = dzz
 
-  end subroutine patmo_setDiffusionDzz
+ end subroutine patmo_setDiffusionDzz
 
   !***************
   !set diffusion Dzz, same for all layers
-  subroutine patmo_setDiffusionDzzAll(dzz)
+ subroutine patmo_setDiffusionDzzAll(dzz)
     use patmo_parameters
     implicit none
     real*8,intent(in)::dzz
 
     diffusionDzz(:) = dzz
 
-  end subroutine patmo_setDiffusionDzzAll
+ end subroutine patmo_setDiffusionDzzAll
 
   !***************
   !append density of species idx to file number ifile
-  subroutine patmo_dumpDensityToFile(ifile,time,idx)
+ subroutine patmo_dumpDensityToFile(ifile,time,idx)
     use patmo_commons
     use patmo_parameters
     implicit none
@@ -668,12 +670,12 @@ contains
     end do
     write(ifile,*)
 
-  end subroutine patmo_dumpDensityToFile
+ end subroutine patmo_dumpDensityToFile
 
   !****************
   !dump all mixing rations to file (one column one species)
   ! first column is layer number
-  subroutine patmo_dumpAllMixingRatioToFile(fname)
+ subroutine patmo_dumpAllMixingRatioToFile(fname)
     use patmo_commons
     use patmo_parameters
     use patmo_utils
@@ -700,11 +702,11 @@ contains
     end do
     close(67)
 
-  end subroutine patmo_dumpAllMixingRatioToFile
+ end subroutine patmo_dumpAllMixingRatioToFile
 
   !***************
   !append mixing ration of species idx to file number ifile
-  subroutine patmo_dumpMixingRatioToFile(ifile,time,idx)
+ subroutine patmo_dumpMixingRatioToFile(ifile,time,idx)
     use patmo_commons
     use patmo_parameters
     implicit none
@@ -718,22 +720,22 @@ contains
     end do
     write(ifile,*)
 
-  end subroutine patmo_dumpMixingRatioToFile
+ end subroutine patmo_dumpMixingRatioToFile
 
   !****************
   !set gravity in cm/s2
-  subroutine patmo_setGravity(g)
+ subroutine patmo_setGravity(g)
     use patmo_parameters
     implicit none
     real*8,intent(in)::g
 
     gravity = g
 
-  end subroutine patmo_setGravity
+ end subroutine patmo_setGravity
 
   !****************
   !set chemistry of layer icell
-  subroutine patmo_setChemistry(icell,n)
+ subroutine patmo_setChemistry(icell,n)
     use patmo_commons
     use patmo_parameters
     implicit none
@@ -742,11 +744,11 @@ contains
 
     nall(icell,:) = n(:)
 
-  end subroutine patmo_setChemistry
+ end subroutine patmo_setChemistry
 
   !****************
   !set the same chemistry for all the layers
-  subroutine patmo_setChemistryAll(n)
+ subroutine patmo_setChemistryAll(n)
     use patmo_commons
     use patmo_parameters
     implicit none
@@ -757,11 +759,11 @@ contains
        nall(icell,:) = n(:)
     end do
 
-  end subroutine patmo_setChemistryAll
+ end subroutine patmo_setChemistryAll
 
   !**************
   !set Tgas for layer icell
-  subroutine patmo_setTgas(icell,Tgas)
+ subroutine patmo_setTgas(icell,Tgas)
     use patmo_commons
     use patmo_parameters
     implicit none
@@ -770,11 +772,11 @@ contains
 
     TgasAll(icell) = Tgas
 
-  end subroutine patmo_setTgas
+ end subroutine patmo_setTgas
 
   !**************
   !set the same Tgas for all layers
-  subroutine patmo_setTgasAll(Tgas)
+ subroutine patmo_setTgasAll(Tgas)
     use patmo_commons
     use patmo_parameters
     implicit none
@@ -782,11 +784,11 @@ contains
 
     TgasAll(:) = Tgas
 
-  end subroutine patmo_setTgasAll
+ end subroutine patmo_setTgasAll
 
   !**************
   !get density of species idx_species at layer icell
-  function patmo_getDensity(icell,idx_species)
+ function patmo_getDensity(icell,idx_species)
     use patmo_commons
     use patmo_parameters
     implicit none
@@ -795,11 +797,11 @@ contains
 
     patmo_getDensity = nall(icell,idx_species)
 
-  end function patmo_getDensity
+ end function patmo_getDensity
 
   !**************
   !get Tgas of layer icell
-  function patmo_getTgas(icell)
+ function patmo_getTgas(icell)
     use patmo_commons
     use patmo_parameters
     implicit none
@@ -808,11 +810,11 @@ contains
 
     patmo_getTgas = TgasAll(icell)
 
-  end function patmo_getTgas
+ end function patmo_getTgas
 
   !**************
   !dump J-Values
-  subroutine patmo_dumpJValue(fname)
+ subroutine patmo_dumpJValue(fname)
     use patmo_commons
     use patmo_constants
     use patmo_parameters
@@ -829,11 +831,11 @@ contains
     write(22,*)
     close(22)
 
-  end subroutine patmo_dumpJValue
+ end subroutine patmo_dumpJValue
 
   !**************
   !dump all reaction rates
-  subroutine patmo_dumpAllRates(fname)
+ subroutine patmo_dumpAllRates(fname)
     use patmo_commons
     use patmo_constants
     use patmo_parameters
@@ -850,9 +852,9 @@ contains
     write(22,*)
     close(22)
 
-end subroutine patmo_dumpAllRates
+ end subroutine patmo_dumpAllRates
 
-subroutine patmo_dumpAllNumberDensityDifference(ifile,nb,na)
+ subroutine patmo_dumpAllNumberDensityDifference(ifile,nb,na)
   use patmo_commons
   use patmo_parameters
   implicit none
@@ -876,32 +878,34 @@ subroutine patmo_dumpAllNumberDensityDifference(ifile,nb,na)
   end do
   write(ifile,*)
 
-end subroutine patmo_dumpAllNumberDensityDifference
+ end subroutine patmo_dumpAllNumberDensityDifference
 
-subroutine computeHescape()
-    use patmo_constants
-    use patmo_parameters
-    implicit none
+#IFPATMO_useHescape_dump
+ subroutine computeHescape()
+   use patmo_constants
+   use patmo_parameters
+   implicit none
     
-    Hesc = 2.5d8 * &
+   Hesc = 2.5d8 * &
             (nAll(cellsNumber, patmo_idx_H) &
             + 2d0 * nAll(cellsNumber, patmo_idx_H2) &
             + 2d0 * nAll(cellsNumber, patmo_idx_H2O) &
             + 4d0 * nAll(cellsNumber, patmo_idx_CH4)) &
             / sum(nAll(cellsNumber,1:chemSpeciesNumber))
-    H2esc = 2.5d8 * &
+   H2esc = 2.5d8 * &
             (nAll(cellsNumber, patmo_idx_H2) &
             + nAll(cellsNumber, patmo_idx_H2O)&
             + 2d0 * nAll(cellsNumber, patmo_idx_CH4))&
             / sum(nAll(cellsNumber,1:chemSpeciesNumber))
-end subroutine computeHescape
+ end subroutine computeHescape
 
-subroutine patmo_dumpHescape(ifile, time)
-  use patmo_parameters
-  implicit none
-  integer,intent(in)::ifile
-  real*8, intent(in)::time
+ subroutine patmo_dumpHescape(ifile, time)
+   use patmo_parameters
+   implicit none
+   integer,intent(in)::ifile
+   real*8, intent(in)::time
    write (ifile, *) time, Hesc, H2esc
-end subroutine patmo_dumpHescape
+ end subroutine patmo_dumpHescape
+#ENDIFPATMO
 
 end module patmo

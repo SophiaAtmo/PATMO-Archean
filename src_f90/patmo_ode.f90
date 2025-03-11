@@ -111,7 +111,6 @@ contains
     k_hm(:) = (kzz_hm(:)+dzz_hm(:))*idh2(:)
 
     dn(:,:) = 0d0
-
 #PATMO_ODE
 
     ngas_hpp(:) = ngas_hp(:)/ngas_p(:)
@@ -126,31 +125,22 @@ contains
             + (k_hm(:)-d_hm(:,i)) * ngas_hmz(:)) * n(:,i) &
             + (k_hm(:)+d_hm(:,i)) * ngas_hmm(:) * n_m(:,i)
     end do
+
     !Chemical Species with constant concentration
-    dn(:,patmo_idx_N2) = 0d0
-    dn(:,patmo_idx_CO2) = 0d0
-    ! Dry Deposition
-    do i=1, chemSpeciesNumber
-        if (i == patmo_idx_O2 .OR. i == patmo_idx_CH4 .OR. i == patmo_idx_S8) then
-            if (n(1,i) > 1d-6) then
-                dn(1,i) = dn(1,i) - 1d-6 * n(1,i)
-            end if
-        end if
-    end do
-        
-    CH4Flux = -1d5 * dn(1, patmo_idx_CH4)
-    O2Flux = -1d5 * dn(1, patmo_idx_O2)
-    dn(1,patmo_idx_CH4) = 0d0 !fix the mixing ratio at the bottom layer as a constant (Claire et al., 2014; Zahnle et al., 2006)
-    dn(1,patmo_idx_O2) = 0d0 !
-    !emission
-    dn(1,patmo_idx_H2S) = dn(1,patmo_idx_H2S) + 84.7910d7/1d5  !H2S 7.72 Tg/yr -> 8479.10 molec cm^-3 s^-1 [Watts 2000]
-    dn(1,patmo_idx_SO2) = dn(1,patmo_idx_SO2) + 615.84d7/1d5   !SO2 105.4 Tg/yr -> 61584.90 molec cm^-3 s^-1 [Zhong 2020]
+#PATMO_constantspecies
+       
+    ! Dry Deposition: assumed a deposition rate of 0.1 cm/s 
+    !dn(1,patmo_idx_A)=dn(1,patmo_idx_A) - 0.1/1.0d5*n(1,patmo_idx_A)
+    ! Fix the mixing ratio of CH4 and O2 at the bottom layer as a constant (Claire et al., 2014; Zahnle et al., 2006)
+#PATMO_drydeppecies
 
+      
+     
+    !Volcanic emission
+    !The release of 1 Tmol/year from Claire et al., 2014, with an H2S:SO2 ratio of 1:10
+    !The release of molecular hydrogen 3 Tmol/year from Claire et al., 2014
+#PATMO_emissionspecies
     
-    dn(1,patmo_idx_CO) = dn(1,patmo_idx_CO) + 3d9 / 1d5
-    dn(1,patmo_idx_H2) = dn(1,patmo_idx_H2) + 1d10 / 1d5
-    dn(1,patmo_idx_NH3) = dn(1,patmo_idx_NH3) + 5.3d9 / 1d5
-
     ! Water Removal
     dn(:,patmo_idx_H2O) = dn(:,patmo_idx_H2O) - n(:,patmo_idx_H2O) * condenseH2O(:)
 
@@ -187,6 +177,7 @@ contains
     S8SurFall = 2.62d-4 * n(1, patmo_idx_S8)
     dn(1, patmo_idx_S8) = dn(1, patmo_idx_S8) - S8SurFall
     
+#IFPATMO_useHescape
     ! Hydrogen Escape
     if (n(cellsNumber, patmo_idx_H) > Hesc) then
         dn(cellsNumber, patmo_idx_H) = dn(cellsNumber, patmo_idx_H) - Hesc
@@ -203,6 +194,8 @@ contains
         n(cellsNumber, patmo_idx_H2) = 0d0
         dn(cellsNumber, patmo_idx_H2) = 0d0
     end if
+#ENDIFPATMO
+    
     !unroll chemistry
     dy(:) = 0d0
     do i=1,speciesNumber
