@@ -53,7 +53,7 @@ patmo_utils.buildUtils(myNetwork)
 patmo_rates.buildRates(myNetwork)
 
 #build photorates F90 file
-patmo_photoRates.buildPhotoRates(myNetwork)
+patmo_photoRates.buildPhotoRates(myNetwork,myOptions)
 #build photorates loader
 myPhotochemistry.buildLoadPhotoRates()
 
@@ -67,7 +67,7 @@ myNetwork.checkAll()
 patmo_reverseRates.buildReverseRates(myNetwork)
 
 #write ODE, including photochemistry
-myNetwork.buildODE()
+myNetwork.buildODE(myOptions)
 
 #build commons F90 file
 patmo_commons.buildCommons(myNetwork,myOptions)
