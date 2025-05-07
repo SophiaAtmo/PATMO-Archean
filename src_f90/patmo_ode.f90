@@ -5,6 +5,7 @@ contains
     use patmo_constants
     use patmo_parameters
     use patmo_utils
+    use patmo_rates
     implicit none
     integer,intent(in)::neq
     real*8,intent(in)::tt,nin(neqAll)
@@ -45,6 +46,8 @@ contains
     do i=1,speciesNumber
        n(:,i) = nin((i-1)*cellsNumber+1:(i*cellsNumber))
     end do
+
+    call computeTotalDensityExcludingM(n)
 
     !local copy of Tgas
     Tgas(:) = nin((positionTgas-1)*cellsNumber+1:(positionTgas*cellsNumber))

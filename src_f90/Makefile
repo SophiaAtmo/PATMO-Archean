@@ -6,7 +6,8 @@ fc_legacy = gfortran -std=legacy -fallow-argument-mismatch -Ofast -ffree-line-le
 exec = test
 
 #flags
-switchOPT = -O3 -ipo -ip -unroll
+switchOPT = -O3 -flto -funroll-loops
+#switchOPT = -O3 -ipo -ip -unroll
 switchDBG = -O0 -check all -warn all -fpe0 -u -traceback -warn nounused -g
 switchPRO = $(switchOPT) -pg -traceback -g
 switchOMP = $(switchOPT) -openmp
