@@ -18,6 +18,8 @@ contains
             (indexReactants1(j)-1)*cellsNumber+i) = 1
         Ms((indexReactants2(j)-1)*cellsNumber+i, &
             (indexReactants1(j)-1)*cellsNumber+i) = 1
+        Ms((indexReactants3(j)-1)*cellsNumber+i, &
+            (indexReactants1(j)-1)*cellsNumber+i) = 1
 
         Ms((indexProducts1(j)-1)*cellsNumber+1, &
             (indexReactants1(j)-1)*cellsNumber+i) = 1
@@ -30,6 +32,8 @@ contains
             (indexReactants2(j)-1)*cellsNumber+i) = 1
         Ms((indexReactants2(j)-1)*cellsNumber+i, &
             (indexReactants2(j)-1)*cellsNumber+i) = 1
+        Ms((indexReactants3(j)-1)*cellsNumber+i, &
+            (indexReactants2(j)-1)*cellsNumber+i) = 1
 
         Ms((indexProducts1(j)-1)*cellsNumber+1, &
             (indexReactants2(j)-1)*cellsNumber+i) = 1
@@ -37,6 +41,20 @@ contains
             (indexReactants2(j)-1)*cellsNumber+i) = 1
         Ms((indexProducts3(j)-1)*cellsNumber+1, &
             (indexReactants2(j)-1)*cellsNumber+i) = 1
+
+        Ms((indexReactants1(j)-1)*cellsNumber+i, &
+            (indexReactants3(j)-1)*cellsNumber+i) = 1
+        Ms((indexReactants2(j)-1)*cellsNumber+i, &
+            (indexReactants3(j)-1)*cellsNumber+i) = 1
+        Ms((indexReactants3(j)-1)*cellsNumber+i, &
+            (indexReactants3(j)-1)*cellsNumber+i) = 1
+
+        Ms((indexProducts1(j)-1)*cellsNumber+1, &
+            (indexReactants3(j)-1)*cellsNumber+i) = 1
+        Ms((indexProducts2(j)-1)*cellsNumber+1, &
+            (indexReactants3(j)-1)*cellsNumber+i) = 1
+        Ms((indexProducts3(j)-1)*cellsNumber+1, &
+            (indexReactants3(j)-1)*cellsNumber+i) = 1
 
       end do
     end do

@@ -1,78 +1,79 @@
 module patmo_commons
   implicit none
 
-  integer,parameter::reactionsNumber = 455
-  integer,parameter::chemReactionsNumber = 211
-  integer,parameter::photoReactionsNumber = 33
-  integer,parameter::reverseReactionsNumber = 211
-  integer,parameter::chemSpeciesNumber = 62
-  integer,parameter::speciesNumber = 64
-  integer,parameter::positionTgas = 63
-  integer,parameter::positionDummy = 64
+  integer,parameter::reactionsNumber = 467
+  integer,parameter::chemReactionsNumber = 214
+  integer,parameter::photoReactionsNumber = 39
+  integer,parameter::reverseReactionsNumber = 214
+  integer,parameter::chemSpeciesNumber = 63
+  integer,parameter::speciesNumber = 65
+  integer,parameter::positionTgas = 64
+  integer,parameter::positionDummy = 65
   integer,parameter::cellsNumber = 100
   integer,parameter::photoBinsNumber = 6800
   integer,parameter::patmo_idx_O = 1
   integer,parameter::patmo_idx_O2 = 2
-  integer,parameter::patmo_idx_O3 = 3
-  integer,parameter::patmo_idx_O_1D = 4
-  integer,parameter::patmo_idx_N2 = 5
-  integer,parameter::patmo_idx_OH = 6
-  integer,parameter::patmo_idx_HO2 = 7
-  integer,parameter::patmo_idx_H2O = 8
-  integer,parameter::patmo_idx_N2O = 9
-  integer,parameter::patmo_idx_NO = 10
-  integer,parameter::patmo_idx_NO2 = 11
-  integer,parameter::patmo_idx_NO3 = 12
-  integer,parameter::patmo_idx_N2O5 = 13
-  integer,parameter::patmo_idx_HNO3 = 14
-  integer,parameter::patmo_idx_H = 15
-  integer,parameter::patmo_idx_H2 = 16
-  integer,parameter::patmo_idx_CH4 = 17
-  integer,parameter::patmo_idx_CH3 = 18
-  integer,parameter::patmo_idx_CH3O2 = 19
-  integer,parameter::patmo_idx_CH3OOH = 20
-  integer,parameter::patmo_idx_CH3O = 21
-  integer,parameter::patmo_idx_CH2O = 22
-  integer,parameter::patmo_idx_CHO = 23
-  integer,parameter::patmo_idx_CO = 24
-  integer,parameter::patmo_idx_CO2 = 25
-  integer,parameter::patmo_idx_H2O2 = 26
-  integer,parameter::patmo_idx_COS = 27
-  integer,parameter::patmo_idx_SH = 28
-  integer,parameter::patmo_idx_SO = 29
-  integer,parameter::patmo_idx_CS2 = 30
-  integer,parameter::patmo_idx_CS = 31
-  integer,parameter::patmo_idx_S = 32
-  integer,parameter::patmo_idx_H2S = 33
-  integer,parameter::patmo_idx_HSO = 34
-  integer,parameter::patmo_idx_SO2 = 35
-  integer,parameter::patmo_idx_SO3 = 36
-  integer,parameter::patmo_idx_HSO2 = 37
-  integer,parameter::patmo_idx_HSO3 = 38
-  integer,parameter::patmo_idx_H2SO4 = 39
-  integer,parameter::patmo_idx_CH3SCH3 = 40
-  integer,parameter::patmo_idx_CH4O3S = 41
-  integer,parameter::patmo_idx_SO4 = 42
-  integer,parameter::patmo_idx_CH3OH = 43
-  integer,parameter::patmo_idx_S2O2 = 44
-  integer,parameter::patmo_idx_S2O = 45
-  integer,parameter::patmo_idx_S2 = 46
-  integer,parameter::patmo_idx_S3 = 47
-  integer,parameter::patmo_idx_S4 = 48
-  integer,parameter::patmo_idx_S8 = 49
-  integer,parameter::patmo_idx_CH2 = 50
-  integer,parameter::patmo_idx_CH = 51
-  integer,parameter::patmo_idx_CH2OH = 52
-  integer,parameter::patmo_idx_N = 53
-  integer,parameter::patmo_idx_NH2 = 54
-  integer,parameter::patmo_idx_N2H4 = 55
-  integer,parameter::patmo_idx_N2H3 = 56
-  integer,parameter::patmo_idx_NH = 57
-  integer,parameter::patmo_idx_NH3 = 58
-  integer,parameter::patmo_idx_HOCO = 59
-  integer,parameter::patmo_idx_O_3P = 60
-  integer,parameter::patmo_idx_CH2CO = 61
-  integer,parameter::patmo_idx_COCOOH = 62
+  integer,parameter::patmo_idx_M = 3
+  integer,parameter::patmo_idx_O3 = 4
+  integer,parameter::patmo_idx_O_1D = 5
+  integer,parameter::patmo_idx_N2 = 6
+  integer,parameter::patmo_idx_OH = 7
+  integer,parameter::patmo_idx_HO2 = 8
+  integer,parameter::patmo_idx_H2O = 9
+  integer,parameter::patmo_idx_H = 10
+  integer,parameter::patmo_idx_H2 = 11
+  integer,parameter::patmo_idx_N2O = 12
+  integer,parameter::patmo_idx_NO = 13
+  integer,parameter::patmo_idx_NO2 = 14
+  integer,parameter::patmo_idx_NO3 = 15
+  integer,parameter::patmo_idx_N2O5 = 16
+  integer,parameter::patmo_idx_HNO3 = 17
+  integer,parameter::patmo_idx_CH4 = 18
+  integer,parameter::patmo_idx_CH3 = 19
+  integer,parameter::patmo_idx_CH3O2 = 20
+  integer,parameter::patmo_idx_CH3OOH = 21
+  integer,parameter::patmo_idx_CH3O = 22
+  integer,parameter::patmo_idx_CH2O = 23
+  integer,parameter::patmo_idx_CHO = 24
+  integer,parameter::patmo_idx_CO = 25
+  integer,parameter::patmo_idx_CO2 = 26
+  integer,parameter::patmo_idx_H2O2 = 27
+  integer,parameter::patmo_idx_COS = 28
+  integer,parameter::patmo_idx_SH = 29
+  integer,parameter::patmo_idx_SO = 30
+  integer,parameter::patmo_idx_CS2 = 31
+  integer,parameter::patmo_idx_CS = 32
+  integer,parameter::patmo_idx_S = 33
+  integer,parameter::patmo_idx_H2S = 34
+  integer,parameter::patmo_idx_HSO = 35
+  integer,parameter::patmo_idx_SO2 = 36
+  integer,parameter::patmo_idx_SO3 = 37
+  integer,parameter::patmo_idx_HSO2 = 38
+  integer,parameter::patmo_idx_HSO3 = 39
+  integer,parameter::patmo_idx_H2SO4 = 40
+  integer,parameter::patmo_idx_CH3SCH3 = 41
+  integer,parameter::patmo_idx_CH4O3S = 42
+  integer,parameter::patmo_idx_SO4 = 43
+  integer,parameter::patmo_idx_CH3OH = 44
+  integer,parameter::patmo_idx_S2O2 = 45
+  integer,parameter::patmo_idx_S2O = 46
+  integer,parameter::patmo_idx_S2 = 47
+  integer,parameter::patmo_idx_S3 = 48
+  integer,parameter::patmo_idx_S4 = 49
+  integer,parameter::patmo_idx_S8 = 50
+  integer,parameter::patmo_idx_CH2 = 51
+  integer,parameter::patmo_idx_CH = 52
+  integer,parameter::patmo_idx_CH2OH = 53
+  integer,parameter::patmo_idx_N = 54
+  integer,parameter::patmo_idx_NH2 = 55
+  integer,parameter::patmo_idx_N2H4 = 56
+  integer,parameter::patmo_idx_N2H3 = 57
+  integer,parameter::patmo_idx_NH = 58
+  integer,parameter::patmo_idx_NH3 = 59
+  integer,parameter::patmo_idx_HOCO = 60
+  integer,parameter::patmo_idx_O_3P = 61
+  integer,parameter::patmo_idx_CH2CO = 62
+  integer,parameter::patmo_idx_COCOOH = 63
 
   integer,parameter::chemReactionsOffset = 0
   integer,parameter::photoReactionsOffset = chemReactionsNumber
@@ -82,7 +83,7 @@ module patmo_commons
   integer,parameter::neqAll = speciesNumber*cellsNumber
   integer,parameter::maxNameLength = 50
 
-  integer,dimension(photoReactionsNumber)::photoPartnerIndex = (/patmo_idx_O2,patmo_idx_O3,patmo_idx_O3,patmo_idx_HO2,patmo_idx_H2O,patmo_idx_H2O,patmo_idx_N2O,patmo_idx_NO2,patmo_idx_NO3,patmo_idx_NO3,patmo_idx_N2O5,patmo_idx_N2O5,patmo_idx_HNO3,patmo_idx_HNO3,patmo_idx_CH4,patmo_idx_CH3OOH,patmo_idx_CH2O,patmo_idx_CH2O,patmo_idx_CO2,patmo_idx_H2O2,patmo_idx_H2O2,patmo_idx_COS,patmo_idx_SO,patmo_idx_CS2,patmo_idx_H2S,patmo_idx_SO2,patmo_idx_SO3,patmo_idx_H2SO4,patmo_idx_S2O2,patmo_idx_S2O,patmo_idx_N2H4,patmo_idx_NH3,patmo_idx_NH3/)
+  integer,dimension(photoReactionsNumber)::photoPartnerIndex = (/patmo_idx_O2,patmo_idx_O3,patmo_idx_O3,patmo_idx_OH,patmo_idx_OH,patmo_idx_HO2,patmo_idx_H2O,patmo_idx_H2O,patmo_idx_H2,patmo_idx_N2O,patmo_idx_NO2,patmo_idx_NO3,patmo_idx_NO3,patmo_idx_N2O5,patmo_idx_N2O5,patmo_idx_HNO3,patmo_idx_HNO3,patmo_idx_CH4,patmo_idx_CH3OOH,patmo_idx_CH2O,patmo_idx_CH2O,patmo_idx_CHO,patmo_idx_CO2,patmo_idx_H2O2,patmo_idx_H2O2,patmo_idx_COS,patmo_idx_SO,patmo_idx_CS2,patmo_idx_H2S,patmo_idx_SO2,patmo_idx_SO3,patmo_idx_H2SO4,patmo_idx_CH3OH,patmo_idx_CH3OH,patmo_idx_S2O2,patmo_idx_S2O,patmo_idx_N2H4,patmo_idx_NH3,patmo_idx_NH3/)
 
   integer,parameter,dimension(reactionsNumber)::indexReactants1 = (/patmo_idx_O,&
       patmo_idx_O,&
@@ -94,6 +95,7 @@ module patmo_commons
       patmo_idx_HO2,&
       patmo_idx_OH,&
       patmo_idx_O_1D,&
+      patmo_idx_H2O,&
       patmo_idx_O_1D,&
       patmo_idx_O_1D,&
       patmo_idx_O_1D,&
@@ -288,19 +290,24 @@ module patmo_commons
       patmo_idx_HOCO,&
       patmo_idx_HOCO,&
       patmo_idx_HOCO,&
+      patmo_idx_HOCO,&
       patmo_idx_OH,&
       patmo_idx_O_1D,&
       patmo_idx_O_1D,&
       patmo_idx_O_1D,&
-      patmo_idx_H2O,&
       patmo_idx_CH4,&
+      patmo_idx_O,&
+      patmo_idx_H,&
       patmo_idx_HOCO,&
       patmo_idx_O2,&
       patmo_idx_O3,&
       patmo_idx_O3,&
+      patmo_idx_OH,&
+      patmo_idx_OH,&
       patmo_idx_HO2,&
       patmo_idx_H2O,&
       patmo_idx_H2O,&
+      patmo_idx_H2,&
       patmo_idx_N2O,&
       patmo_idx_NO2,&
       patmo_idx_NO3,&
@@ -313,6 +320,7 @@ module patmo_commons
       patmo_idx_CH3OOH,&
       patmo_idx_CH2O,&
       patmo_idx_CH2O,&
+      patmo_idx_CHO,&
       patmo_idx_CO2,&
       patmo_idx_H2O2,&
       patmo_idx_H2O2,&
@@ -323,6 +331,8 @@ module patmo_commons
       patmo_idx_SO2,&
       patmo_idx_SO3,&
       patmo_idx_H2SO4,&
+      patmo_idx_CH3OH,&
+      patmo_idx_CH3OH,&
       patmo_idx_S2O2,&
       patmo_idx_S2O,&
       patmo_idx_N2H4,&
@@ -337,6 +347,7 @@ module patmo_commons
       patmo_idx_HO2,&
       patmo_idx_OH,&
       patmo_idx_H2O,&
+      patmo_idx_OH,&
       patmo_idx_OH,&
       patmo_idx_N2O,&
       patmo_idx_N2,&
@@ -532,13 +543,15 @@ module patmo_commons
       patmo_idx_CH4,&
       patmo_idx_H2O,&
       patmo_idx_H2,&
+      patmo_idx_COCOOH,&
       patmo_idx_H2O2,&
       patmo_idx_O_3P,&
       patmo_idx_O_3P,&
       patmo_idx_O_3P,&
-      patmo_idx_OH,&
       patmo_idx_CH3,&
-      patmo_idx_COCOOH/)
+      patmo_idx_OH,&
+      patmo_idx_H2,&
+      patmo_idx_HO2/)
   integer,parameter,dimension(reactionsNumber)::indexReactants2 = (/patmo_idx_O2,&
       patmo_idx_O3,&
       patmo_idx_O3,&
@@ -549,6 +562,7 @@ module patmo_commons
       patmo_idx_O3,&
       patmo_idx_HO2,&
       patmo_idx_H2O,&
+      patmo_idx_H,&
       patmo_idx_N2,&
       patmo_idx_N2O,&
       patmo_idx_N2O,&
@@ -644,7 +658,7 @@ module patmo_commons
       patmo_idx_S3,&
       patmo_idx_S2,&
       patmo_idx_S4,&
-      positionDummy,&
+      patmo_idx_M,&
       patmo_idx_O,&
       patmo_idx_CH3,&
       patmo_idx_CH3,&
@@ -743,13 +757,15 @@ module patmo_commons
       patmo_idx_CH3,&
       patmo_idx_H,&
       patmo_idx_H,&
+      patmo_idx_CO,&
       patmo_idx_OH,&
       patmo_idx_CO2,&
       patmo_idx_N2,&
       patmo_idx_SO2,&
-      patmo_idx_H,&
       patmo_idx_CH2,&
-      patmo_idx_CO,&
+      patmo_idx_H2,&
+      patmo_idx_H,&
+      patmo_idx_O2,&
       positionDummy,&
       positionDummy,&
       positionDummy,&
@@ -784,6 +800,12 @@ module patmo_commons
       positionDummy,&
       positionDummy,&
       positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      patmo_idx_M,&
       patmo_idx_O2,&
       patmo_idx_O2,&
       patmo_idx_O,&
@@ -793,25 +815,26 @@ module patmo_commons
       patmo_idx_O2,&
       patmo_idx_O2,&
       patmo_idx_OH,&
+      patmo_idx_H2,&
       positionDummy,&
       patmo_idx_O2,&
       patmo_idx_NO,&
       patmo_idx_O2,&
       patmo_idx_O2,&
       patmo_idx_O2,&
-      positionDummy,&
-      positionDummy,&
+      patmo_idx_M,&
+      patmo_idx_M,&
       patmo_idx_H2O,&
       patmo_idx_NO2,&
       patmo_idx_O2,&
       patmo_idx_O2,&
-      positionDummy,&
+      patmo_idx_M,&
       patmo_idx_O2,&
       patmo_idx_OH,&
       patmo_idx_H2O,&
       patmo_idx_O2,&
       patmo_idx_H2O,&
-      positionDummy,&
+      patmo_idx_M,&
       patmo_idx_O2,&
       patmo_idx_NO2,&
       patmo_idx_OH,&
@@ -853,8 +876,8 @@ module patmo_commons
       patmo_idx_SO2,&
       patmo_idx_SO3,&
       positionDummy,&
-      positionDummy,&
-      positionDummy,&
+      patmo_idx_M,&
+      patmo_idx_M,&
       positionDummy,&
       positionDummy,&
       patmo_idx_CH4O3S,&
@@ -864,8 +887,8 @@ module patmo_commons
       patmo_idx_H2,&
       patmo_idx_CH3O,&
       patmo_idx_CH2O,&
-      positionDummy,&
-      positionDummy,&
+      patmo_idx_M,&
+      patmo_idx_M,&
       patmo_idx_CO,&
       patmo_idx_CO,&
       patmo_idx_CO,&
@@ -876,28 +899,28 @@ module patmo_commons
       patmo_idx_OH,&
       patmo_idx_H2O,&
       patmo_idx_OH,&
-      positionDummy,&
+      patmo_idx_M,&
       patmo_idx_S2O,&
       patmo_idx_SO2,&
       patmo_idx_SO2,&
       patmo_idx_H2S,&
       patmo_idx_S,&
       patmo_idx_CHO,&
-      positionDummy,&
-      positionDummy,&
-      positionDummy,&
-      positionDummy,&
-      positionDummy,&
+      patmo_idx_M,&
+      patmo_idx_M,&
+      patmo_idx_M,&
+      patmo_idx_M,&
+      patmo_idx_M,&
       patmo_idx_S,&
       patmo_idx_SO,&
       positionDummy,&
       patmo_idx_H,&
-      positionDummy,&
+      patmo_idx_M,&
       patmo_idx_O2,&
       patmo_idx_HO2,&
       patmo_idx_H,&
       patmo_idx_O,&
-      positionDummy,&
+      patmo_idx_M,&
       patmo_idx_OH,&
       patmo_idx_O2,&
       patmo_idx_CO,&
@@ -954,7 +977,7 @@ module patmo_commons
       patmo_idx_O,&
       patmo_idx_OH,&
       patmo_idx_NO2,&
-      positionDummy,&
+      patmo_idx_M,&
       patmo_idx_H2,&
       patmo_idx_NH2,&
       patmo_idx_OH,&
@@ -963,7 +986,7 @@ module patmo_commons
       patmo_idx_OH,&
       patmo_idx_OH,&
       patmo_idx_H2O,&
-      positionDummy,&
+      patmo_idx_M,&
       patmo_idx_H,&
       patmo_idx_H,&
       patmo_idx_SH,&
@@ -976,11 +999,11 @@ module patmo_commons
       patmo_idx_NH,&
       patmo_idx_N,&
       patmo_idx_N,&
-      positionDummy,&
-      positionDummy,&
+      patmo_idx_M,&
+      patmo_idx_M,&
       patmo_idx_O,&
-      positionDummy,&
-      positionDummy,&
+      patmo_idx_M,&
+      patmo_idx_M,&
       patmo_idx_OH,&
       patmo_idx_H2O,&
       patmo_idx_CH2CO,&
@@ -988,11 +1011,480 @@ module patmo_commons
       patmo_idx_CO,&
       patmo_idx_CO2,&
       positionDummy,&
+      patmo_idx_M,&
       patmo_idx_CO2,&
       patmo_idx_N2,&
       patmo_idx_SO2,&
-      patmo_idx_H2,&
       patmo_idx_CH3,&
+      patmo_idx_H,&
+      positionDummy,&
+      patmo_idx_CO2/)
+  integer,parameter,dimension(reactionsNumber)::indexReactants3 = (/patmo_idx_M,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      patmo_idx_M,&
+      patmo_idx_M,&
+      patmo_idx_M,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      patmo_idx_M,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      patmo_idx_M,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      patmo_idx_M,&
+      patmo_idx_M,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      patmo_idx_M,&
+      patmo_idx_M,&
+      positionDummy,&
+      positionDummy,&
+      patmo_idx_M,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      patmo_idx_M,&
+      patmo_idx_M,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      patmo_idx_M,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      patmo_idx_M,&
+      patmo_idx_M,&
+      patmo_idx_M,&
+      patmo_idx_M,&
+      patmo_idx_M,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      patmo_idx_M,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      patmo_idx_M,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      patmo_idx_M,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      patmo_idx_M,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      patmo_idx_M,&
+      patmo_idx_M,&
+      positionDummy,&
+      patmo_idx_M,&
+      patmo_idx_M,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      patmo_idx_M,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      patmo_idx_O,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      patmo_idx_O2,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      patmo_idx_M,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      patmo_idx_H2O,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      patmo_idx_M,&
+      patmo_idx_M,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      patmo_idx_SH,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      patmo_idx_M,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      patmo_idx_O2,&
+      patmo_idx_O2,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      patmo_idx_M,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      patmo_idx_CO,&
+      positionDummy,&
+      positionDummy,&
+      patmo_idx_CO2,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      patmo_idx_H,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
       positionDummy/)
   integer,parameter,dimension(reactionsNumber)::indexProducts1 = (/patmo_idx_O3,&
       patmo_idx_O2,&
@@ -1004,6 +1496,7 @@ module patmo_commons
       patmo_idx_OH,&
       patmo_idx_H2O,&
       patmo_idx_OH,&
+      patmo_idx_OH,&
       patmo_idx_N2O,&
       patmo_idx_N2,&
       patmo_idx_NO,&
@@ -1198,19 +1691,24 @@ module patmo_commons
       patmo_idx_CH4,&
       patmo_idx_H2O,&
       patmo_idx_H2,&
+      patmo_idx_COCOOH,&
       patmo_idx_H2O2,&
       patmo_idx_O_3P,&
       patmo_idx_O_3P,&
       patmo_idx_O_3P,&
-      patmo_idx_OH,&
       patmo_idx_CH3,&
-      patmo_idx_COCOOH,&
+      patmo_idx_OH,&
+      patmo_idx_H2,&
+      patmo_idx_HO2,&
       patmo_idx_O,&
       patmo_idx_O2,&
       patmo_idx_O2,&
+      patmo_idx_O,&
+      patmo_idx_O_1D,&
       patmo_idx_OH,&
       patmo_idx_OH,&
       patmo_idx_H2,&
+      patmo_idx_H,&
       patmo_idx_N2,&
       patmo_idx_NO,&
       patmo_idx_NO,&
@@ -1223,6 +1721,7 @@ module patmo_commons
       patmo_idx_CH3O,&
       patmo_idx_H,&
       patmo_idx_H2,&
+      patmo_idx_H,&
       patmo_idx_CO,&
       patmo_idx_OH,&
       patmo_idx_H,&
@@ -1233,6 +1732,8 @@ module patmo_commons
       patmo_idx_SO,&
       patmo_idx_SO2,&
       patmo_idx_SO2,&
+      patmo_idx_CH3,&
+      patmo_idx_CH3O,&
       patmo_idx_SO,&
       patmo_idx_SO,&
       patmo_idx_H,&
@@ -1248,6 +1749,7 @@ module patmo_commons
       patmo_idx_HO2,&
       patmo_idx_OH,&
       patmo_idx_O_1D,&
+      patmo_idx_H2O,&
       patmo_idx_O_1D,&
       patmo_idx_O_1D,&
       patmo_idx_O_1D,&
@@ -1442,14 +1944,16 @@ module patmo_commons
       patmo_idx_HOCO,&
       patmo_idx_HOCO,&
       patmo_idx_HOCO,&
+      patmo_idx_HOCO,&
       patmo_idx_OH,&
       patmo_idx_O_1D,&
       patmo_idx_O_1D,&
       patmo_idx_O_1D,&
-      patmo_idx_H2O,&
       patmo_idx_CH4,&
+      patmo_idx_O,&
+      patmo_idx_H,&
       patmo_idx_HOCO/)
-  integer,parameter,dimension(reactionsNumber)::indexProducts2 = (/positionDummy,&
+  integer,parameter,dimension(reactionsNumber)::indexProducts2 = (/patmo_idx_M,&
       patmo_idx_O2,&
       patmo_idx_O2,&
       patmo_idx_O,&
@@ -1459,25 +1963,26 @@ module patmo_commons
       patmo_idx_O2,&
       patmo_idx_O2,&
       patmo_idx_OH,&
+      patmo_idx_H2,&
       positionDummy,&
       patmo_idx_O2,&
       patmo_idx_NO,&
       patmo_idx_O2,&
       patmo_idx_O2,&
       patmo_idx_O2,&
-      positionDummy,&
-      positionDummy,&
+      patmo_idx_M,&
+      patmo_idx_M,&
       patmo_idx_H2O,&
       patmo_idx_NO2,&
       patmo_idx_O2,&
       patmo_idx_O2,&
-      positionDummy,&
+      patmo_idx_M,&
       patmo_idx_O2,&
       patmo_idx_OH,&
       patmo_idx_H2O,&
       patmo_idx_O2,&
       patmo_idx_H2O,&
-      positionDummy,&
+      patmo_idx_M,&
       patmo_idx_O2,&
       patmo_idx_NO2,&
       patmo_idx_OH,&
@@ -1519,8 +2024,8 @@ module patmo_commons
       patmo_idx_SO2,&
       patmo_idx_SO3,&
       positionDummy,&
-      positionDummy,&
-      positionDummy,&
+      patmo_idx_M,&
+      patmo_idx_M,&
       positionDummy,&
       positionDummy,&
       patmo_idx_CH4O3S,&
@@ -1530,8 +2035,8 @@ module patmo_commons
       patmo_idx_H2,&
       patmo_idx_CH3O,&
       patmo_idx_CH2O,&
-      positionDummy,&
-      positionDummy,&
+      patmo_idx_M,&
+      patmo_idx_M,&
       patmo_idx_CO,&
       patmo_idx_CO,&
       patmo_idx_CO,&
@@ -1542,28 +2047,28 @@ module patmo_commons
       patmo_idx_OH,&
       patmo_idx_H2O,&
       patmo_idx_OH,&
-      positionDummy,&
+      patmo_idx_M,&
       patmo_idx_S2O,&
       patmo_idx_SO2,&
       patmo_idx_SO2,&
       patmo_idx_H2S,&
       patmo_idx_S,&
       patmo_idx_CHO,&
-      positionDummy,&
-      positionDummy,&
-      positionDummy,&
-      positionDummy,&
-      positionDummy,&
+      patmo_idx_M,&
+      patmo_idx_M,&
+      patmo_idx_M,&
+      patmo_idx_M,&
+      patmo_idx_M,&
       patmo_idx_S,&
       patmo_idx_SO,&
       positionDummy,&
       patmo_idx_H,&
-      positionDummy,&
+      patmo_idx_M,&
       patmo_idx_O2,&
       patmo_idx_HO2,&
       patmo_idx_H,&
       patmo_idx_O,&
-      positionDummy,&
+      patmo_idx_M,&
       patmo_idx_OH,&
       patmo_idx_O2,&
       patmo_idx_CO,&
@@ -1620,7 +2125,7 @@ module patmo_commons
       patmo_idx_O,&
       patmo_idx_OH,&
       patmo_idx_NO2,&
-      positionDummy,&
+      patmo_idx_M,&
       patmo_idx_H2,&
       patmo_idx_NH2,&
       patmo_idx_OH,&
@@ -1629,7 +2134,7 @@ module patmo_commons
       patmo_idx_OH,&
       patmo_idx_OH,&
       patmo_idx_H2O,&
-      positionDummy,&
+      patmo_idx_M,&
       patmo_idx_H,&
       patmo_idx_H,&
       patmo_idx_SH,&
@@ -1642,11 +2147,11 @@ module patmo_commons
       patmo_idx_NH,&
       patmo_idx_N,&
       patmo_idx_N,&
-      positionDummy,&
-      positionDummy,&
+      patmo_idx_M,&
+      patmo_idx_M,&
       patmo_idx_O,&
-      positionDummy,&
-      positionDummy,&
+      patmo_idx_M,&
+      patmo_idx_M,&
       patmo_idx_OH,&
       patmo_idx_H2O,&
       patmo_idx_CH2CO,&
@@ -1654,18 +2159,23 @@ module patmo_commons
       patmo_idx_CO,&
       patmo_idx_CO2,&
       positionDummy,&
+      patmo_idx_M,&
       patmo_idx_CO2,&
       patmo_idx_N2,&
       patmo_idx_SO2,&
-      patmo_idx_H2,&
       patmo_idx_CH3,&
+      patmo_idx_H,&
       positionDummy,&
+      patmo_idx_CO2,&
       patmo_idx_O,&
       patmo_idx_O_1D,&
       patmo_idx_O,&
+      patmo_idx_H,&
+      patmo_idx_H,&
       patmo_idx_O,&
       patmo_idx_H,&
       patmo_idx_O,&
+      patmo_idx_H,&
       patmo_idx_O_1D,&
       patmo_idx_O,&
       patmo_idx_O2,&
@@ -1678,6 +2188,7 @@ module patmo_commons
       patmo_idx_OH,&
       patmo_idx_CHO,&
       patmo_idx_CO,&
+      patmo_idx_CO,&
       patmo_idx_O,&
       patmo_idx_OH,&
       patmo_idx_HO2,&
@@ -1688,6 +2199,8 @@ module patmo_commons
       patmo_idx_O,&
       patmo_idx_O,&
       patmo_idx_OH,&
+      patmo_idx_OH,&
+      patmo_idx_H,&
       patmo_idx_SO,&
       patmo_idx_S,&
       patmo_idx_N2H3,&
@@ -1703,6 +2216,7 @@ module patmo_commons
       patmo_idx_O3,&
       patmo_idx_HO2,&
       patmo_idx_H2O,&
+      patmo_idx_H,&
       patmo_idx_N2,&
       patmo_idx_N2O,&
       patmo_idx_N2O,&
@@ -1798,7 +2312,7 @@ module patmo_commons
       patmo_idx_S3,&
       patmo_idx_S2,&
       patmo_idx_S4,&
-      positionDummy,&
+      patmo_idx_M,&
       patmo_idx_O,&
       patmo_idx_CH3,&
       patmo_idx_CH3,&
@@ -1897,13 +2411,15 @@ module patmo_commons
       patmo_idx_CH3,&
       patmo_idx_H,&
       patmo_idx_H,&
+      patmo_idx_CO,&
       patmo_idx_OH,&
       patmo_idx_CO2,&
       patmo_idx_N2,&
       patmo_idx_SO2,&
-      patmo_idx_H,&
       patmo_idx_CH2,&
-      patmo_idx_CO/)
+      patmo_idx_H2,&
+      patmo_idx_H,&
+      patmo_idx_O2/)
   integer,parameter,dimension(reactionsNumber)::indexProducts3 = (/positionDummy,&
       positionDummy,&
       positionDummy,&
@@ -1923,6 +2439,7 @@ module patmo_commons
       positionDummy,&
       positionDummy,&
       positionDummy,&
+      patmo_idx_M,&
       positionDummy,&
       positionDummy,&
       positionDummy,&
@@ -1940,8 +2457,8 @@ module patmo_commons
       positionDummy,&
       positionDummy,&
       positionDummy,&
-      positionDummy,&
-      positionDummy,&
+      patmo_idx_M,&
+      patmo_idx_M,&
       positionDummy,&
       positionDummy,&
       positionDummy,&
@@ -1978,7 +2495,7 @@ module patmo_commons
       positionDummy,&
       positionDummy,&
       positionDummy,&
-      positionDummy,&
+      patmo_idx_M,&
       positionDummy,&
       positionDummy,&
       positionDummy,&
@@ -2009,7 +2526,7 @@ module patmo_commons
       positionDummy,&
       positionDummy,&
       positionDummy,&
-      positionDummy,&
+      patmo_idx_M,&
       positionDummy,&
       positionDummy,&
       positionDummy,&
@@ -2126,7 +2643,13 @@ module patmo_commons
       positionDummy,&
       positionDummy,&
       positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
+      positionDummy,&
       patmo_idx_NO3,&
+      positionDummy,&
       positionDummy,&
       positionDummy,&
       positionDummy,&
@@ -2150,6 +2673,7 @@ module patmo_commons
       positionDummy,&
       positionDummy,&
       positionDummy,&
+      patmo_idx_M,&
       positionDummy,&
       positionDummy,&
       positionDummy,&
@@ -2166,14 +2690,19 @@ module patmo_commons
       positionDummy,&
       positionDummy,&
       positionDummy,&
+      patmo_idx_M,&
+      patmo_idx_M,&
+      patmo_idx_M,&
       positionDummy,&
       positionDummy,&
       positionDummy,&
+      patmo_idx_M,&
       positionDummy,&
       positionDummy,&
       positionDummy,&
       positionDummy,&
       positionDummy,&
+      patmo_idx_M,&
       positionDummy,&
       positionDummy,&
       positionDummy,&
@@ -2181,6 +2710,8 @@ module patmo_commons
       positionDummy,&
       positionDummy,&
       positionDummy,&
+      patmo_idx_M,&
+      patmo_idx_M,&
       positionDummy,&
       positionDummy,&
       positionDummy,&
@@ -2213,14 +2744,19 @@ module patmo_commons
       positionDummy,&
       positionDummy,&
       positionDummy,&
+      patmo_idx_M,&
+      patmo_idx_M,&
       positionDummy,&
       positionDummy,&
+      patmo_idx_M,&
       positionDummy,&
       positionDummy,&
       positionDummy,&
       positionDummy,&
       positionDummy,&
       positionDummy,&
+      patmo_idx_M,&
+      patmo_idx_M,&
       positionDummy,&
       positionDummy,&
       positionDummy,&
@@ -2231,20 +2767,28 @@ module patmo_commons
       positionDummy,&
       positionDummy,&
       positionDummy,&
+      patmo_idx_M,&
       positionDummy,&
       positionDummy,&
       positionDummy,&
       positionDummy,&
       positionDummy,&
       positionDummy,&
+      patmo_idx_M,&
+      patmo_idx_M,&
+      patmo_idx_M,&
+      patmo_idx_M,&
+      patmo_idx_M,&
       positionDummy,&
       positionDummy,&
       positionDummy,&
       positionDummy,&
+      patmo_idx_M,&
       positionDummy,&
       positionDummy,&
       positionDummy,&
       positionDummy,&
+      patmo_idx_M,&
       positionDummy,&
       positionDummy,&
       positionDummy,&
@@ -2301,6 +2845,7 @@ module patmo_commons
       positionDummy,&
       positionDummy,&
       positionDummy,&
+      patmo_idx_M,&
       positionDummy,&
       positionDummy,&
       positionDummy,&
@@ -2309,6 +2854,7 @@ module patmo_commons
       positionDummy,&
       positionDummy,&
       positionDummy,&
+      patmo_idx_M,&
       positionDummy,&
       positionDummy,&
       positionDummy,&
@@ -2321,7 +2867,11 @@ module patmo_commons
       positionDummy,&
       positionDummy,&
       positionDummy,&
+      patmo_idx_M,&
+      patmo_idx_M,&
       positionDummy,&
+      patmo_idx_M,&
+      patmo_idx_M,&
       positionDummy,&
       positionDummy,&
       positionDummy,&
@@ -2329,29 +2879,7 @@ module patmo_commons
       positionDummy,&
       positionDummy,&
       positionDummy,&
-      positionDummy,&
-      positionDummy,&
-      positionDummy,&
-      positionDummy,&
-      positionDummy,&
-      positionDummy,&
-      positionDummy,&
-      positionDummy,&
-      positionDummy,&
-      positionDummy,&
-      positionDummy,&
-      positionDummy,&
-      positionDummy,&
-      positionDummy,&
-      positionDummy,&
-      positionDummy,&
-      positionDummy,&
-      positionDummy,&
-      positionDummy,&
-      positionDummy,&
-      positionDummy,&
-      positionDummy,&
-      positionDummy,&
+      patmo_idx_M,&
       positionDummy,&
       positionDummy,&
       positionDummy,&
