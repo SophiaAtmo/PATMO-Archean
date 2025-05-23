@@ -570,22 +570,12 @@ contains
   end function patmo_getTotalMass
 
 !***************************
-function patmo_getTotalMassNuclei_C()
+function patmo_getTotalMassNuclei_H()
  use patmo_utils
  implicit none
- real*8::patmo_getTotalMassNuclei_C
+ real*8::patmo_getTotalMassNuclei_H
 
-patmo_getTotalMassNuclei_C = getTotalMassNuclei_C() 
-
-end function
-
-!***************************
-function patmo_getTotalMassNuclei_N()
- use patmo_utils
- implicit none
- real*8::patmo_getTotalMassNuclei_N
-
-patmo_getTotalMassNuclei_N = getTotalMassNuclei_N() 
+patmo_getTotalMassNuclei_H = getTotalMassNuclei_H() 
 
 end function
 
@@ -600,22 +590,12 @@ patmo_getTotalMassNuclei_O = getTotalMassNuclei_O()
 end function
 
 !***************************
-function patmo_getTotalMassNuclei_S()
+function patmo_getTotalMassNuclei_C()
  use patmo_utils
  implicit none
- real*8::patmo_getTotalMassNuclei_S
+ real*8::patmo_getTotalMassNuclei_C
 
-patmo_getTotalMassNuclei_S = getTotalMassNuclei_S() 
-
-end function
-
-!***************************
-function patmo_getTotalMassNuclei_H()
- use patmo_utils
- implicit none
- real*8::patmo_getTotalMassNuclei_H
-
-patmo_getTotalMassNuclei_H = getTotalMassNuclei_H() 
+patmo_getTotalMassNuclei_C = getTotalMassNuclei_C() 
 
 end function
 
@@ -626,6 +606,26 @@ function patmo_getTotalMassNuclei_M()
  real*8::patmo_getTotalMassNuclei_M
 
 patmo_getTotalMassNuclei_M = getTotalMassNuclei_M() 
+
+end function
+
+!***************************
+function patmo_getTotalMassNuclei_N()
+ use patmo_utils
+ implicit none
+ real*8::patmo_getTotalMassNuclei_N
+
+patmo_getTotalMassNuclei_N = getTotalMassNuclei_N() 
+
+end function
+
+!***************************
+function patmo_getTotalMassNuclei_S()
+ use patmo_utils
+ implicit none
+ real*8::patmo_getTotalMassNuclei_S
+
+patmo_getTotalMassNuclei_S = getTotalMassNuclei_S() 
 
 end function
 
@@ -893,10 +893,15 @@ end function
     use patmo_commons
     use patmo_constants
     use patmo_parameters
+    use patmo_rates  !Trieu added
     implicit none
     character(len=*),intent(in)::fname
     integer::i
+    real*8::n(cellsNumber,speciesNumber)  !Trieu added
 
+    call computeTotalDensityExcludingM(n) !Trieu added
+    nall(:,patmo_idx_M) = n(:, patmo_idx_M)  !Trieu added
+    
     open(22,file=trim(fname),status="replace")
     write(22,*) "altitude/km, O+O2+M->O3+M, O+O3->O2+O2, O(1D)+O3->O2+O2, O(1D)+O3->O2+O+O, O(1D)+N2->O+N2, O(1D)+O2->O+O2, OH+O3->HO2+O2, HO2+O3->OH+O2+O2, OH+HO2->H2O+O2, O(1D)+H2O->OH+OH, H2O+H->OH+H2, O(1D)+N2->N2O, O(1D)+N2O->N2+O2, O(1D)+N2O->NO+NO, O+NO2->NO+O2, NO+O3->NO2+O2, NO2+O3->NO3+O2, NO2+NO3+M->N2O5+M, NO2+OH+M->HNO3+M, HNO3+OH+M->NO3+H2O+M, HO2+NO->OH+NO2, H+O3->OH+O2, O+OH->H+O2, H+O2+M->HO2+M, O+HO2->OH+O2, H+HO2->OH+OH, H+HO2->O+H2O, H+HO2->H2+O2, CH4+OH->CH3+H2O, CH3+O2+M->CH3O2+M, CH3O2+HO2->CH3OOH+O2, CH3O2+NO->CH3O+NO2, CH3OOH+OH->CH2O+OH+H2O, CH3OOH+OH->CH3O2+H2O, CH3O+O2->CH2O+HO2, CH2O+OH->CHO+H2O, CHO+O2->CO+HO2, CO+OH+M->CO2+H+M, HO2+HO2+M->H2O2+O2+M, H2O2+OH->HO2+H2O, COS+OH->CO2+SH, COS+O->CO+SO, CS2+OH->SH+COS, CS2+O->CS+SO, CS+O2->COS+O, CS+O3->COS+O2, CS+O->CO+S, H2S+OH->H2O+SH, H2S+O->OH+SH, H2S+H->H2+SH, H2S+HO2->H2O+HSO, SH+O->H+SO, SH+O2->OH+SO, SH+O3->HSO+O2, SH+NO2->HSO+NO, SO+O3->SO2+O2, SO+O2->SO2+O, SO+OH->SO2+H, SO+NO2->SO2+NO, S+O2->SO+O, S+O3->O2+SO, S+OH->H+SO, SO2+HO2->OH+SO3, SO2+NO2->SO3+NO, SO2+O3->SO3+O2, HSO+O2->SO2+OH, HSO+O3->O2+O2+SH, HSO+NO2->NO+HSO2, HSO2+O2->HO2+SO2, HSO3+O2->HO2+SO3, SO3+H2O->H2SO4, SO2+O+M->SO3+M, SO2+OH+M->HSO3+M, CH3SCH3+OH->SO2, CH3SCH3+O->SO2, CH3SCH3+OH+M->SO2+CH4O3S+M, H2SO4->SO4, O(1D)+CH4->CH3+OH, O(1D)+CH4->CH3O+H, O(1D)+CH4->CH2O+H2, CH3O2+CH3O2->CH3O+CH3O+O2, CH3O2+CH3O2->CH3OH+CH2O+O2, O+CO+M->CO2+M, H+CO+M->CHO+M, H+CHO->H2+CO, CHO+CHO->CH2O+CO, OH+CHO->H2O+CO, O+CHO->H+CO2, O+CHO->OH+CO, H+CH2O->H2+CHO, O+CH2O->OH+CHO, O(1D)+H2->H+OH, OH+H2->H+H2O, SO+HO2->SO2+OH, SO+SO+M->S2O2+M, SO+S2O2->SO2+S2O, SO+SO->S+SO2, SO+SO3->SO2+SO2, SH+SH->S+H2S, SH+H->H2+S, SH+CH2O->H2S+CHO, S+S+M->S2+M, S+S2+M->S3+M, S+S3+M->S4+M, S2+S2+M->S4+M, S4+S4+M->S8+M, S2+M->S+S+M, S2+O->S+SO, O+CH3->CH3O, O+CH3->CH2O+H, H+CH3+M->CH4+M, O3+CH3->CH3O+O2, H2O2+CH3->CH4+HO2, OH+CH3->CH3O+H, OH+CH3->CH4+O, OH+CH3+M->CH3OH+M, HO2+CH3->CH3O+OH, HO2+CH3->CH4+O2, CHO+CH3->CH4+CO, CH3+CH3->CH4+CH2, CH3->H+CH2, CH3->H2+CH, CH3O+CH3->CH2O+CH4, CH2OH+CH3->CH2O+CH4, CH3O2+CH3->CH3O+CH3O, H2+CH3->CH4+H, O+CH2->CHO+H, O+CH2->H+H+CO, O+CH2->H2+CO, H+CH2->H2+CH, O2+CH2->H+H+CO2, O2+CH2->H2+CO2, O2+CH2->CO+H2O, O2+CH2->O+CH2O, OH+CH2->H+CH2O, CHO+CH2->CO+CH3, CH3O2+CH2->CH2O+CH3O, CO2+CH2->CH2O+CO, O+CH->H+CO, CH+NO2->CHO+NO, O2+CH->O+CHO, O2+CH->OH+CO, H2O+CH->H+CH2O, H2+CH->H+CH2, H2+CH->CH3, CH3OH+CH2->CH3O+CH3, CH3OH+CH2->CH2OH+CH3, CH3OH+O->CH3O+OH, CH3OH+O->CH2OH+OH, CH3OH+H->CH3+H2O, CH3OH+H->CH3O+H2, CH3OH+H->CH2OH+H2, CH3OH+OH->CH3O+H2O, CH3OH+OH->CH2OH+H2O, CH3OH+OH->CH2O+H2O+H, CH3OH+CH3->CH4+CH3O, CH3OH+CH3->CH4+CH2OH, CH2OH+CH2->CH2O+CH3, CH2OH+O->CH2O+OH, CH2OH+H->CH3+OH, CH2OH+H->CH3OH, CH2OH+H->CH2O+H2, CH2OH+H2O2->CH3OH+HO2, CH2OH+OH->CH2O+H2O, CH2OH+HO2->CH2O+H2O2, CH2OH+CHO->CH3OH+CO, CH2OH+CHO->CH2O+CH2O, CH2OH+CH2OH->CH2O+CH3OH, N+O2->O+NO, N+NO->N2+O, H+NO2->NO+OH, O+NO3->O2+NO2, NH2+NH2+M->N2H4+M, N2H4+H->N2H3+H2, N2H3+H->NH2+NH2, NH+NO->N2+OH, NH+O->N+OH, NH2+NO->N2+H2O, NH2+O->NH+OH, NH3+O(1D)->NH2+OH, NH3+OH->NH2+H2O, NH2+H+M->NH3+M, NH+NO->N2O+H, NH+O->NO+H, CH3+H2S->CH4+SH, COS+H->CO+SH, COS+S->CO+S2, CS+NO2->COS+NO, CO+SH->COS+H, CS2+O->CO+S2, CS2+O->COS+S, OH+NH2->H2O+NH, NH+NH->NH2+N, NH2+NH->NH3+N, O+N+M->NO+M, H+N+M->NH+M, NO2+N->N2O+O, O+O+M->O2+M, OH+CO+M->HOCO+M, HOCO+O(3P)->CO2+OH, HOCO+OH->CO2+H2O, HOCO+CH3->H2O+CH2CO, HOCO+CH3->CH4+CO2, HOCO+H->H2O+CO, HOCO+H->H2+CO2, HOCO+CO->COCOOH, OH+OH+M->H2O2+M, O(1D)+CO2->O(3P)+CO2, O(1D)+N2->O(3P)+N2, O(1D)+SO2->O(3P)+SO2, CH4+CH2->CH3+CH3, O+H2->OH+H, H+H->H2, HOCO+O2->HO2+CO2, O2->O+O, O3->O2+O(1D), O3->O2+O, OH->O+H, OH->O(1D)+H, HO2->OH+O, H2O->OH+H, H2O->H2+O, H2->H+H, N2O->N2+O(1D), NO2->NO+O, NO3->NO+O2, NO3->O+NO2, N2O5->NO2+NO3, N2O5->O+NO+NO3, HNO3->OH+NO2, HNO3->H+NO3, CH4->CH3+H, CH3OOH->CH3O+OH, CH2O->H+CHO, CH2O->H2+CO, CHO->H+CO, CO2->CO+O, H2O2->OH+OH, H2O2->H+HO2, COS->CO+S, SO->S+O, CS2->CS+S, H2S->SH+H, SO2->SO+O, SO3->SO2+O, H2SO4->SO2+OH+OH, CH3OH->CH3+OH, CH3OH->CH3O+H, S2O2->SO+SO, S2O->SO+S, N2H4->H+N2H3, NH3->H+NH2, NH3->H2+NH, O3+M->O+O2+M, O2+O2->O+O3, O2+O2->O(1D)+O3, O2+O+O->O(1D)+O3, O+N2->O(1D)+N2, O+O2->O(1D)+O2, HO2+O2->OH+O3, OH+O2+O2->HO2+O3, H2O+O2->OH+HO2, OH+OH->O(1D)+H2O, OH+H2->H2O+H, N2O->O(1D)+N2, N2+O2->O(1D)+N2O, NO+NO->O(1D)+N2O, NO+O2->O+NO2, NO2+O2->NO+O3, NO3+O2->NO2+O3, N2O5+M->NO2+NO3+M, HNO3+M->NO2+OH+M, NO3+H2O+M->HNO3+OH+M, OH+NO2->HO2+NO, OH+O2->H+O3, H+O2->O+OH, HO2+M->H+O2+M, OH+O2->O+HO2, OH+OH->H+HO2, O+H2O->H+HO2, H2+O2->H+HO2, CH3+H2O->CH4+OH, CH3O2+M->CH3+O2+M, CH3OOH+O2->CH3O2+HO2, CH3O+NO2->CH3O2+NO, CH2O+OH+H2O->CH3OOH+OH, CH3O2+H2O->CH3OOH+OH, CH2O+HO2->CH3O+O2, CHO+H2O->CH2O+OH, CO+HO2->CHO+O2, CO2+H+M->CO+OH+M, H2O2+O2+M->HO2+HO2+M, HO2+H2O->H2O2+OH, CO2+SH->COS+OH, CO+SO->COS+O, SH+COS->CS2+OH, CS+SO->CS2+O, COS+O->CS+O2, COS+O2->CS+O3, CO+S->CS+O, H2O+SH->H2S+OH, OH+SH->H2S+O, H2+SH->H2S+H, H2O+HSO->H2S+HO2, H+SO->SH+O, OH+SO->SH+O2, HSO+O2->SH+O3, HSO+NO->SH+NO2, SO2+O2->SO+O3, SO2+O->SO+O2, SO2+H->SO+OH, SO2+NO->SO+NO2, SO+O->S+O2, O2+SO->S+O3, H+SO->S+OH, OH+SO3->SO2+HO2, SO3+NO->SO2+NO2, SO3+O2->SO2+O3, SO2+OH->HSO+O2, O2+O2+SH->HSO+O3, NO+HSO2->HSO+NO2, HO2+SO2->HSO2+O2, HO2+SO3->HSO3+O2, H2SO4->SO3+H2O, SO3+M->SO2+O+M, HSO3+M->SO2+OH+M, SO2->CH3SCH3+OH, SO2->CH3SCH3+O, SO2+CH4O3S+M->CH3SCH3+OH+M, SO4->H2SO4, CH3+OH->O(1D)+CH4, CH3O+H->O(1D)+CH4, CH2O+H2->O(1D)+CH4, CH3O+CH3O+O2->CH3O2+CH3O2, CH3OH+CH2O+O2->CH3O2+CH3O2, CO2+M->O+CO+M, CHO+M->H+CO+M, H2+CO->H+CHO, CH2O+CO->CHO+CHO, H2O+CO->OH+CHO, H+CO2->O+CHO, OH+CO->O+CHO, H2+CHO->H+CH2O, OH+CHO->O+CH2O, H+OH->O(1D)+H2, H+H2O->OH+H2, SO2+OH->SO+HO2, S2O2+M->SO+SO+M, SO2+S2O->SO+S2O2, S+SO2->SO+SO, SO2+SO2->SO+SO3, S+H2S->SH+SH, H2+S->SH+H, H2S+CHO->SH+CH2O, S2+M->S+S+M, S3+M->S+S2+M, S4+M->S+S3+M, S4+M->S2+S2+M, S8+M->S4+S4+M, S+S+M->S2+M, S+SO->S2+O, CH3O->O+CH3, CH2O+H->O+CH3, CH4+M->H+CH3+M, CH3O+O2->O3+CH3, CH4+HO2->H2O2+CH3, CH3O+H->OH+CH3, CH4+O->OH+CH3, CH3OH+M->OH+CH3+M, CH3O+OH->HO2+CH3, CH4+O2->HO2+CH3, CH4+CO->CHO+CH3, CH4+CH2->CH3+CH3, H+CH2->CH3, H2+CH->CH3, CH2O+CH4->CH3O+CH3, CH2O+CH4->CH2OH+CH3, CH3O+CH3O->CH3O2+CH3, CH4+H->H2+CH3, CHO+H->O+CH2, H+H+CO->O+CH2, H2+CO->O+CH2, H2+CH->H+CH2, H+H+CO2->O2+CH2, H2+CO2->O2+CH2, CO+H2O->O2+CH2, O+CH2O->O2+CH2, H+CH2O->OH+CH2, CO+CH3->CHO+CH2, CH2O+CH3O->CH3O2+CH2, CH2O+CO->CO2+CH2, H+CO->O+CH, CHO+NO->CH+NO2, O+CHO->O2+CH, OH+CO->O2+CH, H+CH2O->H2O+CH, H+CH2->H2+CH, CH3->H2+CH, CH3O+CH3->CH3OH+CH2, CH2OH+CH3->CH3OH+CH2, CH3O+OH->CH3OH+O, CH2OH+OH->CH3OH+O, CH3+H2O->CH3OH+H, CH3O+H2->CH3OH+H, CH2OH+H2->CH3OH+H, CH3O+H2O->CH3OH+OH, CH2OH+H2O->CH3OH+OH, CH2O+H2O+H->CH3OH+OH, CH4+CH3O->CH3OH+CH3, CH4+CH2OH->CH3OH+CH3, CH2O+CH3->CH2OH+CH2, CH2O+OH->CH2OH+O, CH3+OH->CH2OH+H, CH3OH->CH2OH+H, CH2O+H2->CH2OH+H, CH3OH+HO2->CH2OH+H2O2, CH2O+H2O->CH2OH+OH, CH2O+H2O2->CH2OH+HO2, CH3OH+CO->CH2OH+CHO, CH2O+CH2O->CH2OH+CHO, CH2O+CH3OH->CH2OH+CH2OH, O+NO->N+O2, N2+O->N+NO, NO+OH->H+NO2, O2+NO2->O+NO3, N2H4+M->NH2+NH2+M, N2H3+H2->N2H4+H, NH2+NH2->N2H3+H, N2+OH->NH+NO, N+OH->NH+O, N2+H2O->NH2+NO, NH+OH->NH2+O, NH2+OH->NH3+O(1D), NH2+H2O->NH3+OH, NH3+M->NH2+H+M, N2O+H->NH+NO, NO+H->NH+O, CH4+SH->CH3+H2S, CO+SH->COS+H, CO+S2->COS+S, COS+NO->CS+NO2, COS+H->CO+SH, CO+S2->CS2+O, COS+S->CS2+O, H2O+NH->OH+NH2, NH2+N->NH+NH, NH3+N->NH2+NH, NO+M->O+N+M, NH+M->H+N+M, N2O+O->NO2+N, O2+M->O+O+M, HOCO+M->OH+CO+M, CO2+OH->HOCO+O(3P), CO2+H2O->HOCO+OH, H2O+CH2CO->HOCO+CH3, CH4+CO2->HOCO+CH3, H2O+CO->HOCO+H, H2+CO2->HOCO+H, COCOOH->HOCO+CO, H2O2+M->OH+OH+M, O(3P)+CO2->O(1D)+CO2, O(3P)+N2->O(1D)+N2, O(3P)+SO2->O(1D)+SO2, CH3+CH3->CH4+CH2, OH+H->O+H2, H2->H+H, HO2+CO2->HOCO+O2"
     !loop on cells
