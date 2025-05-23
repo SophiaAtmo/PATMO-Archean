@@ -839,10 +839,15 @@ contains
     use patmo_commons
     use patmo_constants
     use patmo_parameters
+    use patmo_rates  !Trieu added
     implicit none
     character(len=*),intent(in)::fname
     integer::i
+    real*8::n(cellsNumber,speciesNumber)  !Trieu added
 
+    call computeTotalDensityExcludingM(n) !Trieu added
+    nall(:,patmo_idx_M) = n(:, patmo_idx_M)  !Trieu added
+    
     open(22,file=trim(fname),status="replace")
     write(22,*) "altitude/km#PATMO_DumpReactions"
     !loop on cells
