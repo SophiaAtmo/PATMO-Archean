@@ -1,6 +1,7 @@
 import patmo_string
 import patmo_options
 import patmo_commons
+import math
 
 def buildPhotoRates(network,options):
 
@@ -14,9 +15,14 @@ def buildPhotoRates(network,options):
 	res =""
 	res += "dE = " +str(dE) 
 	
+	zenith = 0.0
+	zenith += math.cos(math.radians(float(options.zenith_angle)))
+	mu = f"mu = {zenith:.6f}"
+	print(mu)
+	
 	#replace commons pragma
-	pragmaList = ["#PATMO_photoRates","#PATMO_resolution"]
-	replaceList = [allRates,res]
+	pragmaList = ["#PATMO_photoRates","#PATMO_resolution", "#PATMO_zenith_angle"]
+	replaceList = [allRates,res,mu]
 
 	patmo_string.fileReplaceBuild("src_f90/patmo_photoRates.f90", "build/patmo_photoRates.f90", \
 		pragmaList, replaceList)
