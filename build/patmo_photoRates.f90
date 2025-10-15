@@ -9,121 +9,124 @@ contains
     real*8,intent(in)::tau(photoBinsNumber,cellsNumber)
 
     !O2 -> O + O
-    krate(:,215) = integrateXsec(1, tau(:,:))
+    krate(:,228) = integrateXsec(1, tau(:,:))
 
     !O3 -> O2 + O(1D)
-    krate(:,216) = integrateXsec(2, tau(:,:))
+    krate(:,229) = integrateXsec(2, tau(:,:))
 
     !O3 -> O2 + O
-    krate(:,217) = integrateXsec(3, tau(:,:))
+    krate(:,230) = integrateXsec(3, tau(:,:))
 
     !OH -> O + H
-    krate(:,218) = integrateXsec(4, tau(:,:))
+    krate(:,231) = integrateXsec(4, tau(:,:))
 
     !OH -> O(1D) + H
-    krate(:,219) = integrateXsec(5, tau(:,:))
+    krate(:,232) = integrateXsec(5, tau(:,:))
 
     !HO2 -> OH + O
-    krate(:,220) = integrateXsec(6, tau(:,:))
+    krate(:,233) = integrateXsec(6, tau(:,:))
 
     !H2O -> OH + H
-    krate(:,221) = integrateXsec(7, tau(:,:))
+    krate(:,234) = integrateXsec(7, tau(:,:))
 
     !H2O -> H2 + O
-    krate(:,222) = integrateXsec(8, tau(:,:))
+    krate(:,235) = integrateXsec(8, tau(:,:))
 
     !H2 -> H + H
-    krate(:,223) = integrateXsec(9, tau(:,:))
+    krate(:,236) = integrateXsec(9, tau(:,:))
 
     !N2O -> N2 + O(1D)
-    krate(:,224) = integrateXsec(10, tau(:,:))
+    krate(:,237) = integrateXsec(10, tau(:,:))
 
     !NO2 -> NO + O
-    krate(:,225) = integrateXsec(11, tau(:,:))
+    krate(:,238) = integrateXsec(11, tau(:,:))
 
     !NO3 -> NO + O2
-    krate(:,226) = integrateXsec(12, tau(:,:))
+    krate(:,239) = integrateXsec(12, tau(:,:))
 
     !NO3 -> O + NO2
-    krate(:,227) = integrateXsec(13, tau(:,:))
+    krate(:,240) = integrateXsec(13, tau(:,:))
 
     !N2O5 -> NO2 + NO3
-    krate(:,228) = integrateXsec(14, tau(:,:))
+    krate(:,241) = integrateXsec(14, tau(:,:))
 
     !N2O5 -> O + NO + NO3
-    krate(:,229) = integrateXsec(15, tau(:,:))
+    krate(:,242) = integrateXsec(15, tau(:,:))
 
     !HNO3 -> OH + NO2
-    krate(:,230) = integrateXsec(16, tau(:,:))
+    krate(:,243) = integrateXsec(16, tau(:,:))
 
     !HNO3 -> H + NO3
-    krate(:,231) = integrateXsec(17, tau(:,:))
+    krate(:,244) = integrateXsec(17, tau(:,:))
 
     !CH4 -> CH3 + H
-    krate(:,232) = integrateXsec(18, tau(:,:))
+    krate(:,245) = integrateXsec(18, tau(:,:))
 
     !CH3OOH -> CH3O + OH
-    krate(:,233) = integrateXsec(19, tau(:,:))
+    krate(:,246) = integrateXsec(19, tau(:,:))
 
     !CH2O -> H + CHO
-    krate(:,234) = integrateXsec(20, tau(:,:))
+    krate(:,247) = integrateXsec(20, tau(:,:))
 
     !CH2O -> H2 + CO
-    krate(:,235) = integrateXsec(21, tau(:,:))
+    krate(:,248) = integrateXsec(21, tau(:,:))
 
     !CHO -> H + CO
-    krate(:,236) = integrateXsec(22, tau(:,:))
+    krate(:,249) = integrateXsec(22, tau(:,:))
 
     !CO2 -> CO + O
-    krate(:,237) = integrateXsec(23, tau(:,:))
+    krate(:,250) = integrateXsec(23, tau(:,:))
 
     !H2O2 -> OH + OH
-    krate(:,238) = integrateXsec(24, tau(:,:))
+    krate(:,251) = integrateXsec(24, tau(:,:))
 
     !H2O2 -> H + HO2
-    krate(:,239) = integrateXsec(25, tau(:,:))
+    krate(:,252) = integrateXsec(25, tau(:,:))
 
     !COS -> CO + S
-    krate(:,240) = integrateXsec(26, tau(:,:))
+    krate(:,253) = integrateXsec(26, tau(:,:))
 
     !SO -> S + O
-    krate(:,241) = integrateXsec(27, tau(:,:))
+    krate(:,254) = integrateXsec(27, tau(:,:))
 
     !CS2 -> CS + S
-    krate(:,242) = integrateXsec(28, tau(:,:))
+    krate(:,255) = integrateXsec(28, tau(:,:))
 
     !H2S -> SH + H
-    krate(:,243) = integrateXsec(29, tau(:,:))
+    krate(:,256) = integrateXsec(29, tau(:,:))
 
     !SO2 -> SO + O
-    krate(:,244) = integrateXsec(30, tau(:,:))
+    krate(:,257) = integrateXsec(30, tau(:,:))
 
     !SO3 -> SO2 + O
-    krate(:,245) = integrateXsec(31, tau(:,:))
+    krate(:,258) = integrateXsec(31, tau(:,:))
 
     !H2SO4 -> SO2 + OH + OH
-    krate(:,246) = integrateXsec(32, tau(:,:))
+    krate(:,259) = integrateXsec(32, tau(:,:))
 
     !CH3OH -> CH3 + OH
-    krate(:,247) = integrateXsec(33, tau(:,:))
+    krate(:,260) = integrateXsec(33, tau(:,:))
 
     !CH3OH -> CH3O + H
-    krate(:,248) = integrateXsec(34, tau(:,:))
+    krate(:,261) = integrateXsec(34, tau(:,:))
 
     !S2O2 -> SO + SO
-    krate(:,249) = integrateXsec(35, tau(:,:))
+    krate(:,262) = integrateXsec(35, tau(:,:))
 
     !S2O -> SO + S
-    krate(:,250) = integrateXsec(36, tau(:,:))
+    krate(:,263) = integrateXsec(36, tau(:,:))
 
     !N2H4 -> H + N2H3
-    krate(:,251) = integrateXsec(37, tau(:,:))
+    krate(:,264) = integrateXsec(37, tau(:,:))
 
     !NH3 -> H + NH2
-    krate(:,252) = integrateXsec(38, tau(:,:))
+    krate(:,265) = integrateXsec(38, tau(:,:))
 
     !NH3 -> H2 + NH
-    krate(:,253) = integrateXsec(39, tau(:,:))
+    krate(:,266) = integrateXsec(39, tau(:,:))
+
+    !HCN -> CN + H
+    krate(:,267) = integrateXsec(40, tau(:,:))
 
   end subroutine computePhotoRates
 
@@ -135,7 +138,7 @@ contains
     implicit none
     integer,intent(in)::index
     real*8,intent(in)::tau(photoBinsNumber,cellsNumber)
-    real*8::integrateXsec(cellsNumber), dE
+    real*8::integrateXsec(cellsNumber), dE, mu
     integer::j
 
     ! !loop on cells (stride photobins)
@@ -146,10 +149,12 @@ contains
 
     !dE = (wavelengMax-wavelengMin)/photoBinsNumber (nm)
     dE = 0.1
+    !mu =cosine(zenith_angle)
+    mu = 0.500000
 
     !loop on cells (stride photobins)
     do j=1,cellsNumber
-      integrateXsec(j) = sum(xsecAll(:,index)*photoFlux(:)*exp(-2*tau(:,j))*dE)
+      integrateXsec(j) = sum(xsecAll(:,index)*photoFlux(:)*exp(-tau(:,j)/mu)*dE)
     end do
 
   end function integrateXsec

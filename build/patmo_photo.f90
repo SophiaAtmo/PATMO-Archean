@@ -120,6 +120,8 @@ contains
     call loadPhotoXsec("xsecs/NH3__H_NH2.dat",38)
     !NH3 -> H2 + NH
     call loadPhotoXsec("xsecs/NH3__H2_NH.dat",39)
+    !HCN -> CN + H
+    call loadPhotoXsec("xsecs/HCN__CN_H.dat",40)
 
   end subroutine loadAllPhotoXsecs
 

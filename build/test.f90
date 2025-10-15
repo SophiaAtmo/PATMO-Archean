@@ -23,6 +23,7 @@ program test
   call patmo_dumpHydrostaticProfile("hydrostat.out")
   !set diffusion, same for every layer
   ! call patmo_setDiffusionDzzAll(1d5)
+  ! call patmo_setEddyKzzAll(1.0d5)
 
   ! Wet Deposition
   wetdep(:,:) = 0d0

@@ -663,6 +663,45 @@ contains
       !HOCO + O2 -> HO2 + CO2
       krate(icell,214) = 2.00d-12
 
+      !CN + CH4 -> HCN + CH3
+      krate(icell,215) = 7.01d-13*(T/298)**(2.3d0)*exp(15.6354/T)
+
+      !CH4 + N -> HCN + H2 + H
+      krate(icell,216) = 2.51d-14
+
+      !O(1D) + HCN -> O(3P) + HCN
+      krate(icell,217) = 0.15*exp(-199.65/T)
+
+      !CH + N -> CN + H
+      krate(icell,218) = 1.66d-10*(T/298)**(-0.09)
+
+      !CH3 + N -> HCN + H + H
+      krate(icell,219) = 3.32d-13
+
+      !HCN + OH -> CN + H2O
+      krate(icell,220) = 2.41d-11*exp(-5500/T)
+
+      !HCN + O -> CO + NH
+      krate(icell,221) = 8.88d-13*(T/298)**(1.21d0)*exp(-3819.85/T)
+
+      !CH2 + CH2 -> C2H4
+      krate(icell,222) = 4.2d-11
+
+      !C2H4 + N -> HCN + CH3
+      krate(icell,223) = 4.2d-14
+
+      !CH2 + CH2 -> C2H2 + H2
+      krate(icell,224) = 5.3d-11
+
+      !C2H2 + OH -> C2H + H2O
+      krate(icell,225) = 2.49d-14
+
+      !CN + C2H2 -> HCN + C2H
+      krate(icell,226) = 2.19d-10
+
+      !C2H + H2O -> C2H2 + O2
+      krate(icell,227) = 3.01d-11
+
     end do
 
   end subroutine computeRates

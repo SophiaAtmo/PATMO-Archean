@@ -165,69 +165,71 @@ contains
         - krate(:,198)*n(:,patmo_idx_O)*n(:,patmo_idx_O)*n(:,patmo_idx_M) &
         - krate(:,198)*n(:,patmo_idx_O)*n(:,patmo_idx_O)*n(:,patmo_idx_M) &
         - krate(:,212)*n(:,patmo_idx_O)*n(:,patmo_idx_H2) &
-        + krate(:,215)*n(:,patmo_idx_O2) &
-        + krate(:,215)*n(:,patmo_idx_O2) &
-        + krate(:,217)*n(:,patmo_idx_O3) &
-        + krate(:,218)*n(:,patmo_idx_OH) &
-        + krate(:,220)*n(:,patmo_idx_HO2) &
-        + krate(:,222)*n(:,patmo_idx_H2O) &
-        + krate(:,225)*n(:,patmo_idx_NO2) &
-        + krate(:,227)*n(:,patmo_idx_NO3) &
-        + krate(:,229)*n(:,patmo_idx_N2O5) &
-        + krate(:,237)*n(:,patmo_idx_CO2) &
-        + krate(:,241)*n(:,patmo_idx_SO) &
-        + krate(:,244)*n(:,patmo_idx_SO2) &
-        + krate(:,245)*n(:,patmo_idx_SO3) &
-        + krate(:,254)*n(:,patmo_idx_O3)*n(:,patmo_idx_M) &
-        + krate(:,255)*n(:,patmo_idx_O2)*n(:,patmo_idx_O2) &
-        - krate(:,257)*n(:,patmo_idx_O2)*n(:,patmo_idx_O)*n(:,patmo_idx_O) &
-        - krate(:,257)*n(:,patmo_idx_O2)*n(:,patmo_idx_O)*n(:,patmo_idx_O) &
-        - krate(:,258)*n(:,patmo_idx_O)*n(:,patmo_idx_N2) &
-        - krate(:,259)*n(:,patmo_idx_O)*n(:,patmo_idx_O2) &
-        + krate(:,268)*n(:,patmo_idx_NO)*n(:,patmo_idx_O2) &
-        + krate(:,276)*n(:,patmo_idx_H)*n(:,patmo_idx_O2) &
-        + krate(:,278)*n(:,patmo_idx_OH)*n(:,patmo_idx_O2) &
-        - krate(:,280)*n(:,patmo_idx_O)*n(:,patmo_idx_H2O) &
-        + krate(:,295)*n(:,patmo_idx_CO)*n(:,patmo_idx_SO) &
-        + krate(:,297)*n(:,patmo_idx_CS)*n(:,patmo_idx_SO) &
-        - krate(:,298)*n(:,patmo_idx_COS)*n(:,patmo_idx_O) &
-        + krate(:,300)*n(:,patmo_idx_CO)*n(:,patmo_idx_S) &
-        + krate(:,302)*n(:,patmo_idx_OH)*n(:,patmo_idx_SH) &
-        + krate(:,305)*n(:,patmo_idx_H)*n(:,patmo_idx_SO) &
-        - krate(:,310)*n(:,patmo_idx_SO2)*n(:,patmo_idx_O) &
-        - krate(:,313)*n(:,patmo_idx_SO)*n(:,patmo_idx_O) &
-        + krate(:,325)*n(:,patmo_idx_SO3)*n(:,patmo_idx_M) &
-        + krate(:,328)*n(:,patmo_idx_SO2) &
-        + krate(:,336)*n(:,patmo_idx_CO2)*n(:,patmo_idx_M) &
-        + krate(:,341)*n(:,patmo_idx_H)*n(:,patmo_idx_CO2) &
-        + krate(:,342)*n(:,patmo_idx_OH)*n(:,patmo_idx_CO) &
-        + krate(:,344)*n(:,patmo_idx_OH)*n(:,patmo_idx_CHO) &
-        + krate(:,361)*n(:,patmo_idx_S)*n(:,patmo_idx_SO) &
-        + krate(:,362)*n(:,patmo_idx_CH3O) &
-        + krate(:,363)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H) &
-        - krate(:,368)*n(:,patmo_idx_CH4)*n(:,patmo_idx_O) &
-        + krate(:,380)*n(:,patmo_idx_CHO)*n(:,patmo_idx_H) &
-        + krate(:,381)*n(:,patmo_idx_H)*n(:,patmo_idx_H)*n(:,patmo_idx_CO) &
-        + krate(:,382)*n(:,patmo_idx_H2)*n(:,patmo_idx_CO) &
-        - krate(:,387)*n(:,patmo_idx_O)*n(:,patmo_idx_CH2O) &
-        + krate(:,392)*n(:,patmo_idx_H)*n(:,patmo_idx_CO) &
-        - krate(:,394)*n(:,patmo_idx_O)*n(:,patmo_idx_CHO) &
-        + krate(:,401)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_OH) &
-        + krate(:,402)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_OH) &
-        + krate(:,412)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_OH) &
-        - krate(:,422)*n(:,patmo_idx_O)*n(:,patmo_idx_NO) &
-        - krate(:,423)*n(:,patmo_idx_N2)*n(:,patmo_idx_O) &
-        + krate(:,425)*n(:,patmo_idx_O2)*n(:,patmo_idx_NO2) &
-        + krate(:,430)*n(:,patmo_idx_N)*n(:,patmo_idx_OH) &
-        + krate(:,432)*n(:,patmo_idx_NH)*n(:,patmo_idx_OH) &
-        + krate(:,437)*n(:,patmo_idx_NO)*n(:,patmo_idx_H) &
-        + krate(:,443)*n(:,patmo_idx_CO)*n(:,patmo_idx_S2) &
-        + krate(:,444)*n(:,patmo_idx_COS)*n(:,patmo_idx_S) &
-        + krate(:,448)*n(:,patmo_idx_NO)*n(:,patmo_idx_M) &
-        - krate(:,450)*n(:,patmo_idx_N2O)*n(:,patmo_idx_O) &
-        + krate(:,451)*n(:,patmo_idx_O2)*n(:,patmo_idx_M) &
-        + krate(:,451)*n(:,patmo_idx_O2)*n(:,patmo_idx_M) &
-        + krate(:,465)*n(:,patmo_idx_OH)*n(:,patmo_idx_H)
+        - krate(:,221)*n(:,patmo_idx_HCN)*n(:,patmo_idx_O) &
+        + krate(:,228)*n(:,patmo_idx_O2) &
+        + krate(:,228)*n(:,patmo_idx_O2) &
+        + krate(:,230)*n(:,patmo_idx_O3) &
+        + krate(:,231)*n(:,patmo_idx_OH) &
+        + krate(:,233)*n(:,patmo_idx_HO2) &
+        + krate(:,235)*n(:,patmo_idx_H2O) &
+        + krate(:,238)*n(:,patmo_idx_NO2) &
+        + krate(:,240)*n(:,patmo_idx_NO3) &
+        + krate(:,242)*n(:,patmo_idx_N2O5) &
+        + krate(:,250)*n(:,patmo_idx_CO2) &
+        + krate(:,254)*n(:,patmo_idx_SO) &
+        + krate(:,257)*n(:,patmo_idx_SO2) &
+        + krate(:,258)*n(:,patmo_idx_SO3) &
+        + krate(:,268)*n(:,patmo_idx_O3)*n(:,patmo_idx_M) &
+        + krate(:,269)*n(:,patmo_idx_O2)*n(:,patmo_idx_O2) &
+        - krate(:,271)*n(:,patmo_idx_O2)*n(:,patmo_idx_O)*n(:,patmo_idx_O) &
+        - krate(:,271)*n(:,patmo_idx_O2)*n(:,patmo_idx_O)*n(:,patmo_idx_O) &
+        - krate(:,272)*n(:,patmo_idx_O)*n(:,patmo_idx_N2) &
+        - krate(:,273)*n(:,patmo_idx_O)*n(:,patmo_idx_O2) &
+        + krate(:,282)*n(:,patmo_idx_NO)*n(:,patmo_idx_O2) &
+        + krate(:,290)*n(:,patmo_idx_H)*n(:,patmo_idx_O2) &
+        + krate(:,292)*n(:,patmo_idx_OH)*n(:,patmo_idx_O2) &
+        - krate(:,294)*n(:,patmo_idx_O)*n(:,patmo_idx_H2O) &
+        + krate(:,309)*n(:,patmo_idx_CO)*n(:,patmo_idx_SO) &
+        + krate(:,311)*n(:,patmo_idx_CS)*n(:,patmo_idx_SO) &
+        - krate(:,312)*n(:,patmo_idx_COS)*n(:,patmo_idx_O) &
+        + krate(:,314)*n(:,patmo_idx_CO)*n(:,patmo_idx_S) &
+        + krate(:,316)*n(:,patmo_idx_OH)*n(:,patmo_idx_SH) &
+        + krate(:,319)*n(:,patmo_idx_H)*n(:,patmo_idx_SO) &
+        - krate(:,324)*n(:,patmo_idx_SO2)*n(:,patmo_idx_O) &
+        - krate(:,327)*n(:,patmo_idx_SO)*n(:,patmo_idx_O) &
+        + krate(:,339)*n(:,patmo_idx_SO3)*n(:,patmo_idx_M) &
+        + krate(:,342)*n(:,patmo_idx_SO2) &
+        + krate(:,350)*n(:,patmo_idx_CO2)*n(:,patmo_idx_M) &
+        + krate(:,355)*n(:,patmo_idx_H)*n(:,patmo_idx_CO2) &
+        + krate(:,356)*n(:,patmo_idx_OH)*n(:,patmo_idx_CO) &
+        + krate(:,358)*n(:,patmo_idx_OH)*n(:,patmo_idx_CHO) &
+        + krate(:,375)*n(:,patmo_idx_S)*n(:,patmo_idx_SO) &
+        + krate(:,376)*n(:,patmo_idx_CH3O) &
+        + krate(:,377)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H) &
+        - krate(:,382)*n(:,patmo_idx_CH4)*n(:,patmo_idx_O) &
+        + krate(:,394)*n(:,patmo_idx_CHO)*n(:,patmo_idx_H) &
+        + krate(:,395)*n(:,patmo_idx_H)*n(:,patmo_idx_H)*n(:,patmo_idx_CO) &
+        + krate(:,396)*n(:,patmo_idx_H2)*n(:,patmo_idx_CO) &
+        - krate(:,401)*n(:,patmo_idx_O)*n(:,patmo_idx_CH2O) &
+        + krate(:,406)*n(:,patmo_idx_H)*n(:,patmo_idx_CO) &
+        - krate(:,408)*n(:,patmo_idx_O)*n(:,patmo_idx_CHO) &
+        + krate(:,415)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_OH) &
+        + krate(:,416)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_OH) &
+        + krate(:,426)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_OH) &
+        - krate(:,436)*n(:,patmo_idx_O)*n(:,patmo_idx_NO) &
+        - krate(:,437)*n(:,patmo_idx_N2)*n(:,patmo_idx_O) &
+        + krate(:,439)*n(:,patmo_idx_O2)*n(:,patmo_idx_NO2) &
+        + krate(:,444)*n(:,patmo_idx_N)*n(:,patmo_idx_OH) &
+        + krate(:,446)*n(:,patmo_idx_NH)*n(:,patmo_idx_OH) &
+        + krate(:,451)*n(:,patmo_idx_NO)*n(:,patmo_idx_H) &
+        + krate(:,457)*n(:,patmo_idx_CO)*n(:,patmo_idx_S2) &
+        + krate(:,458)*n(:,patmo_idx_COS)*n(:,patmo_idx_S) &
+        + krate(:,462)*n(:,patmo_idx_NO)*n(:,patmo_idx_M) &
+        - krate(:,464)*n(:,patmo_idx_N2O)*n(:,patmo_idx_O) &
+        + krate(:,465)*n(:,patmo_idx_O2)*n(:,patmo_idx_M) &
+        + krate(:,465)*n(:,patmo_idx_O2)*n(:,patmo_idx_M) &
+        + krate(:,479)*n(:,patmo_idx_OH)*n(:,patmo_idx_H) &
+        + krate(:,488)*n(:,patmo_idx_CO)*n(:,patmo_idx_NH)
 
     dn(:,patmo_idx_O2) = &
         - krate(:,1)*n(:,patmo_idx_O)*n(:,patmo_idx_O2)*n(:,patmo_idx_M) &
@@ -284,64 +286,66 @@ contains
         + krate(:,172)*n(:,patmo_idx_O)*n(:,patmo_idx_NO3) &
         + krate(:,198)*n(:,patmo_idx_O)*n(:,patmo_idx_O)*n(:,patmo_idx_M) &
         - krate(:,214)*n(:,patmo_idx_HOCO)*n(:,patmo_idx_O2) &
-        - krate(:,215)*n(:,patmo_idx_O2) &
-        + krate(:,216)*n(:,patmo_idx_O3) &
-        + krate(:,217)*n(:,patmo_idx_O3) &
-        + krate(:,226)*n(:,patmo_idx_NO3) &
-        + krate(:,254)*n(:,patmo_idx_O3)*n(:,patmo_idx_M) &
-        - krate(:,255)*n(:,patmo_idx_O2)*n(:,patmo_idx_O2) &
-        - krate(:,255)*n(:,patmo_idx_O2)*n(:,patmo_idx_O2) &
-        - krate(:,256)*n(:,patmo_idx_O2)*n(:,patmo_idx_O2) &
-        - krate(:,256)*n(:,patmo_idx_O2)*n(:,patmo_idx_O2) &
-        - krate(:,257)*n(:,patmo_idx_O2)*n(:,patmo_idx_O)*n(:,patmo_idx_O) &
-        - krate(:,259)*n(:,patmo_idx_O)*n(:,patmo_idx_O2) &
-        + krate(:,259)*n(:,patmo_idx_O)*n(:,patmo_idx_O2) &
-        - krate(:,260)*n(:,patmo_idx_HO2)*n(:,patmo_idx_O2) &
-        - krate(:,261)*n(:,patmo_idx_OH)*n(:,patmo_idx_O2)*n(:,patmo_idx_O2) &
-        - krate(:,261)*n(:,patmo_idx_OH)*n(:,patmo_idx_O2)*n(:,patmo_idx_O2) &
-        - krate(:,262)*n(:,patmo_idx_H2O)*n(:,patmo_idx_O2) &
-        - krate(:,266)*n(:,patmo_idx_N2)*n(:,patmo_idx_O2) &
-        - krate(:,268)*n(:,patmo_idx_NO)*n(:,patmo_idx_O2) &
-        - krate(:,269)*n(:,patmo_idx_NO2)*n(:,patmo_idx_O2) &
-        - krate(:,270)*n(:,patmo_idx_NO3)*n(:,patmo_idx_O2) &
-        - krate(:,275)*n(:,patmo_idx_OH)*n(:,patmo_idx_O2) &
-        - krate(:,276)*n(:,patmo_idx_H)*n(:,patmo_idx_O2) &
-        + krate(:,277)*n(:,patmo_idx_HO2)*n(:,patmo_idx_M) &
-        - krate(:,278)*n(:,patmo_idx_OH)*n(:,patmo_idx_O2) &
-        - krate(:,281)*n(:,patmo_idx_H2)*n(:,patmo_idx_O2) &
-        + krate(:,283)*n(:,patmo_idx_CH3O2)*n(:,patmo_idx_M) &
-        - krate(:,284)*n(:,patmo_idx_CH3OOH)*n(:,patmo_idx_O2) &
-        + krate(:,288)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_HO2) &
-        + krate(:,290)*n(:,patmo_idx_CO)*n(:,patmo_idx_HO2) &
-        - krate(:,292)*n(:,patmo_idx_H2O2)*n(:,patmo_idx_O2)*n(:,patmo_idx_M) &
-        + krate(:,298)*n(:,patmo_idx_COS)*n(:,patmo_idx_O) &
-        - krate(:,299)*n(:,patmo_idx_COS)*n(:,patmo_idx_O2) &
-        + krate(:,306)*n(:,patmo_idx_OH)*n(:,patmo_idx_SO) &
-        - krate(:,307)*n(:,patmo_idx_HSO)*n(:,patmo_idx_O2) &
-        - krate(:,309)*n(:,patmo_idx_SO2)*n(:,patmo_idx_O2) &
-        + krate(:,310)*n(:,patmo_idx_SO2)*n(:,patmo_idx_O) &
-        + krate(:,313)*n(:,patmo_idx_SO)*n(:,patmo_idx_O) &
-        - krate(:,314)*n(:,patmo_idx_O2)*n(:,patmo_idx_SO) &
-        - krate(:,318)*n(:,patmo_idx_SO3)*n(:,patmo_idx_O2) &
-        + krate(:,319)*n(:,patmo_idx_SO2)*n(:,patmo_idx_OH) &
-        - krate(:,320)*n(:,patmo_idx_O2)*n(:,patmo_idx_O2)*n(:,patmo_idx_SH) &
-        - krate(:,320)*n(:,patmo_idx_O2)*n(:,patmo_idx_O2)*n(:,patmo_idx_SH) &
-        + krate(:,322)*n(:,patmo_idx_HO2)*n(:,patmo_idx_SO2) &
-        + krate(:,323)*n(:,patmo_idx_HO2)*n(:,patmo_idx_SO3) &
-        - krate(:,334)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_O2) &
-        - krate(:,335)*n(:,patmo_idx_CH3OH)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_O2) &
-        - krate(:,365)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_O2) &
-        - krate(:,371)*n(:,patmo_idx_CH4)*n(:,patmo_idx_O2) &
-        + krate(:,384)*n(:,patmo_idx_H)*n(:,patmo_idx_H)*n(:,patmo_idx_CO2) &
-        + krate(:,385)*n(:,patmo_idx_H2)*n(:,patmo_idx_CO2) &
-        + krate(:,386)*n(:,patmo_idx_CO)*n(:,patmo_idx_H2O) &
-        + krate(:,387)*n(:,patmo_idx_O)*n(:,patmo_idx_CH2O) &
-        + krate(:,394)*n(:,patmo_idx_O)*n(:,patmo_idx_CHO) &
-        + krate(:,395)*n(:,patmo_idx_OH)*n(:,patmo_idx_CO) &
-        + krate(:,422)*n(:,patmo_idx_O)*n(:,patmo_idx_NO) &
-        - krate(:,425)*n(:,patmo_idx_O2)*n(:,patmo_idx_NO2) &
-        - krate(:,451)*n(:,patmo_idx_O2)*n(:,patmo_idx_M) &
-        + krate(:,467)*n(:,patmo_idx_HO2)*n(:,patmo_idx_CO2)
+        + krate(:,227)*n(:,patmo_idx_C2H)*n(:,patmo_idx_H2O) &
+        - krate(:,228)*n(:,patmo_idx_O2) &
+        + krate(:,229)*n(:,patmo_idx_O3) &
+        + krate(:,230)*n(:,patmo_idx_O3) &
+        + krate(:,239)*n(:,patmo_idx_NO3) &
+        + krate(:,268)*n(:,patmo_idx_O3)*n(:,patmo_idx_M) &
+        - krate(:,269)*n(:,patmo_idx_O2)*n(:,patmo_idx_O2) &
+        - krate(:,269)*n(:,patmo_idx_O2)*n(:,patmo_idx_O2) &
+        - krate(:,270)*n(:,patmo_idx_O2)*n(:,patmo_idx_O2) &
+        - krate(:,270)*n(:,patmo_idx_O2)*n(:,patmo_idx_O2) &
+        - krate(:,271)*n(:,patmo_idx_O2)*n(:,patmo_idx_O)*n(:,patmo_idx_O) &
+        - krate(:,273)*n(:,patmo_idx_O)*n(:,patmo_idx_O2) &
+        + krate(:,273)*n(:,patmo_idx_O)*n(:,patmo_idx_O2) &
+        - krate(:,274)*n(:,patmo_idx_HO2)*n(:,patmo_idx_O2) &
+        - krate(:,275)*n(:,patmo_idx_OH)*n(:,patmo_idx_O2)*n(:,patmo_idx_O2) &
+        - krate(:,275)*n(:,patmo_idx_OH)*n(:,patmo_idx_O2)*n(:,patmo_idx_O2) &
+        - krate(:,276)*n(:,patmo_idx_H2O)*n(:,patmo_idx_O2) &
+        - krate(:,280)*n(:,patmo_idx_N2)*n(:,patmo_idx_O2) &
+        - krate(:,282)*n(:,patmo_idx_NO)*n(:,patmo_idx_O2) &
+        - krate(:,283)*n(:,patmo_idx_NO2)*n(:,patmo_idx_O2) &
+        - krate(:,284)*n(:,patmo_idx_NO3)*n(:,patmo_idx_O2) &
+        - krate(:,289)*n(:,patmo_idx_OH)*n(:,patmo_idx_O2) &
+        - krate(:,290)*n(:,patmo_idx_H)*n(:,patmo_idx_O2) &
+        + krate(:,291)*n(:,patmo_idx_HO2)*n(:,patmo_idx_M) &
+        - krate(:,292)*n(:,patmo_idx_OH)*n(:,patmo_idx_O2) &
+        - krate(:,295)*n(:,patmo_idx_H2)*n(:,patmo_idx_O2) &
+        + krate(:,297)*n(:,patmo_idx_CH3O2)*n(:,patmo_idx_M) &
+        - krate(:,298)*n(:,patmo_idx_CH3OOH)*n(:,patmo_idx_O2) &
+        + krate(:,302)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_HO2) &
+        + krate(:,304)*n(:,patmo_idx_CO)*n(:,patmo_idx_HO2) &
+        - krate(:,306)*n(:,patmo_idx_H2O2)*n(:,patmo_idx_O2)*n(:,patmo_idx_M) &
+        + krate(:,312)*n(:,patmo_idx_COS)*n(:,patmo_idx_O) &
+        - krate(:,313)*n(:,patmo_idx_COS)*n(:,patmo_idx_O2) &
+        + krate(:,320)*n(:,patmo_idx_OH)*n(:,patmo_idx_SO) &
+        - krate(:,321)*n(:,patmo_idx_HSO)*n(:,patmo_idx_O2) &
+        - krate(:,323)*n(:,patmo_idx_SO2)*n(:,patmo_idx_O2) &
+        + krate(:,324)*n(:,patmo_idx_SO2)*n(:,patmo_idx_O) &
+        + krate(:,327)*n(:,patmo_idx_SO)*n(:,patmo_idx_O) &
+        - krate(:,328)*n(:,patmo_idx_O2)*n(:,patmo_idx_SO) &
+        - krate(:,332)*n(:,patmo_idx_SO3)*n(:,patmo_idx_O2) &
+        + krate(:,333)*n(:,patmo_idx_SO2)*n(:,patmo_idx_OH) &
+        - krate(:,334)*n(:,patmo_idx_O2)*n(:,patmo_idx_O2)*n(:,patmo_idx_SH) &
+        - krate(:,334)*n(:,patmo_idx_O2)*n(:,patmo_idx_O2)*n(:,patmo_idx_SH) &
+        + krate(:,336)*n(:,patmo_idx_HO2)*n(:,patmo_idx_SO2) &
+        + krate(:,337)*n(:,patmo_idx_HO2)*n(:,patmo_idx_SO3) &
+        - krate(:,348)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_O2) &
+        - krate(:,349)*n(:,patmo_idx_CH3OH)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_O2) &
+        - krate(:,379)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_O2) &
+        - krate(:,385)*n(:,patmo_idx_CH4)*n(:,patmo_idx_O2) &
+        + krate(:,398)*n(:,patmo_idx_H)*n(:,patmo_idx_H)*n(:,patmo_idx_CO2) &
+        + krate(:,399)*n(:,patmo_idx_H2)*n(:,patmo_idx_CO2) &
+        + krate(:,400)*n(:,patmo_idx_CO)*n(:,patmo_idx_H2O) &
+        + krate(:,401)*n(:,patmo_idx_O)*n(:,patmo_idx_CH2O) &
+        + krate(:,408)*n(:,patmo_idx_O)*n(:,patmo_idx_CHO) &
+        + krate(:,409)*n(:,patmo_idx_OH)*n(:,patmo_idx_CO) &
+        + krate(:,436)*n(:,patmo_idx_O)*n(:,patmo_idx_NO) &
+        - krate(:,439)*n(:,patmo_idx_O2)*n(:,patmo_idx_NO2) &
+        - krate(:,465)*n(:,patmo_idx_O2)*n(:,patmo_idx_M) &
+        + krate(:,481)*n(:,patmo_idx_HO2)*n(:,patmo_idx_CO2) &
+        - krate(:,494)*n(:,patmo_idx_C2H2)*n(:,patmo_idx_O2)
 
     dn(:,patmo_idx_O3) = &
         + krate(:,1)*n(:,patmo_idx_O)*n(:,patmo_idx_O2)*n(:,patmo_idx_M) &
@@ -360,24 +364,24 @@ contains
         - krate(:,65)*n(:,patmo_idx_SO2)*n(:,patmo_idx_O3) &
         - krate(:,67)*n(:,patmo_idx_HSO)*n(:,patmo_idx_O3) &
         - krate(:,112)*n(:,patmo_idx_O3)*n(:,patmo_idx_CH3) &
-        - krate(:,216)*n(:,patmo_idx_O3) &
-        - krate(:,217)*n(:,patmo_idx_O3) &
-        - krate(:,254)*n(:,patmo_idx_O3)*n(:,patmo_idx_M) &
-        + krate(:,255)*n(:,patmo_idx_O2)*n(:,patmo_idx_O2) &
-        + krate(:,256)*n(:,patmo_idx_O2)*n(:,patmo_idx_O2) &
-        + krate(:,257)*n(:,patmo_idx_O2)*n(:,patmo_idx_O)*n(:,patmo_idx_O) &
-        + krate(:,260)*n(:,patmo_idx_HO2)*n(:,patmo_idx_O2) &
-        + krate(:,261)*n(:,patmo_idx_OH)*n(:,patmo_idx_O2)*n(:,patmo_idx_O2) &
-        + krate(:,269)*n(:,patmo_idx_NO2)*n(:,patmo_idx_O2) &
-        + krate(:,270)*n(:,patmo_idx_NO3)*n(:,patmo_idx_O2) &
-        + krate(:,275)*n(:,patmo_idx_OH)*n(:,patmo_idx_O2) &
-        + krate(:,299)*n(:,patmo_idx_COS)*n(:,patmo_idx_O2) &
-        + krate(:,307)*n(:,patmo_idx_HSO)*n(:,patmo_idx_O2) &
-        + krate(:,309)*n(:,patmo_idx_SO2)*n(:,patmo_idx_O2) &
-        + krate(:,314)*n(:,patmo_idx_O2)*n(:,patmo_idx_SO) &
-        + krate(:,318)*n(:,patmo_idx_SO3)*n(:,patmo_idx_O2) &
-        + krate(:,320)*n(:,patmo_idx_O2)*n(:,patmo_idx_O2)*n(:,patmo_idx_SH) &
-        + krate(:,365)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_O2)
+        - krate(:,229)*n(:,patmo_idx_O3) &
+        - krate(:,230)*n(:,patmo_idx_O3) &
+        - krate(:,268)*n(:,patmo_idx_O3)*n(:,patmo_idx_M) &
+        + krate(:,269)*n(:,patmo_idx_O2)*n(:,patmo_idx_O2) &
+        + krate(:,270)*n(:,patmo_idx_O2)*n(:,patmo_idx_O2) &
+        + krate(:,271)*n(:,patmo_idx_O2)*n(:,patmo_idx_O)*n(:,patmo_idx_O) &
+        + krate(:,274)*n(:,patmo_idx_HO2)*n(:,patmo_idx_O2) &
+        + krate(:,275)*n(:,patmo_idx_OH)*n(:,patmo_idx_O2)*n(:,patmo_idx_O2) &
+        + krate(:,283)*n(:,patmo_idx_NO2)*n(:,patmo_idx_O2) &
+        + krate(:,284)*n(:,patmo_idx_NO3)*n(:,patmo_idx_O2) &
+        + krate(:,289)*n(:,patmo_idx_OH)*n(:,patmo_idx_O2) &
+        + krate(:,313)*n(:,patmo_idx_COS)*n(:,patmo_idx_O2) &
+        + krate(:,321)*n(:,patmo_idx_HSO)*n(:,patmo_idx_O2) &
+        + krate(:,323)*n(:,patmo_idx_SO2)*n(:,patmo_idx_O2) &
+        + krate(:,328)*n(:,patmo_idx_O2)*n(:,patmo_idx_SO) &
+        + krate(:,332)*n(:,patmo_idx_SO3)*n(:,patmo_idx_O2) &
+        + krate(:,334)*n(:,patmo_idx_O2)*n(:,patmo_idx_O2)*n(:,patmo_idx_SH) &
+        + krate(:,379)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_O2)
 
     dn(:,patmo_idx_O_1D) = &
         - krate(:,3)*n(:,patmo_idx_O_1D)*n(:,patmo_idx_O3) &
@@ -396,25 +400,48 @@ contains
         - krate(:,208)*n(:,patmo_idx_O_1D)*n(:,patmo_idx_CO2) &
         - krate(:,209)*n(:,patmo_idx_O_1D)*n(:,patmo_idx_N2) &
         - krate(:,210)*n(:,patmo_idx_O_1D)*n(:,patmo_idx_SO2) &
-        + krate(:,216)*n(:,patmo_idx_O3) &
-        + krate(:,219)*n(:,patmo_idx_OH) &
-        + krate(:,224)*n(:,patmo_idx_N2O) &
-        + krate(:,256)*n(:,patmo_idx_O2)*n(:,patmo_idx_O2) &
-        + krate(:,257)*n(:,patmo_idx_O2)*n(:,patmo_idx_O)*n(:,patmo_idx_O) &
-        + krate(:,258)*n(:,patmo_idx_O)*n(:,patmo_idx_N2) &
-        + krate(:,259)*n(:,patmo_idx_O)*n(:,patmo_idx_O2) &
-        + krate(:,263)*n(:,patmo_idx_OH)*n(:,patmo_idx_OH) &
-        + krate(:,265)*n(:,patmo_idx_N2O) &
-        + krate(:,266)*n(:,patmo_idx_N2)*n(:,patmo_idx_O2) &
-        + krate(:,267)*n(:,patmo_idx_NO)*n(:,patmo_idx_NO) &
-        + krate(:,331)*n(:,patmo_idx_CH3)*n(:,patmo_idx_OH) &
-        + krate(:,332)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_H) &
-        + krate(:,333)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H2) &
-        + krate(:,345)*n(:,patmo_idx_H)*n(:,patmo_idx_OH) &
-        + krate(:,433)*n(:,patmo_idx_NH2)*n(:,patmo_idx_OH) &
-        + krate(:,461)*n(:,patmo_idx_O_3P)*n(:,patmo_idx_CO2) &
-        + krate(:,462)*n(:,patmo_idx_O_3P)*n(:,patmo_idx_N2) &
-        + krate(:,463)*n(:,patmo_idx_O_3P)*n(:,patmo_idx_SO2)
+        - krate(:,217)*n(:,patmo_idx_O_1D)*n(:,patmo_idx_HCN) &
+        + krate(:,229)*n(:,patmo_idx_O3) &
+        + krate(:,232)*n(:,patmo_idx_OH) &
+        + krate(:,237)*n(:,patmo_idx_N2O) &
+        + krate(:,270)*n(:,patmo_idx_O2)*n(:,patmo_idx_O2) &
+        + krate(:,271)*n(:,patmo_idx_O2)*n(:,patmo_idx_O)*n(:,patmo_idx_O) &
+        + krate(:,272)*n(:,patmo_idx_O)*n(:,patmo_idx_N2) &
+        + krate(:,273)*n(:,patmo_idx_O)*n(:,patmo_idx_O2) &
+        + krate(:,277)*n(:,patmo_idx_OH)*n(:,patmo_idx_OH) &
+        + krate(:,279)*n(:,patmo_idx_N2O) &
+        + krate(:,280)*n(:,patmo_idx_N2)*n(:,patmo_idx_O2) &
+        + krate(:,281)*n(:,patmo_idx_NO)*n(:,patmo_idx_NO) &
+        + krate(:,345)*n(:,patmo_idx_CH3)*n(:,patmo_idx_OH) &
+        + krate(:,346)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_H) &
+        + krate(:,347)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H2) &
+        + krate(:,359)*n(:,patmo_idx_H)*n(:,patmo_idx_OH) &
+        + krate(:,447)*n(:,patmo_idx_NH2)*n(:,patmo_idx_OH) &
+        + krate(:,475)*n(:,patmo_idx_O_3P)*n(:,patmo_idx_CO2) &
+        + krate(:,476)*n(:,patmo_idx_O_3P)*n(:,patmo_idx_N2) &
+        + krate(:,477)*n(:,patmo_idx_O_3P)*n(:,patmo_idx_SO2) &
+        + krate(:,484)*n(:,patmo_idx_O_3P)*n(:,patmo_idx_HCN)
+
+    dn(:,patmo_idx_N2) = &
+        - krate(:,5)*n(:,patmo_idx_O_1D)*n(:,patmo_idx_N2) &
+        + krate(:,5)*n(:,patmo_idx_O_1D)*n(:,patmo_idx_N2) &
+        - krate(:,12)*n(:,patmo_idx_O_1D)*n(:,patmo_idx_N2) &
+        + krate(:,13)*n(:,patmo_idx_O_1D)*n(:,patmo_idx_N2O) &
+        + krate(:,170)*n(:,patmo_idx_N)*n(:,patmo_idx_NO) &
+        + krate(:,176)*n(:,patmo_idx_NH)*n(:,patmo_idx_NO) &
+        + krate(:,178)*n(:,patmo_idx_NH2)*n(:,patmo_idx_NO) &
+        - krate(:,209)*n(:,patmo_idx_O_1D)*n(:,patmo_idx_N2) &
+        + krate(:,209)*n(:,patmo_idx_O_1D)*n(:,patmo_idx_N2) &
+        + krate(:,237)*n(:,patmo_idx_N2O) &
+        - krate(:,272)*n(:,patmo_idx_O)*n(:,patmo_idx_N2) &
+        + krate(:,272)*n(:,patmo_idx_O)*n(:,patmo_idx_N2) &
+        + krate(:,279)*n(:,patmo_idx_N2O) &
+        - krate(:,280)*n(:,patmo_idx_N2)*n(:,patmo_idx_O2) &
+        - krate(:,437)*n(:,patmo_idx_N2)*n(:,patmo_idx_O) &
+        - krate(:,443)*n(:,patmo_idx_N2)*n(:,patmo_idx_OH) &
+        - krate(:,445)*n(:,patmo_idx_N2)*n(:,patmo_idx_H2O) &
+        - krate(:,476)*n(:,patmo_idx_O_3P)*n(:,patmo_idx_N2) &
+        + krate(:,476)*n(:,patmo_idx_O_3P)*n(:,patmo_idx_N2)
 
     dn(:,patmo_idx_OH) = &
         - krate(:,7)*n(:,patmo_idx_OH)*n(:,patmo_idx_O3) &
@@ -484,84 +511,88 @@ contains
         - krate(:,207)*n(:,patmo_idx_OH)*n(:,patmo_idx_OH)*n(:,patmo_idx_M) &
         - krate(:,207)*n(:,patmo_idx_OH)*n(:,patmo_idx_OH)*n(:,patmo_idx_M) &
         + krate(:,212)*n(:,patmo_idx_O)*n(:,patmo_idx_H2) &
-        - krate(:,218)*n(:,patmo_idx_OH) &
-        - krate(:,219)*n(:,patmo_idx_OH) &
-        + krate(:,220)*n(:,patmo_idx_HO2) &
-        + krate(:,221)*n(:,patmo_idx_H2O) &
-        + krate(:,230)*n(:,patmo_idx_HNO3) &
-        + krate(:,233)*n(:,patmo_idx_CH3OOH) &
-        + krate(:,238)*n(:,patmo_idx_H2O2) &
-        + krate(:,238)*n(:,patmo_idx_H2O2) &
-        + krate(:,246)*n(:,patmo_idx_H2SO4) &
-        + krate(:,246)*n(:,patmo_idx_H2SO4) &
-        + krate(:,247)*n(:,patmo_idx_CH3OH) &
-        + krate(:,260)*n(:,patmo_idx_HO2)*n(:,patmo_idx_O2) &
-        - krate(:,261)*n(:,patmo_idx_OH)*n(:,patmo_idx_O2)*n(:,patmo_idx_O2) &
-        + krate(:,262)*n(:,patmo_idx_H2O)*n(:,patmo_idx_O2) &
-        - krate(:,263)*n(:,patmo_idx_OH)*n(:,patmo_idx_OH) &
-        - krate(:,263)*n(:,patmo_idx_OH)*n(:,patmo_idx_OH) &
-        - krate(:,264)*n(:,patmo_idx_OH)*n(:,patmo_idx_H2) &
-        + krate(:,272)*n(:,patmo_idx_HNO3)*n(:,patmo_idx_M) &
-        + krate(:,273)*n(:,patmo_idx_NO3)*n(:,patmo_idx_H2O)*n(:,patmo_idx_M) &
-        - krate(:,274)*n(:,patmo_idx_OH)*n(:,patmo_idx_NO2) &
-        - krate(:,275)*n(:,patmo_idx_OH)*n(:,patmo_idx_O2) &
-        + krate(:,276)*n(:,patmo_idx_H)*n(:,patmo_idx_O2) &
-        - krate(:,278)*n(:,patmo_idx_OH)*n(:,patmo_idx_O2) &
-        - krate(:,279)*n(:,patmo_idx_OH)*n(:,patmo_idx_OH) &
-        - krate(:,279)*n(:,patmo_idx_OH)*n(:,patmo_idx_OH) &
-        + krate(:,282)*n(:,patmo_idx_CH3)*n(:,patmo_idx_H2O) &
-        - krate(:,286)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_OH)*n(:,patmo_idx_H2O) &
-        + krate(:,286)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_OH)*n(:,patmo_idx_H2O) &
-        + krate(:,287)*n(:,patmo_idx_CH3O2)*n(:,patmo_idx_H2O) &
-        + krate(:,289)*n(:,patmo_idx_CHO)*n(:,patmo_idx_H2O) &
-        + krate(:,291)*n(:,patmo_idx_CO2)*n(:,patmo_idx_H)*n(:,patmo_idx_M) &
-        + krate(:,293)*n(:,patmo_idx_HO2)*n(:,patmo_idx_H2O) &
-        + krate(:,294)*n(:,patmo_idx_CO2)*n(:,patmo_idx_SH) &
-        + krate(:,296)*n(:,patmo_idx_SH)*n(:,patmo_idx_COS) &
-        + krate(:,301)*n(:,patmo_idx_H2O)*n(:,patmo_idx_SH) &
-        - krate(:,302)*n(:,patmo_idx_OH)*n(:,patmo_idx_SH) &
-        - krate(:,306)*n(:,patmo_idx_OH)*n(:,patmo_idx_SO) &
-        + krate(:,311)*n(:,patmo_idx_SO2)*n(:,patmo_idx_H) &
-        + krate(:,315)*n(:,patmo_idx_H)*n(:,patmo_idx_SO) &
-        - krate(:,316)*n(:,patmo_idx_OH)*n(:,patmo_idx_SO3) &
-        - krate(:,319)*n(:,patmo_idx_SO2)*n(:,patmo_idx_OH) &
-        + krate(:,326)*n(:,patmo_idx_HSO3)*n(:,patmo_idx_M) &
-        + krate(:,327)*n(:,patmo_idx_SO2) &
-        + krate(:,329)*n(:,patmo_idx_SO2)*n(:,patmo_idx_CH4O3S)*n(:,patmo_idx_M) &
-        - krate(:,331)*n(:,patmo_idx_CH3)*n(:,patmo_idx_OH) &
-        + krate(:,340)*n(:,patmo_idx_H2O)*n(:,patmo_idx_CO) &
-        - krate(:,342)*n(:,patmo_idx_OH)*n(:,patmo_idx_CO) &
-        - krate(:,344)*n(:,patmo_idx_OH)*n(:,patmo_idx_CHO) &
-        - krate(:,345)*n(:,patmo_idx_H)*n(:,patmo_idx_OH) &
-        + krate(:,346)*n(:,patmo_idx_H)*n(:,patmo_idx_H2O) &
-        - krate(:,347)*n(:,patmo_idx_SO2)*n(:,patmo_idx_OH) &
-        + krate(:,367)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_H) &
-        + krate(:,368)*n(:,patmo_idx_CH4)*n(:,patmo_idx_O) &
-        + krate(:,369)*n(:,patmo_idx_CH3OH)*n(:,patmo_idx_M) &
-        - krate(:,370)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_OH) &
-        + krate(:,388)*n(:,patmo_idx_H)*n(:,patmo_idx_CH2O) &
-        - krate(:,395)*n(:,patmo_idx_OH)*n(:,patmo_idx_CO) &
-        - krate(:,401)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_OH) &
-        - krate(:,402)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_OH) &
-        + krate(:,406)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_H2O) &
-        + krate(:,407)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_H2O) &
-        + krate(:,408)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H2O)*n(:,patmo_idx_H) &
-        - krate(:,412)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_OH) &
-        - krate(:,413)*n(:,patmo_idx_CH3)*n(:,patmo_idx_OH) &
-        + krate(:,417)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H2O) &
-        - krate(:,424)*n(:,patmo_idx_NO)*n(:,patmo_idx_OH) &
-        - krate(:,429)*n(:,patmo_idx_N2)*n(:,patmo_idx_OH) &
-        - krate(:,430)*n(:,patmo_idx_N)*n(:,patmo_idx_OH) &
-        - krate(:,432)*n(:,patmo_idx_NH)*n(:,patmo_idx_OH) &
-        - krate(:,433)*n(:,patmo_idx_NH2)*n(:,patmo_idx_OH) &
-        + krate(:,434)*n(:,patmo_idx_NH2)*n(:,patmo_idx_H2O) &
-        + krate(:,445)*n(:,patmo_idx_H2O)*n(:,patmo_idx_NH) &
-        + krate(:,452)*n(:,patmo_idx_HOCO)*n(:,patmo_idx_M) &
-        - krate(:,453)*n(:,patmo_idx_CO2)*n(:,patmo_idx_OH) &
-        + krate(:,454)*n(:,patmo_idx_CO2)*n(:,patmo_idx_H2O) &
-        + krate(:,460)*n(:,patmo_idx_H2O2)*n(:,patmo_idx_M) &
-        + krate(:,460)*n(:,patmo_idx_H2O2)*n(:,patmo_idx_M) &
-        - krate(:,465)*n(:,patmo_idx_OH)*n(:,patmo_idx_H)
+        - krate(:,220)*n(:,patmo_idx_HCN)*n(:,patmo_idx_OH) &
+        - krate(:,225)*n(:,patmo_idx_C2H2)*n(:,patmo_idx_OH) &
+        - krate(:,231)*n(:,patmo_idx_OH) &
+        - krate(:,232)*n(:,patmo_idx_OH) &
+        + krate(:,233)*n(:,patmo_idx_HO2) &
+        + krate(:,234)*n(:,patmo_idx_H2O) &
+        + krate(:,243)*n(:,patmo_idx_HNO3) &
+        + krate(:,246)*n(:,patmo_idx_CH3OOH) &
+        + krate(:,251)*n(:,patmo_idx_H2O2) &
+        + krate(:,251)*n(:,patmo_idx_H2O2) &
+        + krate(:,259)*n(:,patmo_idx_H2SO4) &
+        + krate(:,259)*n(:,patmo_idx_H2SO4) &
+        + krate(:,260)*n(:,patmo_idx_CH3OH) &
+        + krate(:,274)*n(:,patmo_idx_HO2)*n(:,patmo_idx_O2) &
+        - krate(:,275)*n(:,patmo_idx_OH)*n(:,patmo_idx_O2)*n(:,patmo_idx_O2) &
+        + krate(:,276)*n(:,patmo_idx_H2O)*n(:,patmo_idx_O2) &
+        - krate(:,277)*n(:,patmo_idx_OH)*n(:,patmo_idx_OH) &
+        - krate(:,277)*n(:,patmo_idx_OH)*n(:,patmo_idx_OH) &
+        - krate(:,278)*n(:,patmo_idx_OH)*n(:,patmo_idx_H2) &
+        + krate(:,286)*n(:,patmo_idx_HNO3)*n(:,patmo_idx_M) &
+        + krate(:,287)*n(:,patmo_idx_NO3)*n(:,patmo_idx_H2O)*n(:,patmo_idx_M) &
+        - krate(:,288)*n(:,patmo_idx_OH)*n(:,patmo_idx_NO2) &
+        - krate(:,289)*n(:,patmo_idx_OH)*n(:,patmo_idx_O2) &
+        + krate(:,290)*n(:,patmo_idx_H)*n(:,patmo_idx_O2) &
+        - krate(:,292)*n(:,patmo_idx_OH)*n(:,patmo_idx_O2) &
+        - krate(:,293)*n(:,patmo_idx_OH)*n(:,patmo_idx_OH) &
+        - krate(:,293)*n(:,patmo_idx_OH)*n(:,patmo_idx_OH) &
+        + krate(:,296)*n(:,patmo_idx_CH3)*n(:,patmo_idx_H2O) &
+        - krate(:,300)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_OH)*n(:,patmo_idx_H2O) &
+        + krate(:,300)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_OH)*n(:,patmo_idx_H2O) &
+        + krate(:,301)*n(:,patmo_idx_CH3O2)*n(:,patmo_idx_H2O) &
+        + krate(:,303)*n(:,patmo_idx_CHO)*n(:,patmo_idx_H2O) &
+        + krate(:,305)*n(:,patmo_idx_CO2)*n(:,patmo_idx_H)*n(:,patmo_idx_M) &
+        + krate(:,307)*n(:,patmo_idx_HO2)*n(:,patmo_idx_H2O) &
+        + krate(:,308)*n(:,patmo_idx_CO2)*n(:,patmo_idx_SH) &
+        + krate(:,310)*n(:,patmo_idx_SH)*n(:,patmo_idx_COS) &
+        + krate(:,315)*n(:,patmo_idx_H2O)*n(:,patmo_idx_SH) &
+        - krate(:,316)*n(:,patmo_idx_OH)*n(:,patmo_idx_SH) &
+        - krate(:,320)*n(:,patmo_idx_OH)*n(:,patmo_idx_SO) &
+        + krate(:,325)*n(:,patmo_idx_SO2)*n(:,patmo_idx_H) &
+        + krate(:,329)*n(:,patmo_idx_H)*n(:,patmo_idx_SO) &
+        - krate(:,330)*n(:,patmo_idx_OH)*n(:,patmo_idx_SO3) &
+        - krate(:,333)*n(:,patmo_idx_SO2)*n(:,patmo_idx_OH) &
+        + krate(:,340)*n(:,patmo_idx_HSO3)*n(:,patmo_idx_M) &
+        + krate(:,341)*n(:,patmo_idx_SO2) &
+        + krate(:,343)*n(:,patmo_idx_SO2)*n(:,patmo_idx_CH4O3S)*n(:,patmo_idx_M) &
+        - krate(:,345)*n(:,patmo_idx_CH3)*n(:,patmo_idx_OH) &
+        + krate(:,354)*n(:,patmo_idx_H2O)*n(:,patmo_idx_CO) &
+        - krate(:,356)*n(:,patmo_idx_OH)*n(:,patmo_idx_CO) &
+        - krate(:,358)*n(:,patmo_idx_OH)*n(:,patmo_idx_CHO) &
+        - krate(:,359)*n(:,patmo_idx_H)*n(:,patmo_idx_OH) &
+        + krate(:,360)*n(:,patmo_idx_H)*n(:,patmo_idx_H2O) &
+        - krate(:,361)*n(:,patmo_idx_SO2)*n(:,patmo_idx_OH) &
+        + krate(:,381)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_H) &
+        + krate(:,382)*n(:,patmo_idx_CH4)*n(:,patmo_idx_O) &
+        + krate(:,383)*n(:,patmo_idx_CH3OH)*n(:,patmo_idx_M) &
+        - krate(:,384)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_OH) &
+        + krate(:,402)*n(:,patmo_idx_H)*n(:,patmo_idx_CH2O) &
+        - krate(:,409)*n(:,patmo_idx_OH)*n(:,patmo_idx_CO) &
+        - krate(:,415)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_OH) &
+        - krate(:,416)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_OH) &
+        + krate(:,420)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_H2O) &
+        + krate(:,421)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_H2O) &
+        + krate(:,422)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H2O)*n(:,patmo_idx_H) &
+        - krate(:,426)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_OH) &
+        - krate(:,427)*n(:,patmo_idx_CH3)*n(:,patmo_idx_OH) &
+        + krate(:,431)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H2O) &
+        - krate(:,438)*n(:,patmo_idx_NO)*n(:,patmo_idx_OH) &
+        - krate(:,443)*n(:,patmo_idx_N2)*n(:,patmo_idx_OH) &
+        - krate(:,444)*n(:,patmo_idx_N)*n(:,patmo_idx_OH) &
+        - krate(:,446)*n(:,patmo_idx_NH)*n(:,patmo_idx_OH) &
+        - krate(:,447)*n(:,patmo_idx_NH2)*n(:,patmo_idx_OH) &
+        + krate(:,448)*n(:,patmo_idx_NH2)*n(:,patmo_idx_H2O) &
+        + krate(:,459)*n(:,patmo_idx_H2O)*n(:,patmo_idx_NH) &
+        + krate(:,466)*n(:,patmo_idx_HOCO)*n(:,patmo_idx_M) &
+        - krate(:,467)*n(:,patmo_idx_CO2)*n(:,patmo_idx_OH) &
+        + krate(:,468)*n(:,patmo_idx_CO2)*n(:,patmo_idx_H2O) &
+        + krate(:,474)*n(:,patmo_idx_H2O2)*n(:,patmo_idx_M) &
+        + krate(:,474)*n(:,patmo_idx_H2O2)*n(:,patmo_idx_M) &
+        - krate(:,479)*n(:,patmo_idx_OH)*n(:,patmo_idx_H) &
+        + krate(:,487)*n(:,patmo_idx_CN)*n(:,patmo_idx_H2O) &
+        + krate(:,492)*n(:,patmo_idx_C2H)*n(:,patmo_idx_H2O)
 
     dn(:,patmo_idx_HO2) = &
         + krate(:,7)*n(:,patmo_idx_OH)*n(:,patmo_idx_O3) &
@@ -590,94 +621,34 @@ contains
         + krate(:,163)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_H2O2) &
         - krate(:,165)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_HO2) &
         + krate(:,214)*n(:,patmo_idx_HOCO)*n(:,patmo_idx_O2) &
-        - krate(:,220)*n(:,patmo_idx_HO2) &
-        + krate(:,239)*n(:,patmo_idx_H2O2) &
-        - krate(:,260)*n(:,patmo_idx_HO2)*n(:,patmo_idx_O2) &
-        + krate(:,261)*n(:,patmo_idx_OH)*n(:,patmo_idx_O2)*n(:,patmo_idx_O2) &
-        + krate(:,262)*n(:,patmo_idx_H2O)*n(:,patmo_idx_O2) &
-        + krate(:,274)*n(:,patmo_idx_OH)*n(:,patmo_idx_NO2) &
-        - krate(:,277)*n(:,patmo_idx_HO2)*n(:,patmo_idx_M) &
-        + krate(:,278)*n(:,patmo_idx_OH)*n(:,patmo_idx_O2) &
-        + krate(:,279)*n(:,patmo_idx_OH)*n(:,patmo_idx_OH) &
-        + krate(:,280)*n(:,patmo_idx_O)*n(:,patmo_idx_H2O) &
-        + krate(:,281)*n(:,patmo_idx_H2)*n(:,patmo_idx_O2) &
-        + krate(:,284)*n(:,patmo_idx_CH3OOH)*n(:,patmo_idx_O2) &
-        - krate(:,288)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_HO2) &
-        - krate(:,290)*n(:,patmo_idx_CO)*n(:,patmo_idx_HO2) &
-        + krate(:,292)*n(:,patmo_idx_H2O2)*n(:,patmo_idx_O2)*n(:,patmo_idx_M) &
-        + krate(:,292)*n(:,patmo_idx_H2O2)*n(:,patmo_idx_O2)*n(:,patmo_idx_M) &
-        - krate(:,293)*n(:,patmo_idx_HO2)*n(:,patmo_idx_H2O) &
-        + krate(:,304)*n(:,patmo_idx_H2O)*n(:,patmo_idx_HSO) &
-        + krate(:,316)*n(:,patmo_idx_OH)*n(:,patmo_idx_SO3) &
-        - krate(:,322)*n(:,patmo_idx_HO2)*n(:,patmo_idx_SO2) &
-        - krate(:,323)*n(:,patmo_idx_HO2)*n(:,patmo_idx_SO3) &
-        + krate(:,347)*n(:,patmo_idx_SO2)*n(:,patmo_idx_OH) &
-        - krate(:,366)*n(:,patmo_idx_CH4)*n(:,patmo_idx_HO2) &
-        + krate(:,370)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_OH) &
-        + krate(:,371)*n(:,patmo_idx_CH4)*n(:,patmo_idx_O2) &
-        - krate(:,416)*n(:,patmo_idx_CH3OH)*n(:,patmo_idx_HO2) &
-        + krate(:,418)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H2O2) &
-        - krate(:,467)*n(:,patmo_idx_HO2)*n(:,patmo_idx_CO2)
-
-    dn(:,patmo_idx_H2O) = &
-        + krate(:,9)*n(:,patmo_idx_OH)*n(:,patmo_idx_HO2) &
-        - krate(:,10)*n(:,patmo_idx_O_1D)*n(:,patmo_idx_H2O) &
-        - krate(:,11)*n(:,patmo_idx_H2O)*n(:,patmo_idx_H) &
-        + krate(:,20)*n(:,patmo_idx_HNO3)*n(:,patmo_idx_OH)*n(:,patmo_idx_M) &
-        + krate(:,27)*n(:,patmo_idx_H)*n(:,patmo_idx_HO2) &
-        + krate(:,29)*n(:,patmo_idx_CH4)*n(:,patmo_idx_OH) &
-        + krate(:,33)*n(:,patmo_idx_CH3OOH)*n(:,patmo_idx_OH) &
-        + krate(:,34)*n(:,patmo_idx_CH3OOH)*n(:,patmo_idx_OH) &
-        + krate(:,36)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_OH) &
-        + krate(:,40)*n(:,patmo_idx_H2O2)*n(:,patmo_idx_OH) &
-        + krate(:,48)*n(:,patmo_idx_H2S)*n(:,patmo_idx_OH) &
-        + krate(:,51)*n(:,patmo_idx_H2S)*n(:,patmo_idx_HO2) &
-        - krate(:,71)*n(:,patmo_idx_SO3)*n(:,patmo_idx_H2O) &
-        + krate(:,87)*n(:,patmo_idx_OH)*n(:,patmo_idx_CHO) &
-        + krate(:,93)*n(:,patmo_idx_OH)*n(:,patmo_idx_H2) &
-        + krate(:,133)*n(:,patmo_idx_O2)*n(:,patmo_idx_CH2) &
-        - krate(:,143)*n(:,patmo_idx_H2O)*n(:,patmo_idx_CH) &
-        + krate(:,150)*n(:,patmo_idx_CH3OH)*n(:,patmo_idx_H) &
-        + krate(:,153)*n(:,patmo_idx_CH3OH)*n(:,patmo_idx_OH) &
-        + krate(:,154)*n(:,patmo_idx_CH3OH)*n(:,patmo_idx_OH) &
-        + krate(:,155)*n(:,patmo_idx_CH3OH)*n(:,patmo_idx_OH) &
-        + krate(:,164)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_OH) &
-        + krate(:,178)*n(:,patmo_idx_NH2)*n(:,patmo_idx_NO) &
-        + krate(:,181)*n(:,patmo_idx_NH3)*n(:,patmo_idx_OH) &
-        + krate(:,192)*n(:,patmo_idx_OH)*n(:,patmo_idx_NH2) &
-        + krate(:,201)*n(:,patmo_idx_HOCO)*n(:,patmo_idx_OH) &
-        + krate(:,202)*n(:,patmo_idx_HOCO)*n(:,patmo_idx_CH3) &
-        + krate(:,204)*n(:,patmo_idx_HOCO)*n(:,patmo_idx_H) &
-        - krate(:,221)*n(:,patmo_idx_H2O) &
-        - krate(:,222)*n(:,patmo_idx_H2O) &
-        - krate(:,262)*n(:,patmo_idx_H2O)*n(:,patmo_idx_O2) &
-        + krate(:,263)*n(:,patmo_idx_OH)*n(:,patmo_idx_OH) &
-        + krate(:,264)*n(:,patmo_idx_OH)*n(:,patmo_idx_H2) &
-        - krate(:,273)*n(:,patmo_idx_NO3)*n(:,patmo_idx_H2O)*n(:,patmo_idx_M) &
-        - krate(:,280)*n(:,patmo_idx_O)*n(:,patmo_idx_H2O) &
-        - krate(:,282)*n(:,patmo_idx_CH3)*n(:,patmo_idx_H2O) &
-        - krate(:,286)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_OH)*n(:,patmo_idx_H2O) &
-        - krate(:,287)*n(:,patmo_idx_CH3O2)*n(:,patmo_idx_H2O) &
-        - krate(:,289)*n(:,patmo_idx_CHO)*n(:,patmo_idx_H2O) &
-        - krate(:,293)*n(:,patmo_idx_HO2)*n(:,patmo_idx_H2O) &
-        - krate(:,301)*n(:,patmo_idx_H2O)*n(:,patmo_idx_SH) &
-        - krate(:,304)*n(:,patmo_idx_H2O)*n(:,patmo_idx_HSO) &
-        + krate(:,324)*n(:,patmo_idx_H2SO4) &
-        - krate(:,340)*n(:,patmo_idx_H2O)*n(:,patmo_idx_CO) &
-        - krate(:,346)*n(:,patmo_idx_H)*n(:,patmo_idx_H2O) &
-        - krate(:,386)*n(:,patmo_idx_CO)*n(:,patmo_idx_H2O) &
-        + krate(:,396)*n(:,patmo_idx_H)*n(:,patmo_idx_CH2O) &
-        - krate(:,403)*n(:,patmo_idx_CH3)*n(:,patmo_idx_H2O) &
-        - krate(:,406)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_H2O) &
-        - krate(:,407)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_H2O) &
-        - krate(:,408)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H2O)*n(:,patmo_idx_H) &
-        - krate(:,417)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H2O) &
-        - krate(:,431)*n(:,patmo_idx_N2)*n(:,patmo_idx_H2O) &
-        - krate(:,434)*n(:,patmo_idx_NH2)*n(:,patmo_idx_H2O) &
-        - krate(:,445)*n(:,patmo_idx_H2O)*n(:,patmo_idx_NH) &
-        - krate(:,454)*n(:,patmo_idx_CO2)*n(:,patmo_idx_H2O) &
-        - krate(:,455)*n(:,patmo_idx_H2O)*n(:,patmo_idx_CH2CO) &
-        - krate(:,457)*n(:,patmo_idx_H2O)*n(:,patmo_idx_CO)
+        - krate(:,233)*n(:,patmo_idx_HO2) &
+        + krate(:,252)*n(:,patmo_idx_H2O2) &
+        - krate(:,274)*n(:,patmo_idx_HO2)*n(:,patmo_idx_O2) &
+        + krate(:,275)*n(:,patmo_idx_OH)*n(:,patmo_idx_O2)*n(:,patmo_idx_O2) &
+        + krate(:,276)*n(:,patmo_idx_H2O)*n(:,patmo_idx_O2) &
+        + krate(:,288)*n(:,patmo_idx_OH)*n(:,patmo_idx_NO2) &
+        - krate(:,291)*n(:,patmo_idx_HO2)*n(:,patmo_idx_M) &
+        + krate(:,292)*n(:,patmo_idx_OH)*n(:,patmo_idx_O2) &
+        + krate(:,293)*n(:,patmo_idx_OH)*n(:,patmo_idx_OH) &
+        + krate(:,294)*n(:,patmo_idx_O)*n(:,patmo_idx_H2O) &
+        + krate(:,295)*n(:,patmo_idx_H2)*n(:,patmo_idx_O2) &
+        + krate(:,298)*n(:,patmo_idx_CH3OOH)*n(:,patmo_idx_O2) &
+        - krate(:,302)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_HO2) &
+        - krate(:,304)*n(:,patmo_idx_CO)*n(:,patmo_idx_HO2) &
+        + krate(:,306)*n(:,patmo_idx_H2O2)*n(:,patmo_idx_O2)*n(:,patmo_idx_M) &
+        + krate(:,306)*n(:,patmo_idx_H2O2)*n(:,patmo_idx_O2)*n(:,patmo_idx_M) &
+        - krate(:,307)*n(:,patmo_idx_HO2)*n(:,patmo_idx_H2O) &
+        + krate(:,318)*n(:,patmo_idx_H2O)*n(:,patmo_idx_HSO) &
+        + krate(:,330)*n(:,patmo_idx_OH)*n(:,patmo_idx_SO3) &
+        - krate(:,336)*n(:,patmo_idx_HO2)*n(:,patmo_idx_SO2) &
+        - krate(:,337)*n(:,patmo_idx_HO2)*n(:,patmo_idx_SO3) &
+        + krate(:,361)*n(:,patmo_idx_SO2)*n(:,patmo_idx_OH) &
+        - krate(:,380)*n(:,patmo_idx_CH4)*n(:,patmo_idx_HO2) &
+        + krate(:,384)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_OH) &
+        + krate(:,385)*n(:,patmo_idx_CH4)*n(:,patmo_idx_O2) &
+        - krate(:,430)*n(:,patmo_idx_CH3OH)*n(:,patmo_idx_HO2) &
+        + krate(:,432)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H2O2) &
+        - krate(:,481)*n(:,patmo_idx_HO2)*n(:,patmo_idx_CO2)
 
     dn(:,patmo_idx_H) = &
         - krate(:,11)*n(:,patmo_idx_H2O)*n(:,patmo_idx_H) &
@@ -736,76 +707,85 @@ contains
         + krate(:,212)*n(:,patmo_idx_O)*n(:,patmo_idx_H2) &
         - krate(:,213)*n(:,patmo_idx_H)*n(:,patmo_idx_H) &
         - krate(:,213)*n(:,patmo_idx_H)*n(:,patmo_idx_H) &
-        + krate(:,218)*n(:,patmo_idx_OH) &
-        + krate(:,219)*n(:,patmo_idx_OH) &
-        + krate(:,221)*n(:,patmo_idx_H2O) &
-        + krate(:,223)*n(:,patmo_idx_H2) &
-        + krate(:,223)*n(:,patmo_idx_H2) &
-        + krate(:,231)*n(:,patmo_idx_HNO3) &
-        + krate(:,232)*n(:,patmo_idx_CH4) &
-        + krate(:,234)*n(:,patmo_idx_CH2O) &
-        + krate(:,236)*n(:,patmo_idx_CHO) &
-        + krate(:,239)*n(:,patmo_idx_H2O2) &
-        + krate(:,243)*n(:,patmo_idx_H2S) &
-        + krate(:,248)*n(:,patmo_idx_CH3OH) &
-        + krate(:,251)*n(:,patmo_idx_N2H4) &
-        + krate(:,252)*n(:,patmo_idx_NH3) &
-        + krate(:,264)*n(:,patmo_idx_OH)*n(:,patmo_idx_H2) &
-        + krate(:,275)*n(:,patmo_idx_OH)*n(:,patmo_idx_O2) &
-        - krate(:,276)*n(:,patmo_idx_H)*n(:,patmo_idx_O2) &
-        + krate(:,277)*n(:,patmo_idx_HO2)*n(:,patmo_idx_M) &
-        + krate(:,279)*n(:,patmo_idx_OH)*n(:,patmo_idx_OH) &
-        + krate(:,280)*n(:,patmo_idx_O)*n(:,patmo_idx_H2O) &
-        + krate(:,281)*n(:,patmo_idx_H2)*n(:,patmo_idx_O2) &
-        - krate(:,291)*n(:,patmo_idx_CO2)*n(:,patmo_idx_H)*n(:,patmo_idx_M) &
-        + krate(:,303)*n(:,patmo_idx_H2)*n(:,patmo_idx_SH) &
-        - krate(:,305)*n(:,patmo_idx_H)*n(:,patmo_idx_SO) &
-        - krate(:,311)*n(:,patmo_idx_SO2)*n(:,patmo_idx_H) &
-        - krate(:,315)*n(:,patmo_idx_H)*n(:,patmo_idx_SO) &
-        - krate(:,332)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_H) &
-        + krate(:,337)*n(:,patmo_idx_CHO)*n(:,patmo_idx_M) &
-        + krate(:,338)*n(:,patmo_idx_H2)*n(:,patmo_idx_CO) &
-        - krate(:,341)*n(:,patmo_idx_H)*n(:,patmo_idx_CO2) &
-        + krate(:,343)*n(:,patmo_idx_H2)*n(:,patmo_idx_CHO) &
-        - krate(:,345)*n(:,patmo_idx_H)*n(:,patmo_idx_OH) &
-        - krate(:,346)*n(:,patmo_idx_H)*n(:,patmo_idx_H2O) &
-        + krate(:,353)*n(:,patmo_idx_H2)*n(:,patmo_idx_S) &
-        - krate(:,363)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H) &
-        + krate(:,364)*n(:,patmo_idx_CH4)*n(:,patmo_idx_M) &
-        - krate(:,367)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_H) &
-        - krate(:,374)*n(:,patmo_idx_H)*n(:,patmo_idx_CH2) &
-        - krate(:,379)*n(:,patmo_idx_CH4)*n(:,patmo_idx_H) &
-        - krate(:,380)*n(:,patmo_idx_CHO)*n(:,patmo_idx_H) &
-        - krate(:,381)*n(:,patmo_idx_H)*n(:,patmo_idx_H)*n(:,patmo_idx_CO) &
-        - krate(:,381)*n(:,patmo_idx_H)*n(:,patmo_idx_H)*n(:,patmo_idx_CO) &
-        + krate(:,383)*n(:,patmo_idx_H2)*n(:,patmo_idx_CH) &
-        - krate(:,384)*n(:,patmo_idx_H)*n(:,patmo_idx_H)*n(:,patmo_idx_CO2) &
-        - krate(:,384)*n(:,patmo_idx_H)*n(:,patmo_idx_H)*n(:,patmo_idx_CO2) &
-        - krate(:,388)*n(:,patmo_idx_H)*n(:,patmo_idx_CH2O) &
-        - krate(:,392)*n(:,patmo_idx_H)*n(:,patmo_idx_CO) &
-        - krate(:,396)*n(:,patmo_idx_H)*n(:,patmo_idx_CH2O) &
-        - krate(:,397)*n(:,patmo_idx_H)*n(:,patmo_idx_CH2) &
-        + krate(:,403)*n(:,patmo_idx_CH3)*n(:,patmo_idx_H2O) &
-        + krate(:,404)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_H2) &
-        + krate(:,405)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_H2) &
-        - krate(:,408)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H2O)*n(:,patmo_idx_H) &
-        + krate(:,413)*n(:,patmo_idx_CH3)*n(:,patmo_idx_OH) &
-        + krate(:,414)*n(:,patmo_idx_CH3OH) &
-        + krate(:,415)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H2) &
-        + krate(:,424)*n(:,patmo_idx_NO)*n(:,patmo_idx_OH) &
-        + krate(:,427)*n(:,patmo_idx_N2H3)*n(:,patmo_idx_H2) &
-        + krate(:,428)*n(:,patmo_idx_NH2)*n(:,patmo_idx_NH2) &
-        + krate(:,435)*n(:,patmo_idx_NH3)*n(:,patmo_idx_M) &
-        - krate(:,436)*n(:,patmo_idx_N2O)*n(:,patmo_idx_H) &
-        - krate(:,437)*n(:,patmo_idx_NO)*n(:,patmo_idx_H) &
-        + krate(:,439)*n(:,patmo_idx_CO)*n(:,patmo_idx_SH) &
-        - krate(:,442)*n(:,patmo_idx_COS)*n(:,patmo_idx_H) &
-        + krate(:,449)*n(:,patmo_idx_NH)*n(:,patmo_idx_M) &
-        + krate(:,457)*n(:,patmo_idx_H2O)*n(:,patmo_idx_CO) &
-        + krate(:,458)*n(:,patmo_idx_H2)*n(:,patmo_idx_CO2) &
-        - krate(:,465)*n(:,patmo_idx_OH)*n(:,patmo_idx_H) &
-        + krate(:,466)*n(:,patmo_idx_H2) &
-        + krate(:,466)*n(:,patmo_idx_H2)
+        + krate(:,216)*n(:,patmo_idx_CH4)*n(:,patmo_idx_N) &
+        + krate(:,218)*n(:,patmo_idx_CH)*n(:,patmo_idx_N) &
+        + krate(:,219)*n(:,patmo_idx_CH3)*n(:,patmo_idx_N) &
+        + krate(:,219)*n(:,patmo_idx_CH3)*n(:,patmo_idx_N) &
+        + krate(:,231)*n(:,patmo_idx_OH) &
+        + krate(:,232)*n(:,patmo_idx_OH) &
+        + krate(:,234)*n(:,patmo_idx_H2O) &
+        + krate(:,236)*n(:,patmo_idx_H2) &
+        + krate(:,236)*n(:,patmo_idx_H2) &
+        + krate(:,244)*n(:,patmo_idx_HNO3) &
+        + krate(:,245)*n(:,patmo_idx_CH4) &
+        + krate(:,247)*n(:,patmo_idx_CH2O) &
+        + krate(:,249)*n(:,patmo_idx_CHO) &
+        + krate(:,252)*n(:,patmo_idx_H2O2) &
+        + krate(:,256)*n(:,patmo_idx_H2S) &
+        + krate(:,261)*n(:,patmo_idx_CH3OH) &
+        + krate(:,264)*n(:,patmo_idx_N2H4) &
+        + krate(:,265)*n(:,patmo_idx_NH3) &
+        + krate(:,267)*n(:,patmo_idx_HCN) &
+        + krate(:,278)*n(:,patmo_idx_OH)*n(:,patmo_idx_H2) &
+        + krate(:,289)*n(:,patmo_idx_OH)*n(:,patmo_idx_O2) &
+        - krate(:,290)*n(:,patmo_idx_H)*n(:,patmo_idx_O2) &
+        + krate(:,291)*n(:,patmo_idx_HO2)*n(:,patmo_idx_M) &
+        + krate(:,293)*n(:,patmo_idx_OH)*n(:,patmo_idx_OH) &
+        + krate(:,294)*n(:,patmo_idx_O)*n(:,patmo_idx_H2O) &
+        + krate(:,295)*n(:,patmo_idx_H2)*n(:,patmo_idx_O2) &
+        - krate(:,305)*n(:,patmo_idx_CO2)*n(:,patmo_idx_H)*n(:,patmo_idx_M) &
+        + krate(:,317)*n(:,patmo_idx_H2)*n(:,patmo_idx_SH) &
+        - krate(:,319)*n(:,patmo_idx_H)*n(:,patmo_idx_SO) &
+        - krate(:,325)*n(:,patmo_idx_SO2)*n(:,patmo_idx_H) &
+        - krate(:,329)*n(:,patmo_idx_H)*n(:,patmo_idx_SO) &
+        - krate(:,346)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_H) &
+        + krate(:,351)*n(:,patmo_idx_CHO)*n(:,patmo_idx_M) &
+        + krate(:,352)*n(:,patmo_idx_H2)*n(:,patmo_idx_CO) &
+        - krate(:,355)*n(:,patmo_idx_H)*n(:,patmo_idx_CO2) &
+        + krate(:,357)*n(:,patmo_idx_H2)*n(:,patmo_idx_CHO) &
+        - krate(:,359)*n(:,patmo_idx_H)*n(:,patmo_idx_OH) &
+        - krate(:,360)*n(:,patmo_idx_H)*n(:,patmo_idx_H2O) &
+        + krate(:,367)*n(:,patmo_idx_H2)*n(:,patmo_idx_S) &
+        - krate(:,377)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H) &
+        + krate(:,378)*n(:,patmo_idx_CH4)*n(:,patmo_idx_M) &
+        - krate(:,381)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_H) &
+        - krate(:,388)*n(:,patmo_idx_H)*n(:,patmo_idx_CH2) &
+        - krate(:,393)*n(:,patmo_idx_CH4)*n(:,patmo_idx_H) &
+        - krate(:,394)*n(:,patmo_idx_CHO)*n(:,patmo_idx_H) &
+        - krate(:,395)*n(:,patmo_idx_H)*n(:,patmo_idx_H)*n(:,patmo_idx_CO) &
+        - krate(:,395)*n(:,patmo_idx_H)*n(:,patmo_idx_H)*n(:,patmo_idx_CO) &
+        + krate(:,397)*n(:,patmo_idx_H2)*n(:,patmo_idx_CH) &
+        - krate(:,398)*n(:,patmo_idx_H)*n(:,patmo_idx_H)*n(:,patmo_idx_CO2) &
+        - krate(:,398)*n(:,patmo_idx_H)*n(:,patmo_idx_H)*n(:,patmo_idx_CO2) &
+        - krate(:,402)*n(:,patmo_idx_H)*n(:,patmo_idx_CH2O) &
+        - krate(:,406)*n(:,patmo_idx_H)*n(:,patmo_idx_CO) &
+        - krate(:,410)*n(:,patmo_idx_H)*n(:,patmo_idx_CH2O) &
+        - krate(:,411)*n(:,patmo_idx_H)*n(:,patmo_idx_CH2) &
+        + krate(:,417)*n(:,patmo_idx_CH3)*n(:,patmo_idx_H2O) &
+        + krate(:,418)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_H2) &
+        + krate(:,419)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_H2) &
+        - krate(:,422)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H2O)*n(:,patmo_idx_H) &
+        + krate(:,427)*n(:,patmo_idx_CH3)*n(:,patmo_idx_OH) &
+        + krate(:,428)*n(:,patmo_idx_CH3OH) &
+        + krate(:,429)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H2) &
+        + krate(:,438)*n(:,patmo_idx_NO)*n(:,patmo_idx_OH) &
+        + krate(:,441)*n(:,patmo_idx_N2H3)*n(:,patmo_idx_H2) &
+        + krate(:,442)*n(:,patmo_idx_NH2)*n(:,patmo_idx_NH2) &
+        + krate(:,449)*n(:,patmo_idx_NH3)*n(:,patmo_idx_M) &
+        - krate(:,450)*n(:,patmo_idx_N2O)*n(:,patmo_idx_H) &
+        - krate(:,451)*n(:,patmo_idx_NO)*n(:,patmo_idx_H) &
+        + krate(:,453)*n(:,patmo_idx_CO)*n(:,patmo_idx_SH) &
+        - krate(:,456)*n(:,patmo_idx_COS)*n(:,patmo_idx_H) &
+        + krate(:,463)*n(:,patmo_idx_NH)*n(:,patmo_idx_M) &
+        + krate(:,471)*n(:,patmo_idx_H2O)*n(:,patmo_idx_CO) &
+        + krate(:,472)*n(:,patmo_idx_H2)*n(:,patmo_idx_CO2) &
+        - krate(:,479)*n(:,patmo_idx_OH)*n(:,patmo_idx_H) &
+        + krate(:,480)*n(:,patmo_idx_H2) &
+        + krate(:,480)*n(:,patmo_idx_H2) &
+        - krate(:,483)*n(:,patmo_idx_HCN)*n(:,patmo_idx_H2)*n(:,patmo_idx_H) &
+        - krate(:,485)*n(:,patmo_idx_CN)*n(:,patmo_idx_H) &
+        - krate(:,486)*n(:,patmo_idx_HCN)*n(:,patmo_idx_H)*n(:,patmo_idx_H) &
+        - krate(:,486)*n(:,patmo_idx_HCN)*n(:,patmo_idx_H)*n(:,patmo_idx_H)
 
     dn(:,patmo_idx_H2) = &
         + krate(:,11)*n(:,patmo_idx_H2O)*n(:,patmo_idx_H) &
@@ -831,33 +811,37 @@ contains
         + krate(:,205)*n(:,patmo_idx_HOCO)*n(:,patmo_idx_H) &
         - krate(:,212)*n(:,patmo_idx_O)*n(:,patmo_idx_H2) &
         + krate(:,213)*n(:,patmo_idx_H)*n(:,patmo_idx_H) &
-        + krate(:,222)*n(:,patmo_idx_H2O) &
-        - krate(:,223)*n(:,patmo_idx_H2) &
-        + krate(:,235)*n(:,patmo_idx_CH2O) &
-        + krate(:,253)*n(:,patmo_idx_NH3) &
-        - krate(:,264)*n(:,patmo_idx_OH)*n(:,patmo_idx_H2) &
-        - krate(:,281)*n(:,patmo_idx_H2)*n(:,patmo_idx_O2) &
-        - krate(:,303)*n(:,patmo_idx_H2)*n(:,patmo_idx_SH) &
-        - krate(:,333)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H2) &
-        - krate(:,338)*n(:,patmo_idx_H2)*n(:,patmo_idx_CO) &
-        - krate(:,343)*n(:,patmo_idx_H2)*n(:,patmo_idx_CHO) &
-        + krate(:,345)*n(:,patmo_idx_H)*n(:,patmo_idx_OH) &
-        + krate(:,346)*n(:,patmo_idx_H)*n(:,patmo_idx_H2O) &
-        - krate(:,353)*n(:,patmo_idx_H2)*n(:,patmo_idx_S) &
-        - krate(:,375)*n(:,patmo_idx_H2)*n(:,patmo_idx_CH) &
-        + krate(:,379)*n(:,patmo_idx_CH4)*n(:,patmo_idx_H) &
-        - krate(:,382)*n(:,patmo_idx_H2)*n(:,patmo_idx_CO) &
-        - krate(:,383)*n(:,patmo_idx_H2)*n(:,patmo_idx_CH) &
-        - krate(:,385)*n(:,patmo_idx_H2)*n(:,patmo_idx_CO2) &
-        + krate(:,397)*n(:,patmo_idx_H)*n(:,patmo_idx_CH2) &
-        + krate(:,398)*n(:,patmo_idx_CH3) &
-        - krate(:,404)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_H2) &
-        - krate(:,405)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_H2) &
-        - krate(:,415)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H2) &
-        - krate(:,427)*n(:,patmo_idx_N2H3)*n(:,patmo_idx_H2) &
-        - krate(:,458)*n(:,patmo_idx_H2)*n(:,patmo_idx_CO2) &
-        + krate(:,465)*n(:,patmo_idx_OH)*n(:,patmo_idx_H) &
-        - krate(:,466)*n(:,patmo_idx_H2)
+        + krate(:,216)*n(:,patmo_idx_CH4)*n(:,patmo_idx_N) &
+        + krate(:,224)*n(:,patmo_idx_CH2)*n(:,patmo_idx_CH2) &
+        + krate(:,235)*n(:,patmo_idx_H2O) &
+        - krate(:,236)*n(:,patmo_idx_H2) &
+        + krate(:,248)*n(:,patmo_idx_CH2O) &
+        + krate(:,266)*n(:,patmo_idx_NH3) &
+        - krate(:,278)*n(:,patmo_idx_OH)*n(:,patmo_idx_H2) &
+        - krate(:,295)*n(:,patmo_idx_H2)*n(:,patmo_idx_O2) &
+        - krate(:,317)*n(:,patmo_idx_H2)*n(:,patmo_idx_SH) &
+        - krate(:,347)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H2) &
+        - krate(:,352)*n(:,patmo_idx_H2)*n(:,patmo_idx_CO) &
+        - krate(:,357)*n(:,patmo_idx_H2)*n(:,patmo_idx_CHO) &
+        + krate(:,359)*n(:,patmo_idx_H)*n(:,patmo_idx_OH) &
+        + krate(:,360)*n(:,patmo_idx_H)*n(:,patmo_idx_H2O) &
+        - krate(:,367)*n(:,patmo_idx_H2)*n(:,patmo_idx_S) &
+        - krate(:,389)*n(:,patmo_idx_H2)*n(:,patmo_idx_CH) &
+        + krate(:,393)*n(:,patmo_idx_CH4)*n(:,patmo_idx_H) &
+        - krate(:,396)*n(:,patmo_idx_H2)*n(:,patmo_idx_CO) &
+        - krate(:,397)*n(:,patmo_idx_H2)*n(:,patmo_idx_CH) &
+        - krate(:,399)*n(:,patmo_idx_H2)*n(:,patmo_idx_CO2) &
+        + krate(:,411)*n(:,patmo_idx_H)*n(:,patmo_idx_CH2) &
+        + krate(:,412)*n(:,patmo_idx_CH3) &
+        - krate(:,418)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_H2) &
+        - krate(:,419)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_H2) &
+        - krate(:,429)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H2) &
+        - krate(:,441)*n(:,patmo_idx_N2H3)*n(:,patmo_idx_H2) &
+        - krate(:,472)*n(:,patmo_idx_H2)*n(:,patmo_idx_CO2) &
+        + krate(:,479)*n(:,patmo_idx_OH)*n(:,patmo_idx_H) &
+        - krate(:,480)*n(:,patmo_idx_H2) &
+        - krate(:,483)*n(:,patmo_idx_HCN)*n(:,patmo_idx_H2)*n(:,patmo_idx_H) &
+        - krate(:,491)*n(:,patmo_idx_C2H2)*n(:,patmo_idx_H2)
 
     dn(:,patmo_idx_N2O) = &
         + krate(:,12)*n(:,patmo_idx_O_1D)*n(:,patmo_idx_N2) &
@@ -865,12 +849,12 @@ contains
         - krate(:,14)*n(:,patmo_idx_O_1D)*n(:,patmo_idx_N2O) &
         + krate(:,183)*n(:,patmo_idx_NH)*n(:,patmo_idx_NO) &
         + krate(:,197)*n(:,patmo_idx_NO2)*n(:,patmo_idx_N) &
-        - krate(:,224)*n(:,patmo_idx_N2O) &
-        - krate(:,265)*n(:,patmo_idx_N2O) &
-        + krate(:,266)*n(:,patmo_idx_N2)*n(:,patmo_idx_O2) &
-        + krate(:,267)*n(:,patmo_idx_NO)*n(:,patmo_idx_NO) &
-        - krate(:,436)*n(:,patmo_idx_N2O)*n(:,patmo_idx_H) &
-        - krate(:,450)*n(:,patmo_idx_N2O)*n(:,patmo_idx_O)
+        - krate(:,237)*n(:,patmo_idx_N2O) &
+        - krate(:,279)*n(:,patmo_idx_N2O) &
+        + krate(:,280)*n(:,patmo_idx_N2)*n(:,patmo_idx_O2) &
+        + krate(:,281)*n(:,patmo_idx_NO)*n(:,patmo_idx_NO) &
+        - krate(:,450)*n(:,patmo_idx_N2O)*n(:,patmo_idx_H) &
+        - krate(:,464)*n(:,patmo_idx_N2O)*n(:,patmo_idx_O)
 
     dn(:,patmo_idx_NO) = &
         + krate(:,14)*n(:,patmo_idx_O_1D)*n(:,patmo_idx_N2O) &
@@ -893,29 +877,29 @@ contains
         + krate(:,184)*n(:,patmo_idx_NH)*n(:,patmo_idx_O) &
         + krate(:,188)*n(:,patmo_idx_CS)*n(:,patmo_idx_NO2) &
         + krate(:,195)*n(:,patmo_idx_O)*n(:,patmo_idx_N)*n(:,patmo_idx_M) &
-        + krate(:,225)*n(:,patmo_idx_NO2) &
-        + krate(:,226)*n(:,patmo_idx_NO3) &
-        + krate(:,229)*n(:,patmo_idx_N2O5) &
-        - krate(:,267)*n(:,patmo_idx_NO)*n(:,patmo_idx_NO) &
-        - krate(:,267)*n(:,patmo_idx_NO)*n(:,patmo_idx_NO) &
-        - krate(:,268)*n(:,patmo_idx_NO)*n(:,patmo_idx_O2) &
-        + krate(:,269)*n(:,patmo_idx_NO2)*n(:,patmo_idx_O2) &
-        + krate(:,274)*n(:,patmo_idx_OH)*n(:,patmo_idx_NO2) &
-        + krate(:,285)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_NO2) &
-        - krate(:,308)*n(:,patmo_idx_HSO)*n(:,patmo_idx_NO) &
-        - krate(:,312)*n(:,patmo_idx_SO2)*n(:,patmo_idx_NO) &
-        - krate(:,317)*n(:,patmo_idx_SO3)*n(:,patmo_idx_NO) &
-        - krate(:,321)*n(:,patmo_idx_NO)*n(:,patmo_idx_HSO2) &
-        - krate(:,393)*n(:,patmo_idx_CHO)*n(:,patmo_idx_NO) &
-        - krate(:,422)*n(:,patmo_idx_O)*n(:,patmo_idx_NO) &
-        + krate(:,423)*n(:,patmo_idx_N2)*n(:,patmo_idx_O) &
-        - krate(:,424)*n(:,patmo_idx_NO)*n(:,patmo_idx_OH) &
-        + krate(:,429)*n(:,patmo_idx_N2)*n(:,patmo_idx_OH) &
-        + krate(:,431)*n(:,patmo_idx_N2)*n(:,patmo_idx_H2O) &
-        + krate(:,436)*n(:,patmo_idx_N2O)*n(:,patmo_idx_H) &
-        - krate(:,437)*n(:,patmo_idx_NO)*n(:,patmo_idx_H) &
-        - krate(:,441)*n(:,patmo_idx_COS)*n(:,patmo_idx_NO) &
-        - krate(:,448)*n(:,patmo_idx_NO)*n(:,patmo_idx_M)
+        + krate(:,238)*n(:,patmo_idx_NO2) &
+        + krate(:,239)*n(:,patmo_idx_NO3) &
+        + krate(:,242)*n(:,patmo_idx_N2O5) &
+        - krate(:,281)*n(:,patmo_idx_NO)*n(:,patmo_idx_NO) &
+        - krate(:,281)*n(:,patmo_idx_NO)*n(:,patmo_idx_NO) &
+        - krate(:,282)*n(:,patmo_idx_NO)*n(:,patmo_idx_O2) &
+        + krate(:,283)*n(:,patmo_idx_NO2)*n(:,patmo_idx_O2) &
+        + krate(:,288)*n(:,patmo_idx_OH)*n(:,patmo_idx_NO2) &
+        + krate(:,299)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_NO2) &
+        - krate(:,322)*n(:,patmo_idx_HSO)*n(:,patmo_idx_NO) &
+        - krate(:,326)*n(:,patmo_idx_SO2)*n(:,patmo_idx_NO) &
+        - krate(:,331)*n(:,patmo_idx_SO3)*n(:,patmo_idx_NO) &
+        - krate(:,335)*n(:,patmo_idx_NO)*n(:,patmo_idx_HSO2) &
+        - krate(:,407)*n(:,patmo_idx_CHO)*n(:,patmo_idx_NO) &
+        - krate(:,436)*n(:,patmo_idx_O)*n(:,patmo_idx_NO) &
+        + krate(:,437)*n(:,patmo_idx_N2)*n(:,patmo_idx_O) &
+        - krate(:,438)*n(:,patmo_idx_NO)*n(:,patmo_idx_OH) &
+        + krate(:,443)*n(:,patmo_idx_N2)*n(:,patmo_idx_OH) &
+        + krate(:,445)*n(:,patmo_idx_N2)*n(:,patmo_idx_H2O) &
+        + krate(:,450)*n(:,patmo_idx_N2O)*n(:,patmo_idx_H) &
+        - krate(:,451)*n(:,patmo_idx_NO)*n(:,patmo_idx_H) &
+        - krate(:,455)*n(:,patmo_idx_COS)*n(:,patmo_idx_NO) &
+        - krate(:,462)*n(:,patmo_idx_NO)*n(:,patmo_idx_M)
 
     dn(:,patmo_idx_NO2) = &
         - krate(:,15)*n(:,patmo_idx_O)*n(:,patmo_idx_NO2) &
@@ -934,55 +918,55 @@ contains
         + krate(:,172)*n(:,patmo_idx_O)*n(:,patmo_idx_NO3) &
         - krate(:,188)*n(:,patmo_idx_CS)*n(:,patmo_idx_NO2) &
         - krate(:,197)*n(:,patmo_idx_NO2)*n(:,patmo_idx_N) &
-        - krate(:,225)*n(:,patmo_idx_NO2) &
-        + krate(:,227)*n(:,patmo_idx_NO3) &
-        + krate(:,228)*n(:,patmo_idx_N2O5) &
-        + krate(:,230)*n(:,patmo_idx_HNO3) &
-        + krate(:,268)*n(:,patmo_idx_NO)*n(:,patmo_idx_O2) &
-        - krate(:,269)*n(:,patmo_idx_NO2)*n(:,patmo_idx_O2) &
-        + krate(:,270)*n(:,patmo_idx_NO3)*n(:,patmo_idx_O2) &
-        + krate(:,271)*n(:,patmo_idx_N2O5)*n(:,patmo_idx_M) &
-        + krate(:,272)*n(:,patmo_idx_HNO3)*n(:,patmo_idx_M) &
-        - krate(:,274)*n(:,patmo_idx_OH)*n(:,patmo_idx_NO2) &
-        - krate(:,285)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_NO2) &
-        + krate(:,308)*n(:,patmo_idx_HSO)*n(:,patmo_idx_NO) &
-        + krate(:,312)*n(:,patmo_idx_SO2)*n(:,patmo_idx_NO) &
-        + krate(:,317)*n(:,patmo_idx_SO3)*n(:,patmo_idx_NO) &
-        + krate(:,321)*n(:,patmo_idx_NO)*n(:,patmo_idx_HSO2) &
-        + krate(:,393)*n(:,patmo_idx_CHO)*n(:,patmo_idx_NO) &
-        + krate(:,424)*n(:,patmo_idx_NO)*n(:,patmo_idx_OH) &
-        - krate(:,425)*n(:,patmo_idx_O2)*n(:,patmo_idx_NO2) &
-        + krate(:,441)*n(:,patmo_idx_COS)*n(:,patmo_idx_NO) &
-        + krate(:,450)*n(:,patmo_idx_N2O)*n(:,patmo_idx_O)
+        - krate(:,238)*n(:,patmo_idx_NO2) &
+        + krate(:,240)*n(:,patmo_idx_NO3) &
+        + krate(:,241)*n(:,patmo_idx_N2O5) &
+        + krate(:,243)*n(:,patmo_idx_HNO3) &
+        + krate(:,282)*n(:,patmo_idx_NO)*n(:,patmo_idx_O2) &
+        - krate(:,283)*n(:,patmo_idx_NO2)*n(:,patmo_idx_O2) &
+        + krate(:,284)*n(:,patmo_idx_NO3)*n(:,patmo_idx_O2) &
+        + krate(:,285)*n(:,patmo_idx_N2O5)*n(:,patmo_idx_M) &
+        + krate(:,286)*n(:,patmo_idx_HNO3)*n(:,patmo_idx_M) &
+        - krate(:,288)*n(:,patmo_idx_OH)*n(:,patmo_idx_NO2) &
+        - krate(:,299)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_NO2) &
+        + krate(:,322)*n(:,patmo_idx_HSO)*n(:,patmo_idx_NO) &
+        + krate(:,326)*n(:,patmo_idx_SO2)*n(:,patmo_idx_NO) &
+        + krate(:,331)*n(:,patmo_idx_SO3)*n(:,patmo_idx_NO) &
+        + krate(:,335)*n(:,patmo_idx_NO)*n(:,patmo_idx_HSO2) &
+        + krate(:,407)*n(:,patmo_idx_CHO)*n(:,patmo_idx_NO) &
+        + krate(:,438)*n(:,patmo_idx_NO)*n(:,patmo_idx_OH) &
+        - krate(:,439)*n(:,patmo_idx_O2)*n(:,patmo_idx_NO2) &
+        + krate(:,455)*n(:,patmo_idx_COS)*n(:,patmo_idx_NO) &
+        + krate(:,464)*n(:,patmo_idx_N2O)*n(:,patmo_idx_O)
 
     dn(:,patmo_idx_NO3) = &
         + krate(:,17)*n(:,patmo_idx_NO2)*n(:,patmo_idx_O3) &
         - krate(:,18)*n(:,patmo_idx_NO2)*n(:,patmo_idx_NO3)*n(:,patmo_idx_M) &
         + krate(:,20)*n(:,patmo_idx_HNO3)*n(:,patmo_idx_OH)*n(:,patmo_idx_M) &
         - krate(:,172)*n(:,patmo_idx_O)*n(:,patmo_idx_NO3) &
-        - krate(:,226)*n(:,patmo_idx_NO3) &
-        - krate(:,227)*n(:,patmo_idx_NO3) &
-        + krate(:,228)*n(:,patmo_idx_N2O5) &
-        + krate(:,229)*n(:,patmo_idx_N2O5) &
-        + krate(:,231)*n(:,patmo_idx_HNO3) &
-        - krate(:,270)*n(:,patmo_idx_NO3)*n(:,patmo_idx_O2) &
-        + krate(:,271)*n(:,patmo_idx_N2O5)*n(:,patmo_idx_M) &
-        - krate(:,273)*n(:,patmo_idx_NO3)*n(:,patmo_idx_H2O)*n(:,patmo_idx_M) &
-        + krate(:,425)*n(:,patmo_idx_O2)*n(:,patmo_idx_NO2)
+        - krate(:,239)*n(:,patmo_idx_NO3) &
+        - krate(:,240)*n(:,patmo_idx_NO3) &
+        + krate(:,241)*n(:,patmo_idx_N2O5) &
+        + krate(:,242)*n(:,patmo_idx_N2O5) &
+        + krate(:,244)*n(:,patmo_idx_HNO3) &
+        - krate(:,284)*n(:,patmo_idx_NO3)*n(:,patmo_idx_O2) &
+        + krate(:,285)*n(:,patmo_idx_N2O5)*n(:,patmo_idx_M) &
+        - krate(:,287)*n(:,patmo_idx_NO3)*n(:,patmo_idx_H2O)*n(:,patmo_idx_M) &
+        + krate(:,439)*n(:,patmo_idx_O2)*n(:,patmo_idx_NO2)
 
     dn(:,patmo_idx_N2O5) = &
         + krate(:,18)*n(:,patmo_idx_NO2)*n(:,patmo_idx_NO3)*n(:,patmo_idx_M) &
-        - krate(:,228)*n(:,patmo_idx_N2O5) &
-        - krate(:,229)*n(:,patmo_idx_N2O5) &
-        - krate(:,271)*n(:,patmo_idx_N2O5)*n(:,patmo_idx_M)
+        - krate(:,241)*n(:,patmo_idx_N2O5) &
+        - krate(:,242)*n(:,patmo_idx_N2O5) &
+        - krate(:,285)*n(:,patmo_idx_N2O5)*n(:,patmo_idx_M)
 
     dn(:,patmo_idx_HNO3) = &
         + krate(:,19)*n(:,patmo_idx_NO2)*n(:,patmo_idx_OH)*n(:,patmo_idx_M) &
         - krate(:,20)*n(:,patmo_idx_HNO3)*n(:,patmo_idx_OH)*n(:,patmo_idx_M) &
-        - krate(:,230)*n(:,patmo_idx_HNO3) &
-        - krate(:,231)*n(:,patmo_idx_HNO3) &
-        - krate(:,272)*n(:,patmo_idx_HNO3)*n(:,patmo_idx_M) &
-        + krate(:,273)*n(:,patmo_idx_NO3)*n(:,patmo_idx_H2O)*n(:,patmo_idx_M)
+        - krate(:,243)*n(:,patmo_idx_HNO3) &
+        - krate(:,244)*n(:,patmo_idx_HNO3) &
+        - krate(:,286)*n(:,patmo_idx_HNO3)*n(:,patmo_idx_M) &
+        + krate(:,287)*n(:,patmo_idx_NO3)*n(:,patmo_idx_H2O)*n(:,patmo_idx_M)
 
     dn(:,patmo_idx_CH4) = &
         - krate(:,29)*n(:,patmo_idx_CH4)*n(:,patmo_idx_OH) &
@@ -1003,25 +987,29 @@ contains
         + krate(:,185)*n(:,patmo_idx_CH3)*n(:,patmo_idx_H2S) &
         + krate(:,203)*n(:,patmo_idx_HOCO)*n(:,patmo_idx_CH3) &
         - krate(:,211)*n(:,patmo_idx_CH4)*n(:,patmo_idx_CH2) &
-        - krate(:,232)*n(:,patmo_idx_CH4) &
-        + krate(:,282)*n(:,patmo_idx_CH3)*n(:,patmo_idx_H2O) &
-        + krate(:,331)*n(:,patmo_idx_CH3)*n(:,patmo_idx_OH) &
-        + krate(:,332)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_H) &
-        + krate(:,333)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H2) &
-        - krate(:,364)*n(:,patmo_idx_CH4)*n(:,patmo_idx_M) &
-        - krate(:,366)*n(:,patmo_idx_CH4)*n(:,patmo_idx_HO2) &
-        - krate(:,368)*n(:,patmo_idx_CH4)*n(:,patmo_idx_O) &
-        - krate(:,371)*n(:,patmo_idx_CH4)*n(:,patmo_idx_O2) &
-        - krate(:,372)*n(:,patmo_idx_CH4)*n(:,patmo_idx_CO) &
-        - krate(:,373)*n(:,patmo_idx_CH4)*n(:,patmo_idx_CH2) &
-        - krate(:,376)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH4) &
-        - krate(:,377)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH4) &
-        - krate(:,379)*n(:,patmo_idx_CH4)*n(:,patmo_idx_H) &
-        - krate(:,409)*n(:,patmo_idx_CH4)*n(:,patmo_idx_CH3O) &
-        - krate(:,410)*n(:,patmo_idx_CH4)*n(:,patmo_idx_CH2OH) &
-        - krate(:,438)*n(:,patmo_idx_CH4)*n(:,patmo_idx_SH) &
-        - krate(:,456)*n(:,patmo_idx_CH4)*n(:,patmo_idx_CO2) &
-        + krate(:,464)*n(:,patmo_idx_CH3)*n(:,patmo_idx_CH3)
+        - krate(:,215)*n(:,patmo_idx_CN)*n(:,patmo_idx_CH4) &
+        - krate(:,216)*n(:,patmo_idx_CH4)*n(:,patmo_idx_N) &
+        - krate(:,245)*n(:,patmo_idx_CH4) &
+        + krate(:,296)*n(:,patmo_idx_CH3)*n(:,patmo_idx_H2O) &
+        + krate(:,345)*n(:,patmo_idx_CH3)*n(:,patmo_idx_OH) &
+        + krate(:,346)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_H) &
+        + krate(:,347)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H2) &
+        - krate(:,378)*n(:,patmo_idx_CH4)*n(:,patmo_idx_M) &
+        - krate(:,380)*n(:,patmo_idx_CH4)*n(:,patmo_idx_HO2) &
+        - krate(:,382)*n(:,patmo_idx_CH4)*n(:,patmo_idx_O) &
+        - krate(:,385)*n(:,patmo_idx_CH4)*n(:,patmo_idx_O2) &
+        - krate(:,386)*n(:,patmo_idx_CH4)*n(:,patmo_idx_CO) &
+        - krate(:,387)*n(:,patmo_idx_CH4)*n(:,patmo_idx_CH2) &
+        - krate(:,390)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH4) &
+        - krate(:,391)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH4) &
+        - krate(:,393)*n(:,patmo_idx_CH4)*n(:,patmo_idx_H) &
+        - krate(:,423)*n(:,patmo_idx_CH4)*n(:,patmo_idx_CH3O) &
+        - krate(:,424)*n(:,patmo_idx_CH4)*n(:,patmo_idx_CH2OH) &
+        - krate(:,452)*n(:,patmo_idx_CH4)*n(:,patmo_idx_SH) &
+        - krate(:,470)*n(:,patmo_idx_CH4)*n(:,patmo_idx_CO2) &
+        + krate(:,478)*n(:,patmo_idx_CH3)*n(:,patmo_idx_CH3) &
+        + krate(:,482)*n(:,patmo_idx_HCN)*n(:,patmo_idx_CH3) &
+        + krate(:,483)*n(:,patmo_idx_HCN)*n(:,patmo_idx_H2)*n(:,patmo_idx_H)
 
     dn(:,patmo_idx_CH3) = &
         + krate(:,29)*n(:,patmo_idx_CH4)*n(:,patmo_idx_OH) &
@@ -1060,44 +1048,50 @@ contains
         - krate(:,203)*n(:,patmo_idx_HOCO)*n(:,patmo_idx_CH3) &
         + krate(:,211)*n(:,patmo_idx_CH4)*n(:,patmo_idx_CH2) &
         + krate(:,211)*n(:,patmo_idx_CH4)*n(:,patmo_idx_CH2) &
-        + krate(:,232)*n(:,patmo_idx_CH4) &
-        + krate(:,247)*n(:,patmo_idx_CH3OH) &
-        - krate(:,282)*n(:,patmo_idx_CH3)*n(:,patmo_idx_H2O) &
-        + krate(:,283)*n(:,patmo_idx_CH3O2)*n(:,patmo_idx_M) &
-        - krate(:,331)*n(:,patmo_idx_CH3)*n(:,patmo_idx_OH) &
-        + krate(:,362)*n(:,patmo_idx_CH3O) &
-        + krate(:,363)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H) &
-        + krate(:,364)*n(:,patmo_idx_CH4)*n(:,patmo_idx_M) &
-        + krate(:,365)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_O2) &
-        + krate(:,366)*n(:,patmo_idx_CH4)*n(:,patmo_idx_HO2) &
-        + krate(:,367)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_H) &
-        + krate(:,368)*n(:,patmo_idx_CH4)*n(:,patmo_idx_O) &
-        + krate(:,369)*n(:,patmo_idx_CH3OH)*n(:,patmo_idx_M) &
-        + krate(:,370)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_OH) &
-        + krate(:,371)*n(:,patmo_idx_CH4)*n(:,patmo_idx_O2) &
-        + krate(:,372)*n(:,patmo_idx_CH4)*n(:,patmo_idx_CO) &
-        + krate(:,373)*n(:,patmo_idx_CH4)*n(:,patmo_idx_CH2) &
-        + krate(:,373)*n(:,patmo_idx_CH4)*n(:,patmo_idx_CH2) &
-        + krate(:,374)*n(:,patmo_idx_H)*n(:,patmo_idx_CH2) &
-        + krate(:,375)*n(:,patmo_idx_H2)*n(:,patmo_idx_CH) &
-        + krate(:,376)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH4) &
-        + krate(:,377)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH4) &
-        + krate(:,378)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_CH3O) &
-        + krate(:,379)*n(:,patmo_idx_CH4)*n(:,patmo_idx_H) &
-        - krate(:,389)*n(:,patmo_idx_CO)*n(:,patmo_idx_CH3) &
-        - krate(:,398)*n(:,patmo_idx_CH3) &
-        - krate(:,399)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_CH3) &
-        - krate(:,400)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_CH3) &
-        - krate(:,403)*n(:,patmo_idx_CH3)*n(:,patmo_idx_H2O) &
-        + krate(:,409)*n(:,patmo_idx_CH4)*n(:,patmo_idx_CH3O) &
-        + krate(:,410)*n(:,patmo_idx_CH4)*n(:,patmo_idx_CH2OH) &
-        - krate(:,411)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH3) &
-        - krate(:,413)*n(:,patmo_idx_CH3)*n(:,patmo_idx_OH) &
-        + krate(:,438)*n(:,patmo_idx_CH4)*n(:,patmo_idx_SH) &
-        + krate(:,455)*n(:,patmo_idx_H2O)*n(:,patmo_idx_CH2CO) &
-        + krate(:,456)*n(:,patmo_idx_CH4)*n(:,patmo_idx_CO2) &
-        - krate(:,464)*n(:,patmo_idx_CH3)*n(:,patmo_idx_CH3) &
-        - krate(:,464)*n(:,patmo_idx_CH3)*n(:,patmo_idx_CH3)
+        + krate(:,215)*n(:,patmo_idx_CN)*n(:,patmo_idx_CH4) &
+        - krate(:,219)*n(:,patmo_idx_CH3)*n(:,patmo_idx_N) &
+        + krate(:,223)*n(:,patmo_idx_C2H4)*n(:,patmo_idx_N) &
+        + krate(:,245)*n(:,patmo_idx_CH4) &
+        + krate(:,260)*n(:,patmo_idx_CH3OH) &
+        - krate(:,296)*n(:,patmo_idx_CH3)*n(:,patmo_idx_H2O) &
+        + krate(:,297)*n(:,patmo_idx_CH3O2)*n(:,patmo_idx_M) &
+        - krate(:,345)*n(:,patmo_idx_CH3)*n(:,patmo_idx_OH) &
+        + krate(:,376)*n(:,patmo_idx_CH3O) &
+        + krate(:,377)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H) &
+        + krate(:,378)*n(:,patmo_idx_CH4)*n(:,patmo_idx_M) &
+        + krate(:,379)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_O2) &
+        + krate(:,380)*n(:,patmo_idx_CH4)*n(:,patmo_idx_HO2) &
+        + krate(:,381)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_H) &
+        + krate(:,382)*n(:,patmo_idx_CH4)*n(:,patmo_idx_O) &
+        + krate(:,383)*n(:,patmo_idx_CH3OH)*n(:,patmo_idx_M) &
+        + krate(:,384)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_OH) &
+        + krate(:,385)*n(:,patmo_idx_CH4)*n(:,patmo_idx_O2) &
+        + krate(:,386)*n(:,patmo_idx_CH4)*n(:,patmo_idx_CO) &
+        + krate(:,387)*n(:,patmo_idx_CH4)*n(:,patmo_idx_CH2) &
+        + krate(:,387)*n(:,patmo_idx_CH4)*n(:,patmo_idx_CH2) &
+        + krate(:,388)*n(:,patmo_idx_H)*n(:,patmo_idx_CH2) &
+        + krate(:,389)*n(:,patmo_idx_H2)*n(:,patmo_idx_CH) &
+        + krate(:,390)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH4) &
+        + krate(:,391)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH4) &
+        + krate(:,392)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_CH3O) &
+        + krate(:,393)*n(:,patmo_idx_CH4)*n(:,patmo_idx_H) &
+        - krate(:,403)*n(:,patmo_idx_CO)*n(:,patmo_idx_CH3) &
+        - krate(:,412)*n(:,patmo_idx_CH3) &
+        - krate(:,413)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_CH3) &
+        - krate(:,414)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_CH3) &
+        - krate(:,417)*n(:,patmo_idx_CH3)*n(:,patmo_idx_H2O) &
+        + krate(:,423)*n(:,patmo_idx_CH4)*n(:,patmo_idx_CH3O) &
+        + krate(:,424)*n(:,patmo_idx_CH4)*n(:,patmo_idx_CH2OH) &
+        - krate(:,425)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH3) &
+        - krate(:,427)*n(:,patmo_idx_CH3)*n(:,patmo_idx_OH) &
+        + krate(:,452)*n(:,patmo_idx_CH4)*n(:,patmo_idx_SH) &
+        + krate(:,469)*n(:,patmo_idx_H2O)*n(:,patmo_idx_CH2CO) &
+        + krate(:,470)*n(:,patmo_idx_CH4)*n(:,patmo_idx_CO2) &
+        - krate(:,478)*n(:,patmo_idx_CH3)*n(:,patmo_idx_CH3) &
+        - krate(:,478)*n(:,patmo_idx_CH3)*n(:,patmo_idx_CH3) &
+        - krate(:,482)*n(:,patmo_idx_HCN)*n(:,patmo_idx_CH3) &
+        + krate(:,486)*n(:,patmo_idx_HCN)*n(:,patmo_idx_H)*n(:,patmo_idx_H) &
+        - krate(:,490)*n(:,patmo_idx_HCN)*n(:,patmo_idx_CH3)
 
     dn(:,patmo_idx_CH3O2) = &
         + krate(:,30)*n(:,patmo_idx_CH3)*n(:,patmo_idx_O2)*n(:,patmo_idx_M) &
@@ -1110,25 +1104,25 @@ contains
         - krate(:,82)*n(:,patmo_idx_CH3O2)*n(:,patmo_idx_CH3O2) &
         - krate(:,125)*n(:,patmo_idx_CH3O2)*n(:,patmo_idx_CH3) &
         - krate(:,137)*n(:,patmo_idx_CH3O2)*n(:,patmo_idx_CH2) &
-        - krate(:,283)*n(:,patmo_idx_CH3O2)*n(:,patmo_idx_M) &
-        + krate(:,284)*n(:,patmo_idx_CH3OOH)*n(:,patmo_idx_O2) &
-        + krate(:,285)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_NO2) &
-        - krate(:,287)*n(:,patmo_idx_CH3O2)*n(:,patmo_idx_H2O) &
-        + krate(:,334)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_O2) &
-        + krate(:,334)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_O2) &
-        + krate(:,335)*n(:,patmo_idx_CH3OH)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_O2) &
-        + krate(:,335)*n(:,patmo_idx_CH3OH)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_O2) &
-        + krate(:,378)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_CH3O) &
-        + krate(:,390)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH3O)
+        - krate(:,297)*n(:,patmo_idx_CH3O2)*n(:,patmo_idx_M) &
+        + krate(:,298)*n(:,patmo_idx_CH3OOH)*n(:,patmo_idx_O2) &
+        + krate(:,299)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_NO2) &
+        - krate(:,301)*n(:,patmo_idx_CH3O2)*n(:,patmo_idx_H2O) &
+        + krate(:,348)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_O2) &
+        + krate(:,348)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_O2) &
+        + krate(:,349)*n(:,patmo_idx_CH3OH)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_O2) &
+        + krate(:,349)*n(:,patmo_idx_CH3OH)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_O2) &
+        + krate(:,392)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_CH3O) &
+        + krate(:,404)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH3O)
 
     dn(:,patmo_idx_CH3OOH) = &
         + krate(:,31)*n(:,patmo_idx_CH3O2)*n(:,patmo_idx_HO2) &
         - krate(:,33)*n(:,patmo_idx_CH3OOH)*n(:,patmo_idx_OH) &
         - krate(:,34)*n(:,patmo_idx_CH3OOH)*n(:,patmo_idx_OH) &
-        - krate(:,233)*n(:,patmo_idx_CH3OOH) &
-        - krate(:,284)*n(:,patmo_idx_CH3OOH)*n(:,patmo_idx_O2) &
-        + krate(:,286)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_OH)*n(:,patmo_idx_H2O) &
-        + krate(:,287)*n(:,patmo_idx_CH3O2)*n(:,patmo_idx_H2O)
+        - krate(:,246)*n(:,patmo_idx_CH3OOH) &
+        - krate(:,298)*n(:,patmo_idx_CH3OOH)*n(:,patmo_idx_O2) &
+        + krate(:,300)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_OH)*n(:,patmo_idx_H2O) &
+        + krate(:,301)*n(:,patmo_idx_CH3O2)*n(:,patmo_idx_H2O)
 
     dn(:,patmo_idx_CH3O) = &
         + krate(:,32)*n(:,patmo_idx_CH3O2)*n(:,patmo_idx_NO) &
@@ -1149,26 +1143,26 @@ contains
         + krate(:,151)*n(:,patmo_idx_CH3OH)*n(:,patmo_idx_H) &
         + krate(:,153)*n(:,patmo_idx_CH3OH)*n(:,patmo_idx_OH) &
         + krate(:,156)*n(:,patmo_idx_CH3OH)*n(:,patmo_idx_CH3) &
-        + krate(:,233)*n(:,patmo_idx_CH3OOH) &
-        + krate(:,248)*n(:,patmo_idx_CH3OH) &
-        - krate(:,285)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_NO2) &
-        + krate(:,288)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_HO2) &
-        - krate(:,332)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_H) &
-        - krate(:,334)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_O2) &
-        - krate(:,334)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_O2) &
-        - krate(:,362)*n(:,patmo_idx_CH3O) &
-        - krate(:,365)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_O2) &
-        - krate(:,367)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_H) &
-        - krate(:,370)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_OH) &
-        + krate(:,376)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH4) &
-        - krate(:,378)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_CH3O) &
-        - krate(:,378)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_CH3O) &
-        - krate(:,390)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH3O) &
-        - krate(:,399)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_CH3) &
-        - krate(:,401)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_OH) &
-        - krate(:,404)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_H2) &
-        - krate(:,406)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_H2O) &
-        - krate(:,409)*n(:,patmo_idx_CH4)*n(:,patmo_idx_CH3O)
+        + krate(:,246)*n(:,patmo_idx_CH3OOH) &
+        + krate(:,261)*n(:,patmo_idx_CH3OH) &
+        - krate(:,299)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_NO2) &
+        + krate(:,302)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_HO2) &
+        - krate(:,346)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_H) &
+        - krate(:,348)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_O2) &
+        - krate(:,348)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_O2) &
+        - krate(:,376)*n(:,patmo_idx_CH3O) &
+        - krate(:,379)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_O2) &
+        - krate(:,381)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_H) &
+        - krate(:,384)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_OH) &
+        + krate(:,390)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH4) &
+        - krate(:,392)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_CH3O) &
+        - krate(:,392)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_CH3O) &
+        - krate(:,404)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH3O) &
+        - krate(:,413)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_CH3) &
+        - krate(:,415)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_OH) &
+        - krate(:,418)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_H2) &
+        - krate(:,420)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_H2O) &
+        - krate(:,423)*n(:,patmo_idx_CH4)*n(:,patmo_idx_CH3O)
 
     dn(:,patmo_idx_CH2O) = &
         + krate(:,33)*n(:,patmo_idx_CH3OOH)*n(:,patmo_idx_OH) &
@@ -1197,34 +1191,34 @@ contains
         + krate(:,167)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_CHO) &
         + krate(:,167)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_CHO) &
         + krate(:,168)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_CH2OH) &
-        - krate(:,234)*n(:,patmo_idx_CH2O) &
-        - krate(:,235)*n(:,patmo_idx_CH2O) &
-        - krate(:,286)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_OH)*n(:,patmo_idx_H2O) &
-        - krate(:,288)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_HO2) &
-        + krate(:,289)*n(:,patmo_idx_CHO)*n(:,patmo_idx_H2O) &
-        - krate(:,333)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H2) &
-        - krate(:,335)*n(:,patmo_idx_CH3OH)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_O2) &
-        - krate(:,339)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CO) &
-        + krate(:,343)*n(:,patmo_idx_H2)*n(:,patmo_idx_CHO) &
-        + krate(:,344)*n(:,patmo_idx_OH)*n(:,patmo_idx_CHO) &
-        + krate(:,354)*n(:,patmo_idx_H2S)*n(:,patmo_idx_CHO) &
-        - krate(:,363)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H) &
-        - krate(:,376)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH4) &
-        - krate(:,377)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH4) &
-        - krate(:,387)*n(:,patmo_idx_O)*n(:,patmo_idx_CH2O) &
-        - krate(:,388)*n(:,patmo_idx_H)*n(:,patmo_idx_CH2O) &
-        - krate(:,390)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH3O) &
-        - krate(:,391)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CO) &
-        - krate(:,396)*n(:,patmo_idx_H)*n(:,patmo_idx_CH2O) &
-        - krate(:,408)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H2O)*n(:,patmo_idx_H) &
-        - krate(:,411)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH3) &
-        - krate(:,412)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_OH) &
-        - krate(:,415)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H2) &
-        - krate(:,417)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H2O) &
-        - krate(:,418)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H2O2) &
-        - krate(:,420)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH2O) &
-        - krate(:,420)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH2O) &
-        - krate(:,421)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH3OH)
+        - krate(:,247)*n(:,patmo_idx_CH2O) &
+        - krate(:,248)*n(:,patmo_idx_CH2O) &
+        - krate(:,300)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_OH)*n(:,patmo_idx_H2O) &
+        - krate(:,302)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_HO2) &
+        + krate(:,303)*n(:,patmo_idx_CHO)*n(:,patmo_idx_H2O) &
+        - krate(:,347)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H2) &
+        - krate(:,349)*n(:,patmo_idx_CH3OH)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_O2) &
+        - krate(:,353)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CO) &
+        + krate(:,357)*n(:,patmo_idx_H2)*n(:,patmo_idx_CHO) &
+        + krate(:,358)*n(:,patmo_idx_OH)*n(:,patmo_idx_CHO) &
+        + krate(:,368)*n(:,patmo_idx_H2S)*n(:,patmo_idx_CHO) &
+        - krate(:,377)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H) &
+        - krate(:,390)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH4) &
+        - krate(:,391)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH4) &
+        - krate(:,401)*n(:,patmo_idx_O)*n(:,patmo_idx_CH2O) &
+        - krate(:,402)*n(:,patmo_idx_H)*n(:,patmo_idx_CH2O) &
+        - krate(:,404)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH3O) &
+        - krate(:,405)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CO) &
+        - krate(:,410)*n(:,patmo_idx_H)*n(:,patmo_idx_CH2O) &
+        - krate(:,422)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H2O)*n(:,patmo_idx_H) &
+        - krate(:,425)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH3) &
+        - krate(:,426)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_OH) &
+        - krate(:,429)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H2) &
+        - krate(:,431)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H2O) &
+        - krate(:,432)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H2O2) &
+        - krate(:,434)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH2O) &
+        - krate(:,434)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH2O) &
+        - krate(:,435)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH3OH)
 
     dn(:,patmo_idx_CHO) = &
         + krate(:,36)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_OH) &
@@ -1246,27 +1240,27 @@ contains
         + krate(:,141)*n(:,patmo_idx_O2)*n(:,patmo_idx_CH) &
         - krate(:,166)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_CHO) &
         - krate(:,167)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_CHO) &
-        + krate(:,234)*n(:,patmo_idx_CH2O) &
-        - krate(:,236)*n(:,patmo_idx_CHO) &
-        - krate(:,289)*n(:,patmo_idx_CHO)*n(:,patmo_idx_H2O) &
-        + krate(:,290)*n(:,patmo_idx_CO)*n(:,patmo_idx_HO2) &
-        - krate(:,337)*n(:,patmo_idx_CHO)*n(:,patmo_idx_M) &
-        + krate(:,338)*n(:,patmo_idx_H2)*n(:,patmo_idx_CO) &
-        + krate(:,339)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CO) &
-        + krate(:,339)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CO) &
-        + krate(:,340)*n(:,patmo_idx_H2O)*n(:,patmo_idx_CO) &
-        + krate(:,341)*n(:,patmo_idx_H)*n(:,patmo_idx_CO2) &
-        + krate(:,342)*n(:,patmo_idx_OH)*n(:,patmo_idx_CO) &
-        - krate(:,343)*n(:,patmo_idx_H2)*n(:,patmo_idx_CHO) &
-        - krate(:,344)*n(:,patmo_idx_OH)*n(:,patmo_idx_CHO) &
-        - krate(:,354)*n(:,patmo_idx_H2S)*n(:,patmo_idx_CHO) &
-        + krate(:,372)*n(:,patmo_idx_CH4)*n(:,patmo_idx_CO) &
-        - krate(:,380)*n(:,patmo_idx_CHO)*n(:,patmo_idx_H) &
-        + krate(:,389)*n(:,patmo_idx_CO)*n(:,patmo_idx_CH3) &
-        - krate(:,393)*n(:,patmo_idx_CHO)*n(:,patmo_idx_NO) &
-        - krate(:,394)*n(:,patmo_idx_O)*n(:,patmo_idx_CHO) &
-        + krate(:,419)*n(:,patmo_idx_CH3OH)*n(:,patmo_idx_CO) &
-        + krate(:,420)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH2O)
+        + krate(:,247)*n(:,patmo_idx_CH2O) &
+        - krate(:,249)*n(:,patmo_idx_CHO) &
+        - krate(:,303)*n(:,patmo_idx_CHO)*n(:,patmo_idx_H2O) &
+        + krate(:,304)*n(:,patmo_idx_CO)*n(:,patmo_idx_HO2) &
+        - krate(:,351)*n(:,patmo_idx_CHO)*n(:,patmo_idx_M) &
+        + krate(:,352)*n(:,patmo_idx_H2)*n(:,patmo_idx_CO) &
+        + krate(:,353)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CO) &
+        + krate(:,353)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CO) &
+        + krate(:,354)*n(:,patmo_idx_H2O)*n(:,patmo_idx_CO) &
+        + krate(:,355)*n(:,patmo_idx_H)*n(:,patmo_idx_CO2) &
+        + krate(:,356)*n(:,patmo_idx_OH)*n(:,patmo_idx_CO) &
+        - krate(:,357)*n(:,patmo_idx_H2)*n(:,patmo_idx_CHO) &
+        - krate(:,358)*n(:,patmo_idx_OH)*n(:,patmo_idx_CHO) &
+        - krate(:,368)*n(:,patmo_idx_H2S)*n(:,patmo_idx_CHO) &
+        + krate(:,386)*n(:,patmo_idx_CH4)*n(:,patmo_idx_CO) &
+        - krate(:,394)*n(:,patmo_idx_CHO)*n(:,patmo_idx_H) &
+        + krate(:,403)*n(:,patmo_idx_CO)*n(:,patmo_idx_CH3) &
+        - krate(:,407)*n(:,patmo_idx_CHO)*n(:,patmo_idx_NO) &
+        - krate(:,408)*n(:,patmo_idx_O)*n(:,patmo_idx_CHO) &
+        + krate(:,433)*n(:,patmo_idx_CH3OH)*n(:,patmo_idx_CO) &
+        + krate(:,434)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH2O)
 
     dn(:,patmo_idx_CO) = &
         + krate(:,37)*n(:,patmo_idx_CHO)*n(:,patmo_idx_O2) &
@@ -1295,36 +1289,38 @@ contains
         - krate(:,199)*n(:,patmo_idx_OH)*n(:,patmo_idx_CO)*n(:,patmo_idx_M) &
         + krate(:,204)*n(:,patmo_idx_HOCO)*n(:,patmo_idx_H) &
         - krate(:,206)*n(:,patmo_idx_HOCO)*n(:,patmo_idx_CO) &
-        + krate(:,235)*n(:,patmo_idx_CH2O) &
-        + krate(:,236)*n(:,patmo_idx_CHO) &
-        + krate(:,237)*n(:,patmo_idx_CO2) &
-        + krate(:,240)*n(:,patmo_idx_COS) &
-        - krate(:,290)*n(:,patmo_idx_CO)*n(:,patmo_idx_HO2) &
-        + krate(:,291)*n(:,patmo_idx_CO2)*n(:,patmo_idx_H)*n(:,patmo_idx_M) &
-        - krate(:,295)*n(:,patmo_idx_CO)*n(:,patmo_idx_SO) &
-        - krate(:,300)*n(:,patmo_idx_CO)*n(:,patmo_idx_S) &
-        + krate(:,336)*n(:,patmo_idx_CO2)*n(:,patmo_idx_M) &
-        + krate(:,337)*n(:,patmo_idx_CHO)*n(:,patmo_idx_M) &
-        - krate(:,338)*n(:,patmo_idx_H2)*n(:,patmo_idx_CO) &
-        - krate(:,339)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CO) &
-        - krate(:,340)*n(:,patmo_idx_H2O)*n(:,patmo_idx_CO) &
-        - krate(:,342)*n(:,patmo_idx_OH)*n(:,patmo_idx_CO) &
-        - krate(:,372)*n(:,patmo_idx_CH4)*n(:,patmo_idx_CO) &
-        - krate(:,381)*n(:,patmo_idx_H)*n(:,patmo_idx_H)*n(:,patmo_idx_CO) &
-        - krate(:,382)*n(:,patmo_idx_H2)*n(:,patmo_idx_CO) &
-        - krate(:,386)*n(:,patmo_idx_CO)*n(:,patmo_idx_H2O) &
-        - krate(:,389)*n(:,patmo_idx_CO)*n(:,patmo_idx_CH3) &
-        - krate(:,391)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CO) &
-        - krate(:,392)*n(:,patmo_idx_H)*n(:,patmo_idx_CO) &
-        - krate(:,395)*n(:,patmo_idx_OH)*n(:,patmo_idx_CO) &
-        - krate(:,419)*n(:,patmo_idx_CH3OH)*n(:,patmo_idx_CO) &
-        - krate(:,439)*n(:,patmo_idx_CO)*n(:,patmo_idx_SH) &
-        - krate(:,440)*n(:,patmo_idx_CO)*n(:,patmo_idx_S2) &
-        + krate(:,442)*n(:,patmo_idx_COS)*n(:,patmo_idx_H) &
-        - krate(:,443)*n(:,patmo_idx_CO)*n(:,patmo_idx_S2) &
-        + krate(:,452)*n(:,patmo_idx_HOCO)*n(:,patmo_idx_M) &
-        - krate(:,457)*n(:,patmo_idx_H2O)*n(:,patmo_idx_CO) &
-        + krate(:,459)*n(:,patmo_idx_COCOOH)
+        + krate(:,221)*n(:,patmo_idx_HCN)*n(:,patmo_idx_O) &
+        + krate(:,248)*n(:,patmo_idx_CH2O) &
+        + krate(:,249)*n(:,patmo_idx_CHO) &
+        + krate(:,250)*n(:,patmo_idx_CO2) &
+        + krate(:,253)*n(:,patmo_idx_COS) &
+        - krate(:,304)*n(:,patmo_idx_CO)*n(:,patmo_idx_HO2) &
+        + krate(:,305)*n(:,patmo_idx_CO2)*n(:,patmo_idx_H)*n(:,patmo_idx_M) &
+        - krate(:,309)*n(:,patmo_idx_CO)*n(:,patmo_idx_SO) &
+        - krate(:,314)*n(:,patmo_idx_CO)*n(:,patmo_idx_S) &
+        + krate(:,350)*n(:,patmo_idx_CO2)*n(:,patmo_idx_M) &
+        + krate(:,351)*n(:,patmo_idx_CHO)*n(:,patmo_idx_M) &
+        - krate(:,352)*n(:,patmo_idx_H2)*n(:,patmo_idx_CO) &
+        - krate(:,353)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CO) &
+        - krate(:,354)*n(:,patmo_idx_H2O)*n(:,patmo_idx_CO) &
+        - krate(:,356)*n(:,patmo_idx_OH)*n(:,patmo_idx_CO) &
+        - krate(:,386)*n(:,patmo_idx_CH4)*n(:,patmo_idx_CO) &
+        - krate(:,395)*n(:,patmo_idx_H)*n(:,patmo_idx_H)*n(:,patmo_idx_CO) &
+        - krate(:,396)*n(:,patmo_idx_H2)*n(:,patmo_idx_CO) &
+        - krate(:,400)*n(:,patmo_idx_CO)*n(:,patmo_idx_H2O) &
+        - krate(:,403)*n(:,patmo_idx_CO)*n(:,patmo_idx_CH3) &
+        - krate(:,405)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CO) &
+        - krate(:,406)*n(:,patmo_idx_H)*n(:,patmo_idx_CO) &
+        - krate(:,409)*n(:,patmo_idx_OH)*n(:,patmo_idx_CO) &
+        - krate(:,433)*n(:,patmo_idx_CH3OH)*n(:,patmo_idx_CO) &
+        - krate(:,453)*n(:,patmo_idx_CO)*n(:,patmo_idx_SH) &
+        - krate(:,454)*n(:,patmo_idx_CO)*n(:,patmo_idx_S2) &
+        + krate(:,456)*n(:,patmo_idx_COS)*n(:,patmo_idx_H) &
+        - krate(:,457)*n(:,patmo_idx_CO)*n(:,patmo_idx_S2) &
+        + krate(:,466)*n(:,patmo_idx_HOCO)*n(:,patmo_idx_M) &
+        - krate(:,471)*n(:,patmo_idx_H2O)*n(:,patmo_idx_CO) &
+        + krate(:,473)*n(:,patmo_idx_COCOOH) &
+        - krate(:,488)*n(:,patmo_idx_CO)*n(:,patmo_idx_NH)
 
     dn(:,patmo_idx_H2O2) = &
         + krate(:,39)*n(:,patmo_idx_HO2)*n(:,patmo_idx_HO2)*n(:,patmo_idx_M) &
@@ -1333,14 +1329,14 @@ contains
         - krate(:,163)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_H2O2) &
         + krate(:,165)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_HO2) &
         + krate(:,207)*n(:,patmo_idx_OH)*n(:,patmo_idx_OH)*n(:,patmo_idx_M) &
-        - krate(:,238)*n(:,patmo_idx_H2O2) &
-        - krate(:,239)*n(:,patmo_idx_H2O2) &
-        - krate(:,292)*n(:,patmo_idx_H2O2)*n(:,patmo_idx_O2)*n(:,patmo_idx_M) &
-        + krate(:,293)*n(:,patmo_idx_HO2)*n(:,patmo_idx_H2O) &
-        + krate(:,366)*n(:,patmo_idx_CH4)*n(:,patmo_idx_HO2) &
-        + krate(:,416)*n(:,patmo_idx_CH3OH)*n(:,patmo_idx_HO2) &
-        - krate(:,418)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H2O2) &
-        - krate(:,460)*n(:,patmo_idx_H2O2)*n(:,patmo_idx_M)
+        - krate(:,251)*n(:,patmo_idx_H2O2) &
+        - krate(:,252)*n(:,patmo_idx_H2O2) &
+        - krate(:,306)*n(:,patmo_idx_H2O2)*n(:,patmo_idx_O2)*n(:,patmo_idx_M) &
+        + krate(:,307)*n(:,patmo_idx_HO2)*n(:,patmo_idx_H2O) &
+        + krate(:,380)*n(:,patmo_idx_CH4)*n(:,patmo_idx_HO2) &
+        + krate(:,430)*n(:,patmo_idx_CH3OH)*n(:,patmo_idx_HO2) &
+        - krate(:,432)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H2O2) &
+        - krate(:,474)*n(:,patmo_idx_H2O2)*n(:,patmo_idx_M)
 
     dn(:,patmo_idx_COS) = &
         - krate(:,41)*n(:,patmo_idx_COS)*n(:,patmo_idx_OH) &
@@ -1353,17 +1349,17 @@ contains
         + krate(:,188)*n(:,patmo_idx_CS)*n(:,patmo_idx_NO2) &
         + krate(:,189)*n(:,patmo_idx_CO)*n(:,patmo_idx_SH) &
         + krate(:,191)*n(:,patmo_idx_CS2)*n(:,patmo_idx_O) &
-        - krate(:,240)*n(:,patmo_idx_COS) &
-        + krate(:,294)*n(:,patmo_idx_CO2)*n(:,patmo_idx_SH) &
-        + krate(:,295)*n(:,patmo_idx_CO)*n(:,patmo_idx_SO) &
-        - krate(:,296)*n(:,patmo_idx_SH)*n(:,patmo_idx_COS) &
-        - krate(:,298)*n(:,patmo_idx_COS)*n(:,patmo_idx_O) &
-        - krate(:,299)*n(:,patmo_idx_COS)*n(:,patmo_idx_O2) &
-        + krate(:,439)*n(:,patmo_idx_CO)*n(:,patmo_idx_SH) &
-        + krate(:,440)*n(:,patmo_idx_CO)*n(:,patmo_idx_S2) &
-        - krate(:,441)*n(:,patmo_idx_COS)*n(:,patmo_idx_NO) &
-        - krate(:,442)*n(:,patmo_idx_COS)*n(:,patmo_idx_H) &
-        - krate(:,444)*n(:,patmo_idx_COS)*n(:,patmo_idx_S)
+        - krate(:,253)*n(:,patmo_idx_COS) &
+        + krate(:,308)*n(:,patmo_idx_CO2)*n(:,patmo_idx_SH) &
+        + krate(:,309)*n(:,patmo_idx_CO)*n(:,patmo_idx_SO) &
+        - krate(:,310)*n(:,patmo_idx_SH)*n(:,patmo_idx_COS) &
+        - krate(:,312)*n(:,patmo_idx_COS)*n(:,patmo_idx_O) &
+        - krate(:,313)*n(:,patmo_idx_COS)*n(:,patmo_idx_O2) &
+        + krate(:,453)*n(:,patmo_idx_CO)*n(:,patmo_idx_SH) &
+        + krate(:,454)*n(:,patmo_idx_CO)*n(:,patmo_idx_S2) &
+        - krate(:,455)*n(:,patmo_idx_COS)*n(:,patmo_idx_NO) &
+        - krate(:,456)*n(:,patmo_idx_COS)*n(:,patmo_idx_H) &
+        - krate(:,458)*n(:,patmo_idx_COS)*n(:,patmo_idx_S)
 
     dn(:,patmo_idx_SH) = &
         + krate(:,41)*n(:,patmo_idx_COS)*n(:,patmo_idx_OH) &
@@ -1383,24 +1379,24 @@ contains
         + krate(:,185)*n(:,patmo_idx_CH3)*n(:,patmo_idx_H2S) &
         + krate(:,186)*n(:,patmo_idx_COS)*n(:,patmo_idx_H) &
         - krate(:,189)*n(:,patmo_idx_CO)*n(:,patmo_idx_SH) &
-        + krate(:,243)*n(:,patmo_idx_H2S) &
-        - krate(:,294)*n(:,patmo_idx_CO2)*n(:,patmo_idx_SH) &
-        - krate(:,296)*n(:,patmo_idx_SH)*n(:,patmo_idx_COS) &
-        - krate(:,301)*n(:,patmo_idx_H2O)*n(:,patmo_idx_SH) &
-        - krate(:,302)*n(:,patmo_idx_OH)*n(:,patmo_idx_SH) &
-        - krate(:,303)*n(:,patmo_idx_H2)*n(:,patmo_idx_SH) &
-        + krate(:,305)*n(:,patmo_idx_H)*n(:,patmo_idx_SO) &
-        + krate(:,306)*n(:,patmo_idx_OH)*n(:,patmo_idx_SO) &
-        + krate(:,307)*n(:,patmo_idx_HSO)*n(:,patmo_idx_O2) &
-        + krate(:,308)*n(:,patmo_idx_HSO)*n(:,patmo_idx_NO) &
-        - krate(:,320)*n(:,patmo_idx_O2)*n(:,patmo_idx_O2)*n(:,patmo_idx_SH) &
-        + krate(:,352)*n(:,patmo_idx_S)*n(:,patmo_idx_H2S) &
-        + krate(:,352)*n(:,patmo_idx_S)*n(:,patmo_idx_H2S) &
-        + krate(:,353)*n(:,patmo_idx_H2)*n(:,patmo_idx_S) &
-        + krate(:,354)*n(:,patmo_idx_H2S)*n(:,patmo_idx_CHO) &
-        - krate(:,438)*n(:,patmo_idx_CH4)*n(:,patmo_idx_SH) &
-        - krate(:,439)*n(:,patmo_idx_CO)*n(:,patmo_idx_SH) &
-        + krate(:,442)*n(:,patmo_idx_COS)*n(:,patmo_idx_H)
+        + krate(:,256)*n(:,patmo_idx_H2S) &
+        - krate(:,308)*n(:,patmo_idx_CO2)*n(:,patmo_idx_SH) &
+        - krate(:,310)*n(:,patmo_idx_SH)*n(:,patmo_idx_COS) &
+        - krate(:,315)*n(:,patmo_idx_H2O)*n(:,patmo_idx_SH) &
+        - krate(:,316)*n(:,patmo_idx_OH)*n(:,patmo_idx_SH) &
+        - krate(:,317)*n(:,patmo_idx_H2)*n(:,patmo_idx_SH) &
+        + krate(:,319)*n(:,patmo_idx_H)*n(:,patmo_idx_SO) &
+        + krate(:,320)*n(:,patmo_idx_OH)*n(:,patmo_idx_SO) &
+        + krate(:,321)*n(:,patmo_idx_HSO)*n(:,patmo_idx_O2) &
+        + krate(:,322)*n(:,patmo_idx_HSO)*n(:,patmo_idx_NO) &
+        - krate(:,334)*n(:,patmo_idx_O2)*n(:,patmo_idx_O2)*n(:,patmo_idx_SH) &
+        + krate(:,366)*n(:,patmo_idx_S)*n(:,patmo_idx_H2S) &
+        + krate(:,366)*n(:,patmo_idx_S)*n(:,patmo_idx_H2S) &
+        + krate(:,367)*n(:,patmo_idx_H2)*n(:,patmo_idx_S) &
+        + krate(:,368)*n(:,patmo_idx_H2S)*n(:,patmo_idx_CHO) &
+        - krate(:,452)*n(:,patmo_idx_CH4)*n(:,patmo_idx_SH) &
+        - krate(:,453)*n(:,patmo_idx_CO)*n(:,patmo_idx_SH) &
+        + krate(:,456)*n(:,patmo_idx_COS)*n(:,patmo_idx_H)
 
     dn(:,patmo_idx_SO) = &
         + krate(:,42)*n(:,patmo_idx_COS)*n(:,patmo_idx_O) &
@@ -1422,41 +1418,41 @@ contains
         - krate(:,97)*n(:,patmo_idx_SO)*n(:,patmo_idx_SO) &
         - krate(:,98)*n(:,patmo_idx_SO)*n(:,patmo_idx_SO3) &
         + krate(:,108)*n(:,patmo_idx_S2)*n(:,patmo_idx_O) &
-        - krate(:,241)*n(:,patmo_idx_SO) &
-        + krate(:,244)*n(:,patmo_idx_SO2) &
-        + krate(:,249)*n(:,patmo_idx_S2O2) &
-        + krate(:,249)*n(:,patmo_idx_S2O2) &
-        + krate(:,250)*n(:,patmo_idx_S2O) &
-        - krate(:,295)*n(:,patmo_idx_CO)*n(:,patmo_idx_SO) &
-        - krate(:,297)*n(:,patmo_idx_CS)*n(:,patmo_idx_SO) &
-        - krate(:,305)*n(:,patmo_idx_H)*n(:,patmo_idx_SO) &
-        - krate(:,306)*n(:,patmo_idx_OH)*n(:,patmo_idx_SO) &
-        + krate(:,309)*n(:,patmo_idx_SO2)*n(:,patmo_idx_O2) &
-        + krate(:,310)*n(:,patmo_idx_SO2)*n(:,patmo_idx_O) &
-        + krate(:,311)*n(:,patmo_idx_SO2)*n(:,patmo_idx_H) &
-        + krate(:,312)*n(:,patmo_idx_SO2)*n(:,patmo_idx_NO) &
-        - krate(:,313)*n(:,patmo_idx_SO)*n(:,patmo_idx_O) &
-        - krate(:,314)*n(:,patmo_idx_O2)*n(:,patmo_idx_SO) &
-        - krate(:,315)*n(:,patmo_idx_H)*n(:,patmo_idx_SO) &
-        + krate(:,347)*n(:,patmo_idx_SO2)*n(:,patmo_idx_OH) &
-        + krate(:,348)*n(:,patmo_idx_S2O2)*n(:,patmo_idx_M) &
-        + krate(:,348)*n(:,patmo_idx_S2O2)*n(:,patmo_idx_M) &
-        + krate(:,349)*n(:,patmo_idx_SO2)*n(:,patmo_idx_S2O) &
-        + krate(:,350)*n(:,patmo_idx_S)*n(:,patmo_idx_SO2) &
-        + krate(:,350)*n(:,patmo_idx_S)*n(:,patmo_idx_SO2) &
-        + krate(:,351)*n(:,patmo_idx_SO2)*n(:,patmo_idx_SO2) &
-        - krate(:,361)*n(:,patmo_idx_S)*n(:,patmo_idx_SO)
+        - krate(:,254)*n(:,patmo_idx_SO) &
+        + krate(:,257)*n(:,patmo_idx_SO2) &
+        + krate(:,262)*n(:,patmo_idx_S2O2) &
+        + krate(:,262)*n(:,patmo_idx_S2O2) &
+        + krate(:,263)*n(:,patmo_idx_S2O) &
+        - krate(:,309)*n(:,patmo_idx_CO)*n(:,patmo_idx_SO) &
+        - krate(:,311)*n(:,patmo_idx_CS)*n(:,patmo_idx_SO) &
+        - krate(:,319)*n(:,patmo_idx_H)*n(:,patmo_idx_SO) &
+        - krate(:,320)*n(:,patmo_idx_OH)*n(:,patmo_idx_SO) &
+        + krate(:,323)*n(:,patmo_idx_SO2)*n(:,patmo_idx_O2) &
+        + krate(:,324)*n(:,patmo_idx_SO2)*n(:,patmo_idx_O) &
+        + krate(:,325)*n(:,patmo_idx_SO2)*n(:,patmo_idx_H) &
+        + krate(:,326)*n(:,patmo_idx_SO2)*n(:,patmo_idx_NO) &
+        - krate(:,327)*n(:,patmo_idx_SO)*n(:,patmo_idx_O) &
+        - krate(:,328)*n(:,patmo_idx_O2)*n(:,patmo_idx_SO) &
+        - krate(:,329)*n(:,patmo_idx_H)*n(:,patmo_idx_SO) &
+        + krate(:,361)*n(:,patmo_idx_SO2)*n(:,patmo_idx_OH) &
+        + krate(:,362)*n(:,patmo_idx_S2O2)*n(:,patmo_idx_M) &
+        + krate(:,362)*n(:,patmo_idx_S2O2)*n(:,patmo_idx_M) &
+        + krate(:,363)*n(:,patmo_idx_SO2)*n(:,patmo_idx_S2O) &
+        + krate(:,364)*n(:,patmo_idx_S)*n(:,patmo_idx_SO2) &
+        + krate(:,364)*n(:,patmo_idx_S)*n(:,patmo_idx_SO2) &
+        + krate(:,365)*n(:,patmo_idx_SO2)*n(:,patmo_idx_SO2) &
+        - krate(:,375)*n(:,patmo_idx_S)*n(:,patmo_idx_SO)
 
     dn(:,patmo_idx_CS2) = &
         - krate(:,43)*n(:,patmo_idx_CS2)*n(:,patmo_idx_OH) &
         - krate(:,44)*n(:,patmo_idx_CS2)*n(:,patmo_idx_O) &
         - krate(:,190)*n(:,patmo_idx_CS2)*n(:,patmo_idx_O) &
         - krate(:,191)*n(:,patmo_idx_CS2)*n(:,patmo_idx_O) &
-        - krate(:,242)*n(:,patmo_idx_CS2) &
-        + krate(:,296)*n(:,patmo_idx_SH)*n(:,patmo_idx_COS) &
-        + krate(:,297)*n(:,patmo_idx_CS)*n(:,patmo_idx_SO) &
-        + krate(:,443)*n(:,patmo_idx_CO)*n(:,patmo_idx_S2) &
-        + krate(:,444)*n(:,patmo_idx_COS)*n(:,patmo_idx_S)
+        - krate(:,255)*n(:,patmo_idx_CS2) &
+        + krate(:,310)*n(:,patmo_idx_SH)*n(:,patmo_idx_COS) &
+        + krate(:,311)*n(:,patmo_idx_CS)*n(:,patmo_idx_SO) &
+        + krate(:,457)*n(:,patmo_idx_CO)*n(:,patmo_idx_S2) &
+        + krate(:,458)*n(:,patmo_idx_COS)*n(:,patmo_idx_S)
 
     dn(:,patmo_idx_CS) = &
         + krate(:,44)*n(:,patmo_idx_CS2)*n(:,patmo_idx_O) &
@@ -1464,12 +1460,12 @@ contains
         - krate(:,46)*n(:,patmo_idx_CS)*n(:,patmo_idx_O3) &
         - krate(:,47)*n(:,patmo_idx_CS)*n(:,patmo_idx_O) &
         - krate(:,188)*n(:,patmo_idx_CS)*n(:,patmo_idx_NO2) &
-        + krate(:,242)*n(:,patmo_idx_CS2) &
-        - krate(:,297)*n(:,patmo_idx_CS)*n(:,patmo_idx_SO) &
-        + krate(:,298)*n(:,patmo_idx_COS)*n(:,patmo_idx_O) &
-        + krate(:,299)*n(:,patmo_idx_COS)*n(:,patmo_idx_O2) &
-        + krate(:,300)*n(:,patmo_idx_CO)*n(:,patmo_idx_S) &
-        + krate(:,441)*n(:,patmo_idx_COS)*n(:,patmo_idx_NO)
+        + krate(:,255)*n(:,patmo_idx_CS2) &
+        - krate(:,311)*n(:,patmo_idx_CS)*n(:,patmo_idx_SO) &
+        + krate(:,312)*n(:,patmo_idx_COS)*n(:,patmo_idx_O) &
+        + krate(:,313)*n(:,patmo_idx_COS)*n(:,patmo_idx_O2) &
+        + krate(:,314)*n(:,patmo_idx_CO)*n(:,patmo_idx_S) &
+        + krate(:,455)*n(:,patmo_idx_COS)*n(:,patmo_idx_NO)
 
     dn(:,patmo_idx_S) = &
         + krate(:,47)*n(:,patmo_idx_CS)*n(:,patmo_idx_O) &
@@ -1488,26 +1484,26 @@ contains
         + krate(:,108)*n(:,patmo_idx_S2)*n(:,patmo_idx_O) &
         - krate(:,187)*n(:,patmo_idx_COS)*n(:,patmo_idx_S) &
         + krate(:,191)*n(:,patmo_idx_CS2)*n(:,patmo_idx_O) &
-        + krate(:,240)*n(:,patmo_idx_COS) &
-        + krate(:,241)*n(:,patmo_idx_SO) &
-        + krate(:,242)*n(:,patmo_idx_CS2) &
-        + krate(:,250)*n(:,patmo_idx_S2O) &
-        - krate(:,300)*n(:,patmo_idx_CO)*n(:,patmo_idx_S) &
-        + krate(:,313)*n(:,patmo_idx_SO)*n(:,patmo_idx_O) &
-        + krate(:,314)*n(:,patmo_idx_O2)*n(:,patmo_idx_SO) &
-        + krate(:,315)*n(:,patmo_idx_H)*n(:,patmo_idx_SO) &
-        - krate(:,350)*n(:,patmo_idx_S)*n(:,patmo_idx_SO2) &
-        - krate(:,352)*n(:,patmo_idx_S)*n(:,patmo_idx_H2S) &
-        - krate(:,353)*n(:,patmo_idx_H2)*n(:,patmo_idx_S) &
-        + krate(:,355)*n(:,patmo_idx_S2)*n(:,patmo_idx_M) &
-        + krate(:,355)*n(:,patmo_idx_S2)*n(:,patmo_idx_M) &
-        + krate(:,356)*n(:,patmo_idx_S3)*n(:,patmo_idx_M) &
-        + krate(:,357)*n(:,patmo_idx_S4)*n(:,patmo_idx_M) &
-        - krate(:,360)*n(:,patmo_idx_S)*n(:,patmo_idx_S)*n(:,patmo_idx_M) &
-        - krate(:,360)*n(:,patmo_idx_S)*n(:,patmo_idx_S)*n(:,patmo_idx_M) &
-        - krate(:,361)*n(:,patmo_idx_S)*n(:,patmo_idx_SO) &
-        + krate(:,440)*n(:,patmo_idx_CO)*n(:,patmo_idx_S2) &
-        - krate(:,444)*n(:,patmo_idx_COS)*n(:,patmo_idx_S)
+        + krate(:,253)*n(:,patmo_idx_COS) &
+        + krate(:,254)*n(:,patmo_idx_SO) &
+        + krate(:,255)*n(:,patmo_idx_CS2) &
+        + krate(:,263)*n(:,patmo_idx_S2O) &
+        - krate(:,314)*n(:,patmo_idx_CO)*n(:,patmo_idx_S) &
+        + krate(:,327)*n(:,patmo_idx_SO)*n(:,patmo_idx_O) &
+        + krate(:,328)*n(:,patmo_idx_O2)*n(:,patmo_idx_SO) &
+        + krate(:,329)*n(:,patmo_idx_H)*n(:,patmo_idx_SO) &
+        - krate(:,364)*n(:,patmo_idx_S)*n(:,patmo_idx_SO2) &
+        - krate(:,366)*n(:,patmo_idx_S)*n(:,patmo_idx_H2S) &
+        - krate(:,367)*n(:,patmo_idx_H2)*n(:,patmo_idx_S) &
+        + krate(:,369)*n(:,patmo_idx_S2)*n(:,patmo_idx_M) &
+        + krate(:,369)*n(:,patmo_idx_S2)*n(:,patmo_idx_M) &
+        + krate(:,370)*n(:,patmo_idx_S3)*n(:,patmo_idx_M) &
+        + krate(:,371)*n(:,patmo_idx_S4)*n(:,patmo_idx_M) &
+        - krate(:,374)*n(:,patmo_idx_S)*n(:,patmo_idx_S)*n(:,patmo_idx_M) &
+        - krate(:,374)*n(:,patmo_idx_S)*n(:,patmo_idx_S)*n(:,patmo_idx_M) &
+        - krate(:,375)*n(:,patmo_idx_S)*n(:,patmo_idx_SO) &
+        + krate(:,454)*n(:,patmo_idx_CO)*n(:,patmo_idx_S2) &
+        - krate(:,458)*n(:,patmo_idx_COS)*n(:,patmo_idx_S)
 
     dn(:,patmo_idx_H2S) = &
         - krate(:,48)*n(:,patmo_idx_H2S)*n(:,patmo_idx_OH) &
@@ -1517,14 +1513,14 @@ contains
         + krate(:,99)*n(:,patmo_idx_SH)*n(:,patmo_idx_SH) &
         + krate(:,101)*n(:,patmo_idx_SH)*n(:,patmo_idx_CH2O) &
         - krate(:,185)*n(:,patmo_idx_CH3)*n(:,patmo_idx_H2S) &
-        - krate(:,243)*n(:,patmo_idx_H2S) &
-        + krate(:,301)*n(:,patmo_idx_H2O)*n(:,patmo_idx_SH) &
-        + krate(:,302)*n(:,patmo_idx_OH)*n(:,patmo_idx_SH) &
-        + krate(:,303)*n(:,patmo_idx_H2)*n(:,patmo_idx_SH) &
-        + krate(:,304)*n(:,patmo_idx_H2O)*n(:,patmo_idx_HSO) &
-        - krate(:,352)*n(:,patmo_idx_S)*n(:,patmo_idx_H2S) &
-        - krate(:,354)*n(:,patmo_idx_H2S)*n(:,patmo_idx_CHO) &
-        + krate(:,438)*n(:,patmo_idx_CH4)*n(:,patmo_idx_SH)
+        - krate(:,256)*n(:,patmo_idx_H2S) &
+        + krate(:,315)*n(:,patmo_idx_H2O)*n(:,patmo_idx_SH) &
+        + krate(:,316)*n(:,patmo_idx_OH)*n(:,patmo_idx_SH) &
+        + krate(:,317)*n(:,patmo_idx_H2)*n(:,patmo_idx_SH) &
+        + krate(:,318)*n(:,patmo_idx_H2O)*n(:,patmo_idx_HSO) &
+        - krate(:,366)*n(:,patmo_idx_S)*n(:,patmo_idx_H2S) &
+        - krate(:,368)*n(:,patmo_idx_H2S)*n(:,patmo_idx_CHO) &
+        + krate(:,452)*n(:,patmo_idx_CH4)*n(:,patmo_idx_SH)
 
     dn(:,patmo_idx_HSO) = &
         + krate(:,51)*n(:,patmo_idx_H2S)*n(:,patmo_idx_HO2) &
@@ -1533,12 +1529,12 @@ contains
         - krate(:,66)*n(:,patmo_idx_HSO)*n(:,patmo_idx_O2) &
         - krate(:,67)*n(:,patmo_idx_HSO)*n(:,patmo_idx_O3) &
         - krate(:,68)*n(:,patmo_idx_HSO)*n(:,patmo_idx_NO2) &
-        - krate(:,304)*n(:,patmo_idx_H2O)*n(:,patmo_idx_HSO) &
-        - krate(:,307)*n(:,patmo_idx_HSO)*n(:,patmo_idx_O2) &
-        - krate(:,308)*n(:,patmo_idx_HSO)*n(:,patmo_idx_NO) &
-        + krate(:,319)*n(:,patmo_idx_SO2)*n(:,patmo_idx_OH) &
-        + krate(:,320)*n(:,patmo_idx_O2)*n(:,patmo_idx_O2)*n(:,patmo_idx_SH) &
-        + krate(:,321)*n(:,patmo_idx_NO)*n(:,patmo_idx_HSO2)
+        - krate(:,318)*n(:,patmo_idx_H2O)*n(:,patmo_idx_HSO) &
+        - krate(:,321)*n(:,patmo_idx_HSO)*n(:,patmo_idx_O2) &
+        - krate(:,322)*n(:,patmo_idx_HSO)*n(:,patmo_idx_NO) &
+        + krate(:,333)*n(:,patmo_idx_SO2)*n(:,patmo_idx_OH) &
+        + krate(:,334)*n(:,patmo_idx_O2)*n(:,patmo_idx_O2)*n(:,patmo_idx_SH) &
+        + krate(:,335)*n(:,patmo_idx_NO)*n(:,patmo_idx_HSO2)
 
     dn(:,patmo_idx_SO2) = &
         + krate(:,56)*n(:,patmo_idx_SO)*n(:,patmo_idx_O3) &
@@ -1562,30 +1558,30 @@ contains
         + krate(:,98)*n(:,patmo_idx_SO)*n(:,patmo_idx_SO3) &
         - krate(:,210)*n(:,patmo_idx_O_1D)*n(:,patmo_idx_SO2) &
         + krate(:,210)*n(:,patmo_idx_O_1D)*n(:,patmo_idx_SO2) &
-        - krate(:,244)*n(:,patmo_idx_SO2) &
-        + krate(:,245)*n(:,patmo_idx_SO3) &
-        + krate(:,246)*n(:,patmo_idx_H2SO4) &
-        - krate(:,309)*n(:,patmo_idx_SO2)*n(:,patmo_idx_O2) &
-        - krate(:,310)*n(:,patmo_idx_SO2)*n(:,patmo_idx_O) &
-        - krate(:,311)*n(:,patmo_idx_SO2)*n(:,patmo_idx_H) &
-        - krate(:,312)*n(:,patmo_idx_SO2)*n(:,patmo_idx_NO) &
-        + krate(:,316)*n(:,patmo_idx_OH)*n(:,patmo_idx_SO3) &
-        + krate(:,317)*n(:,patmo_idx_SO3)*n(:,patmo_idx_NO) &
-        + krate(:,318)*n(:,patmo_idx_SO3)*n(:,patmo_idx_O2) &
-        - krate(:,319)*n(:,patmo_idx_SO2)*n(:,patmo_idx_OH) &
-        - krate(:,322)*n(:,patmo_idx_HO2)*n(:,patmo_idx_SO2) &
-        + krate(:,325)*n(:,patmo_idx_SO3)*n(:,patmo_idx_M) &
-        + krate(:,326)*n(:,patmo_idx_HSO3)*n(:,patmo_idx_M) &
-        - krate(:,327)*n(:,patmo_idx_SO2) &
-        - krate(:,328)*n(:,patmo_idx_SO2) &
-        - krate(:,329)*n(:,patmo_idx_SO2)*n(:,patmo_idx_CH4O3S)*n(:,patmo_idx_M) &
-        - krate(:,347)*n(:,patmo_idx_SO2)*n(:,patmo_idx_OH) &
-        - krate(:,349)*n(:,patmo_idx_SO2)*n(:,patmo_idx_S2O) &
-        - krate(:,350)*n(:,patmo_idx_S)*n(:,patmo_idx_SO2) &
-        - krate(:,351)*n(:,patmo_idx_SO2)*n(:,patmo_idx_SO2) &
-        - krate(:,351)*n(:,patmo_idx_SO2)*n(:,patmo_idx_SO2) &
-        - krate(:,463)*n(:,patmo_idx_O_3P)*n(:,patmo_idx_SO2) &
-        + krate(:,463)*n(:,patmo_idx_O_3P)*n(:,patmo_idx_SO2)
+        - krate(:,257)*n(:,patmo_idx_SO2) &
+        + krate(:,258)*n(:,patmo_idx_SO3) &
+        + krate(:,259)*n(:,patmo_idx_H2SO4) &
+        - krate(:,323)*n(:,patmo_idx_SO2)*n(:,patmo_idx_O2) &
+        - krate(:,324)*n(:,patmo_idx_SO2)*n(:,patmo_idx_O) &
+        - krate(:,325)*n(:,patmo_idx_SO2)*n(:,patmo_idx_H) &
+        - krate(:,326)*n(:,patmo_idx_SO2)*n(:,patmo_idx_NO) &
+        + krate(:,330)*n(:,patmo_idx_OH)*n(:,patmo_idx_SO3) &
+        + krate(:,331)*n(:,patmo_idx_SO3)*n(:,patmo_idx_NO) &
+        + krate(:,332)*n(:,patmo_idx_SO3)*n(:,patmo_idx_O2) &
+        - krate(:,333)*n(:,patmo_idx_SO2)*n(:,patmo_idx_OH) &
+        - krate(:,336)*n(:,patmo_idx_HO2)*n(:,patmo_idx_SO2) &
+        + krate(:,339)*n(:,patmo_idx_SO3)*n(:,patmo_idx_M) &
+        + krate(:,340)*n(:,patmo_idx_HSO3)*n(:,patmo_idx_M) &
+        - krate(:,341)*n(:,patmo_idx_SO2) &
+        - krate(:,342)*n(:,patmo_idx_SO2) &
+        - krate(:,343)*n(:,patmo_idx_SO2)*n(:,patmo_idx_CH4O3S)*n(:,patmo_idx_M) &
+        - krate(:,361)*n(:,patmo_idx_SO2)*n(:,patmo_idx_OH) &
+        - krate(:,363)*n(:,patmo_idx_SO2)*n(:,patmo_idx_S2O) &
+        - krate(:,364)*n(:,patmo_idx_S)*n(:,patmo_idx_SO2) &
+        - krate(:,365)*n(:,patmo_idx_SO2)*n(:,patmo_idx_SO2) &
+        - krate(:,365)*n(:,patmo_idx_SO2)*n(:,patmo_idx_SO2) &
+        - krate(:,477)*n(:,patmo_idx_O_3P)*n(:,patmo_idx_SO2) &
+        + krate(:,477)*n(:,patmo_idx_O_3P)*n(:,patmo_idx_SO2)
 
     dn(:,patmo_idx_SO3) = &
         + krate(:,63)*n(:,patmo_idx_SO2)*n(:,patmo_idx_HO2) &
@@ -1595,49 +1591,49 @@ contains
         - krate(:,71)*n(:,patmo_idx_SO3)*n(:,patmo_idx_H2O) &
         + krate(:,72)*n(:,patmo_idx_SO2)*n(:,patmo_idx_O)*n(:,patmo_idx_M) &
         - krate(:,98)*n(:,patmo_idx_SO)*n(:,patmo_idx_SO3) &
-        - krate(:,245)*n(:,patmo_idx_SO3) &
-        - krate(:,316)*n(:,patmo_idx_OH)*n(:,patmo_idx_SO3) &
-        - krate(:,317)*n(:,patmo_idx_SO3)*n(:,patmo_idx_NO) &
-        - krate(:,318)*n(:,patmo_idx_SO3)*n(:,patmo_idx_O2) &
-        - krate(:,323)*n(:,patmo_idx_HO2)*n(:,patmo_idx_SO3) &
-        + krate(:,324)*n(:,patmo_idx_H2SO4) &
-        - krate(:,325)*n(:,patmo_idx_SO3)*n(:,patmo_idx_M) &
-        + krate(:,351)*n(:,patmo_idx_SO2)*n(:,patmo_idx_SO2)
+        - krate(:,258)*n(:,patmo_idx_SO3) &
+        - krate(:,330)*n(:,patmo_idx_OH)*n(:,patmo_idx_SO3) &
+        - krate(:,331)*n(:,patmo_idx_SO3)*n(:,patmo_idx_NO) &
+        - krate(:,332)*n(:,patmo_idx_SO3)*n(:,patmo_idx_O2) &
+        - krate(:,337)*n(:,patmo_idx_HO2)*n(:,patmo_idx_SO3) &
+        + krate(:,338)*n(:,patmo_idx_H2SO4) &
+        - krate(:,339)*n(:,patmo_idx_SO3)*n(:,patmo_idx_M) &
+        + krate(:,365)*n(:,patmo_idx_SO2)*n(:,patmo_idx_SO2)
 
     dn(:,patmo_idx_HSO2) = &
         + krate(:,68)*n(:,patmo_idx_HSO)*n(:,patmo_idx_NO2) &
         - krate(:,69)*n(:,patmo_idx_HSO2)*n(:,patmo_idx_O2) &
-        - krate(:,321)*n(:,patmo_idx_NO)*n(:,patmo_idx_HSO2) &
-        + krate(:,322)*n(:,patmo_idx_HO2)*n(:,patmo_idx_SO2)
+        - krate(:,335)*n(:,patmo_idx_NO)*n(:,patmo_idx_HSO2) &
+        + krate(:,336)*n(:,patmo_idx_HO2)*n(:,patmo_idx_SO2)
 
     dn(:,patmo_idx_HSO3) = &
         - krate(:,70)*n(:,patmo_idx_HSO3)*n(:,patmo_idx_O2) &
         + krate(:,73)*n(:,patmo_idx_SO2)*n(:,patmo_idx_OH)*n(:,patmo_idx_M) &
-        + krate(:,323)*n(:,patmo_idx_HO2)*n(:,patmo_idx_SO3) &
-        - krate(:,326)*n(:,patmo_idx_HSO3)*n(:,patmo_idx_M)
+        + krate(:,337)*n(:,patmo_idx_HO2)*n(:,patmo_idx_SO3) &
+        - krate(:,340)*n(:,patmo_idx_HSO3)*n(:,patmo_idx_M)
 
     dn(:,patmo_idx_H2SO4) = &
         + krate(:,71)*n(:,patmo_idx_SO3)*n(:,patmo_idx_H2O) &
         - krate(:,77)*n(:,patmo_idx_H2SO4) &
-        - krate(:,246)*n(:,patmo_idx_H2SO4) &
-        - krate(:,324)*n(:,patmo_idx_H2SO4) &
-        + krate(:,330)*n(:,patmo_idx_SO4)
+        - krate(:,259)*n(:,patmo_idx_H2SO4) &
+        - krate(:,338)*n(:,patmo_idx_H2SO4) &
+        + krate(:,344)*n(:,patmo_idx_SO4)
 
     dn(:,patmo_idx_CH3SCH3) = &
         - krate(:,74)*n(:,patmo_idx_CH3SCH3)*n(:,patmo_idx_OH) &
         - krate(:,75)*n(:,patmo_idx_CH3SCH3)*n(:,patmo_idx_O) &
         - krate(:,76)*n(:,patmo_idx_CH3SCH3)*n(:,patmo_idx_OH)*n(:,patmo_idx_M) &
-        + krate(:,327)*n(:,patmo_idx_SO2) &
-        + krate(:,328)*n(:,patmo_idx_SO2) &
-        + krate(:,329)*n(:,patmo_idx_SO2)*n(:,patmo_idx_CH4O3S)*n(:,patmo_idx_M)
+        + krate(:,341)*n(:,patmo_idx_SO2) &
+        + krate(:,342)*n(:,patmo_idx_SO2) &
+        + krate(:,343)*n(:,patmo_idx_SO2)*n(:,patmo_idx_CH4O3S)*n(:,patmo_idx_M)
 
     dn(:,patmo_idx_CH4O3S) = &
         + krate(:,76)*n(:,patmo_idx_CH3SCH3)*n(:,patmo_idx_OH)*n(:,patmo_idx_M) &
-        - krate(:,329)*n(:,patmo_idx_SO2)*n(:,patmo_idx_CH4O3S)*n(:,patmo_idx_M)
+        - krate(:,343)*n(:,patmo_idx_SO2)*n(:,patmo_idx_CH4O3S)*n(:,patmo_idx_M)
 
     dn(:,patmo_idx_SO4) = &
         + krate(:,77)*n(:,patmo_idx_H2SO4) &
-        - krate(:,330)*n(:,patmo_idx_SO4)
+        - krate(:,344)*n(:,patmo_idx_SO4)
 
     dn(:,patmo_idx_CH3OH) = &
         + krate(:,82)*n(:,patmo_idx_CH3O2)*n(:,patmo_idx_CH3O2) &
@@ -1658,38 +1654,38 @@ contains
         + krate(:,163)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_H2O2) &
         + krate(:,166)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_CHO) &
         + krate(:,168)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_CH2OH) &
-        - krate(:,247)*n(:,patmo_idx_CH3OH) &
-        - krate(:,248)*n(:,patmo_idx_CH3OH) &
-        - krate(:,335)*n(:,patmo_idx_CH3OH)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_O2) &
-        - krate(:,369)*n(:,patmo_idx_CH3OH)*n(:,patmo_idx_M) &
-        + krate(:,399)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_CH3) &
-        + krate(:,400)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_CH3) &
-        + krate(:,401)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_OH) &
-        + krate(:,402)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_OH) &
-        + krate(:,403)*n(:,patmo_idx_CH3)*n(:,patmo_idx_H2O) &
-        + krate(:,404)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_H2) &
-        + krate(:,405)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_H2) &
-        + krate(:,406)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_H2O) &
-        + krate(:,407)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_H2O) &
-        + krate(:,408)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H2O)*n(:,patmo_idx_H) &
-        + krate(:,409)*n(:,patmo_idx_CH4)*n(:,patmo_idx_CH3O) &
-        + krate(:,410)*n(:,patmo_idx_CH4)*n(:,patmo_idx_CH2OH) &
-        - krate(:,414)*n(:,patmo_idx_CH3OH) &
-        - krate(:,416)*n(:,patmo_idx_CH3OH)*n(:,patmo_idx_HO2) &
-        - krate(:,419)*n(:,patmo_idx_CH3OH)*n(:,patmo_idx_CO) &
-        - krate(:,421)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH3OH)
+        - krate(:,260)*n(:,patmo_idx_CH3OH) &
+        - krate(:,261)*n(:,patmo_idx_CH3OH) &
+        - krate(:,349)*n(:,patmo_idx_CH3OH)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_O2) &
+        - krate(:,383)*n(:,patmo_idx_CH3OH)*n(:,patmo_idx_M) &
+        + krate(:,413)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_CH3) &
+        + krate(:,414)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_CH3) &
+        + krate(:,415)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_OH) &
+        + krate(:,416)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_OH) &
+        + krate(:,417)*n(:,patmo_idx_CH3)*n(:,patmo_idx_H2O) &
+        + krate(:,418)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_H2) &
+        + krate(:,419)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_H2) &
+        + krate(:,420)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_H2O) &
+        + krate(:,421)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_H2O) &
+        + krate(:,422)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H2O)*n(:,patmo_idx_H) &
+        + krate(:,423)*n(:,patmo_idx_CH4)*n(:,patmo_idx_CH3O) &
+        + krate(:,424)*n(:,patmo_idx_CH4)*n(:,patmo_idx_CH2OH) &
+        - krate(:,428)*n(:,patmo_idx_CH3OH) &
+        - krate(:,430)*n(:,patmo_idx_CH3OH)*n(:,patmo_idx_HO2) &
+        - krate(:,433)*n(:,patmo_idx_CH3OH)*n(:,patmo_idx_CO) &
+        - krate(:,435)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH3OH)
 
     dn(:,patmo_idx_S2O2) = &
         + krate(:,95)*n(:,patmo_idx_SO)*n(:,patmo_idx_SO)*n(:,patmo_idx_M) &
         - krate(:,96)*n(:,patmo_idx_SO)*n(:,patmo_idx_S2O2) &
-        - krate(:,249)*n(:,patmo_idx_S2O2) &
-        - krate(:,348)*n(:,patmo_idx_S2O2)*n(:,patmo_idx_M) &
-        + krate(:,349)*n(:,patmo_idx_SO2)*n(:,patmo_idx_S2O)
+        - krate(:,262)*n(:,patmo_idx_S2O2) &
+        - krate(:,362)*n(:,patmo_idx_S2O2)*n(:,patmo_idx_M) &
+        + krate(:,363)*n(:,patmo_idx_SO2)*n(:,patmo_idx_S2O)
 
     dn(:,patmo_idx_S2O) = &
         + krate(:,96)*n(:,patmo_idx_SO)*n(:,patmo_idx_S2O2) &
-        - krate(:,250)*n(:,patmo_idx_S2O) &
-        - krate(:,349)*n(:,patmo_idx_SO2)*n(:,patmo_idx_S2O)
+        - krate(:,263)*n(:,patmo_idx_S2O) &
+        - krate(:,363)*n(:,patmo_idx_SO2)*n(:,patmo_idx_S2O)
 
     dn(:,patmo_idx_S2) = &
         + krate(:,102)*n(:,patmo_idx_S)*n(:,patmo_idx_S)*n(:,patmo_idx_M) &
@@ -1700,34 +1696,34 @@ contains
         - krate(:,108)*n(:,patmo_idx_S2)*n(:,patmo_idx_O) &
         + krate(:,187)*n(:,patmo_idx_COS)*n(:,patmo_idx_S) &
         + krate(:,190)*n(:,patmo_idx_CS2)*n(:,patmo_idx_O) &
-        - krate(:,355)*n(:,patmo_idx_S2)*n(:,patmo_idx_M) &
-        + krate(:,356)*n(:,patmo_idx_S3)*n(:,patmo_idx_M) &
-        + krate(:,358)*n(:,patmo_idx_S4)*n(:,patmo_idx_M) &
-        + krate(:,358)*n(:,patmo_idx_S4)*n(:,patmo_idx_M) &
-        + krate(:,360)*n(:,patmo_idx_S)*n(:,patmo_idx_S)*n(:,patmo_idx_M) &
-        + krate(:,361)*n(:,patmo_idx_S)*n(:,patmo_idx_SO) &
-        - krate(:,440)*n(:,patmo_idx_CO)*n(:,patmo_idx_S2) &
-        - krate(:,443)*n(:,patmo_idx_CO)*n(:,patmo_idx_S2)
+        - krate(:,369)*n(:,patmo_idx_S2)*n(:,patmo_idx_M) &
+        + krate(:,370)*n(:,patmo_idx_S3)*n(:,patmo_idx_M) &
+        + krate(:,372)*n(:,patmo_idx_S4)*n(:,patmo_idx_M) &
+        + krate(:,372)*n(:,patmo_idx_S4)*n(:,patmo_idx_M) &
+        + krate(:,374)*n(:,patmo_idx_S)*n(:,patmo_idx_S)*n(:,patmo_idx_M) &
+        + krate(:,375)*n(:,patmo_idx_S)*n(:,patmo_idx_SO) &
+        - krate(:,454)*n(:,patmo_idx_CO)*n(:,patmo_idx_S2) &
+        - krate(:,457)*n(:,patmo_idx_CO)*n(:,patmo_idx_S2)
 
     dn(:,patmo_idx_S3) = &
         + krate(:,103)*n(:,patmo_idx_S)*n(:,patmo_idx_S2)*n(:,patmo_idx_M) &
         - krate(:,104)*n(:,patmo_idx_S)*n(:,patmo_idx_S3)*n(:,patmo_idx_M) &
-        - krate(:,356)*n(:,patmo_idx_S3)*n(:,patmo_idx_M) &
-        + krate(:,357)*n(:,patmo_idx_S4)*n(:,patmo_idx_M)
+        - krate(:,370)*n(:,patmo_idx_S3)*n(:,patmo_idx_M) &
+        + krate(:,371)*n(:,patmo_idx_S4)*n(:,patmo_idx_M)
 
     dn(:,patmo_idx_S4) = &
         + krate(:,104)*n(:,patmo_idx_S)*n(:,patmo_idx_S3)*n(:,patmo_idx_M) &
         + krate(:,105)*n(:,patmo_idx_S2)*n(:,patmo_idx_S2)*n(:,patmo_idx_M) &
         - krate(:,106)*n(:,patmo_idx_S4)*n(:,patmo_idx_S4)*n(:,patmo_idx_M) &
         - krate(:,106)*n(:,patmo_idx_S4)*n(:,patmo_idx_S4)*n(:,patmo_idx_M) &
-        - krate(:,357)*n(:,patmo_idx_S4)*n(:,patmo_idx_M) &
-        - krate(:,358)*n(:,patmo_idx_S4)*n(:,patmo_idx_M) &
-        + krate(:,359)*n(:,patmo_idx_S8)*n(:,patmo_idx_M) &
-        + krate(:,359)*n(:,patmo_idx_S8)*n(:,patmo_idx_M)
+        - krate(:,371)*n(:,patmo_idx_S4)*n(:,patmo_idx_M) &
+        - krate(:,372)*n(:,patmo_idx_S4)*n(:,patmo_idx_M) &
+        + krate(:,373)*n(:,patmo_idx_S8)*n(:,patmo_idx_M) &
+        + krate(:,373)*n(:,patmo_idx_S8)*n(:,patmo_idx_M)
 
     dn(:,patmo_idx_S8) = &
         + krate(:,106)*n(:,patmo_idx_S4)*n(:,patmo_idx_S4)*n(:,patmo_idx_M) &
-        - krate(:,359)*n(:,patmo_idx_S8)*n(:,patmo_idx_M)
+        - krate(:,373)*n(:,patmo_idx_S8)*n(:,patmo_idx_M)
 
     dn(:,patmo_idx_CH2) = &
         + krate(:,120)*n(:,patmo_idx_CH3)*n(:,patmo_idx_CH3) &
@@ -1749,25 +1745,33 @@ contains
         - krate(:,147)*n(:,patmo_idx_CH3OH)*n(:,patmo_idx_CH2) &
         - krate(:,158)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_CH2) &
         - krate(:,211)*n(:,patmo_idx_CH4)*n(:,patmo_idx_CH2) &
-        - krate(:,373)*n(:,patmo_idx_CH4)*n(:,patmo_idx_CH2) &
-        - krate(:,374)*n(:,patmo_idx_H)*n(:,patmo_idx_CH2) &
-        + krate(:,380)*n(:,patmo_idx_CHO)*n(:,patmo_idx_H) &
-        + krate(:,381)*n(:,patmo_idx_H)*n(:,patmo_idx_H)*n(:,patmo_idx_CO) &
-        + krate(:,382)*n(:,patmo_idx_H2)*n(:,patmo_idx_CO) &
-        + krate(:,383)*n(:,patmo_idx_H2)*n(:,patmo_idx_CH) &
-        + krate(:,384)*n(:,patmo_idx_H)*n(:,patmo_idx_H)*n(:,patmo_idx_CO2) &
-        + krate(:,385)*n(:,patmo_idx_H2)*n(:,patmo_idx_CO2) &
-        + krate(:,386)*n(:,patmo_idx_CO)*n(:,patmo_idx_H2O) &
-        + krate(:,387)*n(:,patmo_idx_O)*n(:,patmo_idx_CH2O) &
-        + krate(:,388)*n(:,patmo_idx_H)*n(:,patmo_idx_CH2O) &
-        + krate(:,389)*n(:,patmo_idx_CO)*n(:,patmo_idx_CH3) &
-        + krate(:,390)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH3O) &
-        + krate(:,391)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CO) &
-        - krate(:,397)*n(:,patmo_idx_H)*n(:,patmo_idx_CH2) &
-        + krate(:,399)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_CH3) &
-        + krate(:,400)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_CH3) &
-        + krate(:,411)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH3) &
-        + krate(:,464)*n(:,patmo_idx_CH3)*n(:,patmo_idx_CH3)
+        - krate(:,222)*n(:,patmo_idx_CH2)*n(:,patmo_idx_CH2) &
+        - krate(:,222)*n(:,patmo_idx_CH2)*n(:,patmo_idx_CH2) &
+        - krate(:,224)*n(:,patmo_idx_CH2)*n(:,patmo_idx_CH2) &
+        - krate(:,224)*n(:,patmo_idx_CH2)*n(:,patmo_idx_CH2) &
+        - krate(:,387)*n(:,patmo_idx_CH4)*n(:,patmo_idx_CH2) &
+        - krate(:,388)*n(:,patmo_idx_H)*n(:,patmo_idx_CH2) &
+        + krate(:,394)*n(:,patmo_idx_CHO)*n(:,patmo_idx_H) &
+        + krate(:,395)*n(:,patmo_idx_H)*n(:,patmo_idx_H)*n(:,patmo_idx_CO) &
+        + krate(:,396)*n(:,patmo_idx_H2)*n(:,patmo_idx_CO) &
+        + krate(:,397)*n(:,patmo_idx_H2)*n(:,patmo_idx_CH) &
+        + krate(:,398)*n(:,patmo_idx_H)*n(:,patmo_idx_H)*n(:,patmo_idx_CO2) &
+        + krate(:,399)*n(:,patmo_idx_H2)*n(:,patmo_idx_CO2) &
+        + krate(:,400)*n(:,patmo_idx_CO)*n(:,patmo_idx_H2O) &
+        + krate(:,401)*n(:,patmo_idx_O)*n(:,patmo_idx_CH2O) &
+        + krate(:,402)*n(:,patmo_idx_H)*n(:,patmo_idx_CH2O) &
+        + krate(:,403)*n(:,patmo_idx_CO)*n(:,patmo_idx_CH3) &
+        + krate(:,404)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH3O) &
+        + krate(:,405)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CO) &
+        - krate(:,411)*n(:,patmo_idx_H)*n(:,patmo_idx_CH2) &
+        + krate(:,413)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_CH3) &
+        + krate(:,414)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_CH3) &
+        + krate(:,425)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH3) &
+        + krate(:,478)*n(:,patmo_idx_CH3)*n(:,patmo_idx_CH3) &
+        + krate(:,489)*n(:,patmo_idx_C2H4) &
+        + krate(:,489)*n(:,patmo_idx_C2H4) &
+        + krate(:,491)*n(:,patmo_idx_C2H2)*n(:,patmo_idx_H2) &
+        + krate(:,491)*n(:,patmo_idx_C2H2)*n(:,patmo_idx_H2)
 
     dn(:,patmo_idx_CH) = &
         + krate(:,122)*n(:,patmo_idx_CH3) &
@@ -1779,15 +1783,17 @@ contains
         - krate(:,143)*n(:,patmo_idx_H2O)*n(:,patmo_idx_CH) &
         - krate(:,144)*n(:,patmo_idx_H2)*n(:,patmo_idx_CH) &
         - krate(:,145)*n(:,patmo_idx_H2)*n(:,patmo_idx_CH) &
-        - krate(:,375)*n(:,patmo_idx_H2)*n(:,patmo_idx_CH) &
-        - krate(:,383)*n(:,patmo_idx_H2)*n(:,patmo_idx_CH) &
-        + krate(:,392)*n(:,patmo_idx_H)*n(:,patmo_idx_CO) &
-        + krate(:,393)*n(:,patmo_idx_CHO)*n(:,patmo_idx_NO) &
-        + krate(:,394)*n(:,patmo_idx_O)*n(:,patmo_idx_CHO) &
-        + krate(:,395)*n(:,patmo_idx_OH)*n(:,patmo_idx_CO) &
-        + krate(:,396)*n(:,patmo_idx_H)*n(:,patmo_idx_CH2O) &
-        + krate(:,397)*n(:,patmo_idx_H)*n(:,patmo_idx_CH2) &
-        + krate(:,398)*n(:,patmo_idx_CH3)
+        - krate(:,218)*n(:,patmo_idx_CH)*n(:,patmo_idx_N) &
+        - krate(:,389)*n(:,patmo_idx_H2)*n(:,patmo_idx_CH) &
+        - krate(:,397)*n(:,patmo_idx_H2)*n(:,patmo_idx_CH) &
+        + krate(:,406)*n(:,patmo_idx_H)*n(:,patmo_idx_CO) &
+        + krate(:,407)*n(:,patmo_idx_CHO)*n(:,patmo_idx_NO) &
+        + krate(:,408)*n(:,patmo_idx_O)*n(:,patmo_idx_CHO) &
+        + krate(:,409)*n(:,patmo_idx_OH)*n(:,patmo_idx_CO) &
+        + krate(:,410)*n(:,patmo_idx_H)*n(:,patmo_idx_CH2O) &
+        + krate(:,411)*n(:,patmo_idx_H)*n(:,patmo_idx_CH2) &
+        + krate(:,412)*n(:,patmo_idx_CH3) &
+        + krate(:,485)*n(:,patmo_idx_CN)*n(:,patmo_idx_H)
 
     dn(:,patmo_idx_CH2OH) = &
         - krate(:,124)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_CH3) &
@@ -1808,24 +1814,24 @@ contains
         - krate(:,167)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_CHO) &
         - krate(:,168)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_CH2OH) &
         - krate(:,168)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_CH2OH) &
-        + krate(:,377)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH4) &
-        - krate(:,400)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_CH3) &
-        - krate(:,402)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_OH) &
-        - krate(:,405)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_H2) &
-        - krate(:,407)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_H2O) &
-        - krate(:,410)*n(:,patmo_idx_CH4)*n(:,patmo_idx_CH2OH) &
-        + krate(:,411)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH3) &
-        + krate(:,412)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_OH) &
-        + krate(:,413)*n(:,patmo_idx_CH3)*n(:,patmo_idx_OH) &
-        + krate(:,414)*n(:,patmo_idx_CH3OH) &
-        + krate(:,415)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H2) &
-        + krate(:,416)*n(:,patmo_idx_CH3OH)*n(:,patmo_idx_HO2) &
-        + krate(:,417)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H2O) &
-        + krate(:,418)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H2O2) &
-        + krate(:,419)*n(:,patmo_idx_CH3OH)*n(:,patmo_idx_CO) &
-        + krate(:,420)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH2O) &
-        + krate(:,421)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH3OH) &
-        + krate(:,421)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH3OH)
+        + krate(:,391)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH4) &
+        - krate(:,414)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_CH3) &
+        - krate(:,416)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_OH) &
+        - krate(:,419)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_H2) &
+        - krate(:,421)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_H2O) &
+        - krate(:,424)*n(:,patmo_idx_CH4)*n(:,patmo_idx_CH2OH) &
+        + krate(:,425)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH3) &
+        + krate(:,426)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_OH) &
+        + krate(:,427)*n(:,patmo_idx_CH3)*n(:,patmo_idx_OH) &
+        + krate(:,428)*n(:,patmo_idx_CH3OH) &
+        + krate(:,429)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H2) &
+        + krate(:,430)*n(:,patmo_idx_CH3OH)*n(:,patmo_idx_HO2) &
+        + krate(:,431)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H2O) &
+        + krate(:,432)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H2O2) &
+        + krate(:,433)*n(:,patmo_idx_CH3OH)*n(:,patmo_idx_CO) &
+        + krate(:,434)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH2O) &
+        + krate(:,435)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH3OH) &
+        + krate(:,435)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_CH3OH)
 
     dn(:,patmo_idx_N) = &
         - krate(:,169)*n(:,patmo_idx_N)*n(:,patmo_idx_O2) &
@@ -1836,14 +1842,22 @@ contains
         - krate(:,195)*n(:,patmo_idx_O)*n(:,patmo_idx_N)*n(:,patmo_idx_M) &
         - krate(:,196)*n(:,patmo_idx_H)*n(:,patmo_idx_N)*n(:,patmo_idx_M) &
         - krate(:,197)*n(:,patmo_idx_NO2)*n(:,patmo_idx_N) &
-        + krate(:,422)*n(:,patmo_idx_O)*n(:,patmo_idx_NO) &
-        + krate(:,423)*n(:,patmo_idx_N2)*n(:,patmo_idx_O) &
-        - krate(:,430)*n(:,patmo_idx_N)*n(:,patmo_idx_OH) &
-        - krate(:,446)*n(:,patmo_idx_NH2)*n(:,patmo_idx_N) &
-        - krate(:,447)*n(:,patmo_idx_NH3)*n(:,patmo_idx_N) &
-        + krate(:,448)*n(:,patmo_idx_NO)*n(:,patmo_idx_M) &
-        + krate(:,449)*n(:,patmo_idx_NH)*n(:,patmo_idx_M) &
-        + krate(:,450)*n(:,patmo_idx_N2O)*n(:,patmo_idx_O)
+        - krate(:,216)*n(:,patmo_idx_CH4)*n(:,patmo_idx_N) &
+        - krate(:,218)*n(:,patmo_idx_CH)*n(:,patmo_idx_N) &
+        - krate(:,219)*n(:,patmo_idx_CH3)*n(:,patmo_idx_N) &
+        - krate(:,223)*n(:,patmo_idx_C2H4)*n(:,patmo_idx_N) &
+        + krate(:,436)*n(:,patmo_idx_O)*n(:,patmo_idx_NO) &
+        + krate(:,437)*n(:,patmo_idx_N2)*n(:,patmo_idx_O) &
+        - krate(:,444)*n(:,patmo_idx_N)*n(:,patmo_idx_OH) &
+        - krate(:,460)*n(:,patmo_idx_NH2)*n(:,patmo_idx_N) &
+        - krate(:,461)*n(:,patmo_idx_NH3)*n(:,patmo_idx_N) &
+        + krate(:,462)*n(:,patmo_idx_NO)*n(:,patmo_idx_M) &
+        + krate(:,463)*n(:,patmo_idx_NH)*n(:,patmo_idx_M) &
+        + krate(:,464)*n(:,patmo_idx_N2O)*n(:,patmo_idx_O) &
+        + krate(:,483)*n(:,patmo_idx_HCN)*n(:,patmo_idx_H2)*n(:,patmo_idx_H) &
+        + krate(:,485)*n(:,patmo_idx_CN)*n(:,patmo_idx_H) &
+        + krate(:,486)*n(:,patmo_idx_HCN)*n(:,patmo_idx_H)*n(:,patmo_idx_H) &
+        + krate(:,490)*n(:,patmo_idx_HCN)*n(:,patmo_idx_CH3)
 
     dn(:,patmo_idx_NH2) = &
         - krate(:,173)*n(:,patmo_idx_NH2)*n(:,patmo_idx_NH2)*n(:,patmo_idx_M) &
@@ -1858,33 +1872,33 @@ contains
         - krate(:,192)*n(:,patmo_idx_OH)*n(:,patmo_idx_NH2) &
         + krate(:,193)*n(:,patmo_idx_NH)*n(:,patmo_idx_NH) &
         - krate(:,194)*n(:,patmo_idx_NH2)*n(:,patmo_idx_NH) &
-        + krate(:,252)*n(:,patmo_idx_NH3) &
-        + krate(:,426)*n(:,patmo_idx_N2H4)*n(:,patmo_idx_M) &
-        + krate(:,426)*n(:,patmo_idx_N2H4)*n(:,patmo_idx_M) &
-        - krate(:,428)*n(:,patmo_idx_NH2)*n(:,patmo_idx_NH2) &
-        - krate(:,428)*n(:,patmo_idx_NH2)*n(:,patmo_idx_NH2) &
-        + krate(:,431)*n(:,patmo_idx_N2)*n(:,patmo_idx_H2O) &
-        + krate(:,432)*n(:,patmo_idx_NH)*n(:,patmo_idx_OH) &
-        - krate(:,433)*n(:,patmo_idx_NH2)*n(:,patmo_idx_OH) &
-        - krate(:,434)*n(:,patmo_idx_NH2)*n(:,patmo_idx_H2O) &
-        + krate(:,435)*n(:,patmo_idx_NH3)*n(:,patmo_idx_M) &
-        + krate(:,445)*n(:,patmo_idx_H2O)*n(:,patmo_idx_NH) &
-        - krate(:,446)*n(:,patmo_idx_NH2)*n(:,patmo_idx_N) &
-        + krate(:,447)*n(:,patmo_idx_NH3)*n(:,patmo_idx_N)
+        + krate(:,265)*n(:,patmo_idx_NH3) &
+        + krate(:,440)*n(:,patmo_idx_N2H4)*n(:,patmo_idx_M) &
+        + krate(:,440)*n(:,patmo_idx_N2H4)*n(:,patmo_idx_M) &
+        - krate(:,442)*n(:,patmo_idx_NH2)*n(:,patmo_idx_NH2) &
+        - krate(:,442)*n(:,patmo_idx_NH2)*n(:,patmo_idx_NH2) &
+        + krate(:,445)*n(:,patmo_idx_N2)*n(:,patmo_idx_H2O) &
+        + krate(:,446)*n(:,patmo_idx_NH)*n(:,patmo_idx_OH) &
+        - krate(:,447)*n(:,patmo_idx_NH2)*n(:,patmo_idx_OH) &
+        - krate(:,448)*n(:,patmo_idx_NH2)*n(:,patmo_idx_H2O) &
+        + krate(:,449)*n(:,patmo_idx_NH3)*n(:,patmo_idx_M) &
+        + krate(:,459)*n(:,patmo_idx_H2O)*n(:,patmo_idx_NH) &
+        - krate(:,460)*n(:,patmo_idx_NH2)*n(:,patmo_idx_N) &
+        + krate(:,461)*n(:,patmo_idx_NH3)*n(:,patmo_idx_N)
 
     dn(:,patmo_idx_N2H4) = &
         + krate(:,173)*n(:,patmo_idx_NH2)*n(:,patmo_idx_NH2)*n(:,patmo_idx_M) &
         - krate(:,174)*n(:,patmo_idx_N2H4)*n(:,patmo_idx_H) &
-        - krate(:,251)*n(:,patmo_idx_N2H4) &
-        - krate(:,426)*n(:,patmo_idx_N2H4)*n(:,patmo_idx_M) &
-        + krate(:,427)*n(:,patmo_idx_N2H3)*n(:,patmo_idx_H2)
+        - krate(:,264)*n(:,patmo_idx_N2H4) &
+        - krate(:,440)*n(:,patmo_idx_N2H4)*n(:,patmo_idx_M) &
+        + krate(:,441)*n(:,patmo_idx_N2H3)*n(:,patmo_idx_H2)
 
     dn(:,patmo_idx_N2H3) = &
         + krate(:,174)*n(:,patmo_idx_N2H4)*n(:,patmo_idx_H) &
         - krate(:,175)*n(:,patmo_idx_N2H3)*n(:,patmo_idx_H) &
-        + krate(:,251)*n(:,patmo_idx_N2H4) &
-        - krate(:,427)*n(:,patmo_idx_N2H3)*n(:,patmo_idx_H2) &
-        + krate(:,428)*n(:,patmo_idx_NH2)*n(:,patmo_idx_NH2)
+        + krate(:,264)*n(:,patmo_idx_N2H4) &
+        - krate(:,441)*n(:,patmo_idx_N2H3)*n(:,patmo_idx_H2) &
+        + krate(:,442)*n(:,patmo_idx_NH2)*n(:,patmo_idx_NH2)
 
     dn(:,patmo_idx_NH) = &
         - krate(:,176)*n(:,patmo_idx_NH)*n(:,patmo_idx_NO) &
@@ -1897,29 +1911,31 @@ contains
         - krate(:,193)*n(:,patmo_idx_NH)*n(:,patmo_idx_NH) &
         - krate(:,194)*n(:,patmo_idx_NH2)*n(:,patmo_idx_NH) &
         + krate(:,196)*n(:,patmo_idx_H)*n(:,patmo_idx_N)*n(:,patmo_idx_M) &
-        + krate(:,253)*n(:,patmo_idx_NH3) &
-        + krate(:,429)*n(:,patmo_idx_N2)*n(:,patmo_idx_OH) &
-        + krate(:,430)*n(:,patmo_idx_N)*n(:,patmo_idx_OH) &
-        - krate(:,432)*n(:,patmo_idx_NH)*n(:,patmo_idx_OH) &
-        + krate(:,436)*n(:,patmo_idx_N2O)*n(:,patmo_idx_H) &
-        + krate(:,437)*n(:,patmo_idx_NO)*n(:,patmo_idx_H) &
-        - krate(:,445)*n(:,patmo_idx_H2O)*n(:,patmo_idx_NH) &
-        + krate(:,446)*n(:,patmo_idx_NH2)*n(:,patmo_idx_N) &
-        + krate(:,446)*n(:,patmo_idx_NH2)*n(:,patmo_idx_N) &
-        + krate(:,447)*n(:,patmo_idx_NH3)*n(:,patmo_idx_N) &
-        - krate(:,449)*n(:,patmo_idx_NH)*n(:,patmo_idx_M)
+        + krate(:,221)*n(:,patmo_idx_HCN)*n(:,patmo_idx_O) &
+        + krate(:,266)*n(:,patmo_idx_NH3) &
+        + krate(:,443)*n(:,patmo_idx_N2)*n(:,patmo_idx_OH) &
+        + krate(:,444)*n(:,patmo_idx_N)*n(:,patmo_idx_OH) &
+        - krate(:,446)*n(:,patmo_idx_NH)*n(:,patmo_idx_OH) &
+        + krate(:,450)*n(:,patmo_idx_N2O)*n(:,patmo_idx_H) &
+        + krate(:,451)*n(:,patmo_idx_NO)*n(:,patmo_idx_H) &
+        - krate(:,459)*n(:,patmo_idx_H2O)*n(:,patmo_idx_NH) &
+        + krate(:,460)*n(:,patmo_idx_NH2)*n(:,patmo_idx_N) &
+        + krate(:,460)*n(:,patmo_idx_NH2)*n(:,patmo_idx_N) &
+        + krate(:,461)*n(:,patmo_idx_NH3)*n(:,patmo_idx_N) &
+        - krate(:,463)*n(:,patmo_idx_NH)*n(:,patmo_idx_M) &
+        - krate(:,488)*n(:,patmo_idx_CO)*n(:,patmo_idx_NH)
 
     dn(:,patmo_idx_NH3) = &
         - krate(:,180)*n(:,patmo_idx_NH3)*n(:,patmo_idx_O_1D) &
         - krate(:,181)*n(:,patmo_idx_NH3)*n(:,patmo_idx_OH) &
         + krate(:,182)*n(:,patmo_idx_NH2)*n(:,patmo_idx_H)*n(:,patmo_idx_M) &
         + krate(:,194)*n(:,patmo_idx_NH2)*n(:,patmo_idx_NH) &
-        - krate(:,252)*n(:,patmo_idx_NH3) &
-        - krate(:,253)*n(:,patmo_idx_NH3) &
-        + krate(:,433)*n(:,patmo_idx_NH2)*n(:,patmo_idx_OH) &
-        + krate(:,434)*n(:,patmo_idx_NH2)*n(:,patmo_idx_H2O) &
-        - krate(:,435)*n(:,patmo_idx_NH3)*n(:,patmo_idx_M) &
-        - krate(:,447)*n(:,patmo_idx_NH3)*n(:,patmo_idx_N)
+        - krate(:,265)*n(:,patmo_idx_NH3) &
+        - krate(:,266)*n(:,patmo_idx_NH3) &
+        + krate(:,447)*n(:,patmo_idx_NH2)*n(:,patmo_idx_OH) &
+        + krate(:,448)*n(:,patmo_idx_NH2)*n(:,patmo_idx_H2O) &
+        - krate(:,449)*n(:,patmo_idx_NH3)*n(:,patmo_idx_M) &
+        - krate(:,461)*n(:,patmo_idx_NH3)*n(:,patmo_idx_N)
 
     dn(:,patmo_idx_HOCO) = &
         + krate(:,199)*n(:,patmo_idx_OH)*n(:,patmo_idx_CO)*n(:,patmo_idx_M) &
@@ -1931,33 +1947,91 @@ contains
         - krate(:,205)*n(:,patmo_idx_HOCO)*n(:,patmo_idx_H) &
         - krate(:,206)*n(:,patmo_idx_HOCO)*n(:,patmo_idx_CO) &
         - krate(:,214)*n(:,patmo_idx_HOCO)*n(:,patmo_idx_O2) &
-        - krate(:,452)*n(:,patmo_idx_HOCO)*n(:,patmo_idx_M) &
-        + krate(:,453)*n(:,patmo_idx_CO2)*n(:,patmo_idx_OH) &
-        + krate(:,454)*n(:,patmo_idx_CO2)*n(:,patmo_idx_H2O) &
-        + krate(:,455)*n(:,patmo_idx_H2O)*n(:,patmo_idx_CH2CO) &
-        + krate(:,456)*n(:,patmo_idx_CH4)*n(:,patmo_idx_CO2) &
-        + krate(:,457)*n(:,patmo_idx_H2O)*n(:,patmo_idx_CO) &
-        + krate(:,458)*n(:,patmo_idx_H2)*n(:,patmo_idx_CO2) &
-        + krate(:,459)*n(:,patmo_idx_COCOOH) &
-        + krate(:,467)*n(:,patmo_idx_HO2)*n(:,patmo_idx_CO2)
+        - krate(:,466)*n(:,patmo_idx_HOCO)*n(:,patmo_idx_M) &
+        + krate(:,467)*n(:,patmo_idx_CO2)*n(:,patmo_idx_OH) &
+        + krate(:,468)*n(:,patmo_idx_CO2)*n(:,patmo_idx_H2O) &
+        + krate(:,469)*n(:,patmo_idx_H2O)*n(:,patmo_idx_CH2CO) &
+        + krate(:,470)*n(:,patmo_idx_CH4)*n(:,patmo_idx_CO2) &
+        + krate(:,471)*n(:,patmo_idx_H2O)*n(:,patmo_idx_CO) &
+        + krate(:,472)*n(:,patmo_idx_H2)*n(:,patmo_idx_CO2) &
+        + krate(:,473)*n(:,patmo_idx_COCOOH) &
+        + krate(:,481)*n(:,patmo_idx_HO2)*n(:,patmo_idx_CO2)
 
     dn(:,patmo_idx_O_3P) = &
         - krate(:,200)*n(:,patmo_idx_HOCO)*n(:,patmo_idx_O_3P) &
         + krate(:,208)*n(:,patmo_idx_O_1D)*n(:,patmo_idx_CO2) &
         + krate(:,209)*n(:,patmo_idx_O_1D)*n(:,patmo_idx_N2) &
         + krate(:,210)*n(:,patmo_idx_O_1D)*n(:,patmo_idx_SO2) &
-        + krate(:,453)*n(:,patmo_idx_CO2)*n(:,patmo_idx_OH) &
-        - krate(:,461)*n(:,patmo_idx_O_3P)*n(:,patmo_idx_CO2) &
-        - krate(:,462)*n(:,patmo_idx_O_3P)*n(:,patmo_idx_N2) &
-        - krate(:,463)*n(:,patmo_idx_O_3P)*n(:,patmo_idx_SO2)
+        + krate(:,217)*n(:,patmo_idx_O_1D)*n(:,patmo_idx_HCN) &
+        + krate(:,467)*n(:,patmo_idx_CO2)*n(:,patmo_idx_OH) &
+        - krate(:,475)*n(:,patmo_idx_O_3P)*n(:,patmo_idx_CO2) &
+        - krate(:,476)*n(:,patmo_idx_O_3P)*n(:,patmo_idx_N2) &
+        - krate(:,477)*n(:,patmo_idx_O_3P)*n(:,patmo_idx_SO2) &
+        - krate(:,484)*n(:,patmo_idx_O_3P)*n(:,patmo_idx_HCN)
 
     dn(:,patmo_idx_CH2CO) = &
         + krate(:,202)*n(:,patmo_idx_HOCO)*n(:,patmo_idx_CH3) &
-        - krate(:,455)*n(:,patmo_idx_H2O)*n(:,patmo_idx_CH2CO)
+        - krate(:,469)*n(:,patmo_idx_H2O)*n(:,patmo_idx_CH2CO)
 
     dn(:,patmo_idx_COCOOH) = &
         + krate(:,206)*n(:,patmo_idx_HOCO)*n(:,patmo_idx_CO) &
-        - krate(:,459)*n(:,patmo_idx_COCOOH)
+        - krate(:,473)*n(:,patmo_idx_COCOOH)
+
+    dn(:,patmo_idx_CN) = &
+        - krate(:,215)*n(:,patmo_idx_CN)*n(:,patmo_idx_CH4) &
+        + krate(:,218)*n(:,patmo_idx_CH)*n(:,patmo_idx_N) &
+        + krate(:,220)*n(:,patmo_idx_HCN)*n(:,patmo_idx_OH) &
+        - krate(:,226)*n(:,patmo_idx_CN)*n(:,patmo_idx_C2H2) &
+        + krate(:,267)*n(:,patmo_idx_HCN) &
+        + krate(:,482)*n(:,patmo_idx_HCN)*n(:,patmo_idx_CH3) &
+        - krate(:,485)*n(:,patmo_idx_CN)*n(:,patmo_idx_H) &
+        - krate(:,487)*n(:,patmo_idx_CN)*n(:,patmo_idx_H2O) &
+        + krate(:,493)*n(:,patmo_idx_HCN)*n(:,patmo_idx_C2H)
+
+    dn(:,patmo_idx_HCN) = &
+        + krate(:,215)*n(:,patmo_idx_CN)*n(:,patmo_idx_CH4) &
+        + krate(:,216)*n(:,patmo_idx_CH4)*n(:,patmo_idx_N) &
+        - krate(:,217)*n(:,patmo_idx_O_1D)*n(:,patmo_idx_HCN) &
+        + krate(:,217)*n(:,patmo_idx_O_1D)*n(:,patmo_idx_HCN) &
+        + krate(:,219)*n(:,patmo_idx_CH3)*n(:,patmo_idx_N) &
+        - krate(:,220)*n(:,patmo_idx_HCN)*n(:,patmo_idx_OH) &
+        - krate(:,221)*n(:,patmo_idx_HCN)*n(:,patmo_idx_O) &
+        + krate(:,223)*n(:,patmo_idx_C2H4)*n(:,patmo_idx_N) &
+        + krate(:,226)*n(:,patmo_idx_CN)*n(:,patmo_idx_C2H2) &
+        - krate(:,267)*n(:,patmo_idx_HCN) &
+        - krate(:,482)*n(:,patmo_idx_HCN)*n(:,patmo_idx_CH3) &
+        - krate(:,483)*n(:,patmo_idx_HCN)*n(:,patmo_idx_H2)*n(:,patmo_idx_H) &
+        - krate(:,484)*n(:,patmo_idx_O_3P)*n(:,patmo_idx_HCN) &
+        + krate(:,484)*n(:,patmo_idx_O_3P)*n(:,patmo_idx_HCN) &
+        - krate(:,486)*n(:,patmo_idx_HCN)*n(:,patmo_idx_H)*n(:,patmo_idx_H) &
+        + krate(:,487)*n(:,patmo_idx_CN)*n(:,patmo_idx_H2O) &
+        + krate(:,488)*n(:,patmo_idx_CO)*n(:,patmo_idx_NH) &
+        - krate(:,490)*n(:,patmo_idx_HCN)*n(:,patmo_idx_CH3) &
+        - krate(:,493)*n(:,patmo_idx_HCN)*n(:,patmo_idx_C2H)
+
+    dn(:,patmo_idx_C2H4) = &
+        + krate(:,222)*n(:,patmo_idx_CH2)*n(:,patmo_idx_CH2) &
+        - krate(:,223)*n(:,patmo_idx_C2H4)*n(:,patmo_idx_N) &
+        - krate(:,489)*n(:,patmo_idx_C2H4) &
+        + krate(:,490)*n(:,patmo_idx_HCN)*n(:,patmo_idx_CH3)
+
+    dn(:,patmo_idx_C2H2) = &
+        + krate(:,224)*n(:,patmo_idx_CH2)*n(:,patmo_idx_CH2) &
+        - krate(:,225)*n(:,patmo_idx_C2H2)*n(:,patmo_idx_OH) &
+        - krate(:,226)*n(:,patmo_idx_CN)*n(:,patmo_idx_C2H2) &
+        + krate(:,227)*n(:,patmo_idx_C2H)*n(:,patmo_idx_H2O) &
+        - krate(:,491)*n(:,patmo_idx_C2H2)*n(:,patmo_idx_H2) &
+        + krate(:,492)*n(:,patmo_idx_C2H)*n(:,patmo_idx_H2O) &
+        + krate(:,493)*n(:,patmo_idx_HCN)*n(:,patmo_idx_C2H) &
+        - krate(:,494)*n(:,patmo_idx_C2H2)*n(:,patmo_idx_O2)
+
+    dn(:,patmo_idx_C2H) = &
+        + krate(:,225)*n(:,patmo_idx_C2H2)*n(:,patmo_idx_OH) &
+        + krate(:,226)*n(:,patmo_idx_CN)*n(:,patmo_idx_C2H2) &
+        - krate(:,227)*n(:,patmo_idx_C2H)*n(:,patmo_idx_H2O) &
+        - krate(:,492)*n(:,patmo_idx_C2H)*n(:,patmo_idx_H2O) &
+        - krate(:,493)*n(:,patmo_idx_HCN)*n(:,patmo_idx_C2H) &
+        + krate(:,494)*n(:,patmo_idx_C2H2)*n(:,patmo_idx_O2)
 
     ngas_hpp(:) = ngas_hp(:)/ngas_p(:)
     ngas_hpz(:) = ngas_hp(:)/ngas(:)
@@ -1973,8 +2047,8 @@ contains
     end do
 
     !Chemical Species with constant concentration
+    dn(:,patmo_idx_H2O) = 0d0
     dn(:,patmo_idx_CO2) = 0d0
-    dn(:,patmo_idx_N2) = 0d0
     dn(:,patmo_idx_M) = 0d0
 
     ! Dry Deposition: assumed a deposition rate of 0.1 cm/s
@@ -1990,8 +2064,8 @@ contains
     end if
     O2Flux = -1d5 * dn(1, patmo_idx_O2)
     dn(1,patmo_idx_O2) = 0d0
-    if (n(1,patmo_idx_S8) > 0.1/1d5) then
-      dn(1,patmo_idx_S8) = dn(1,patmo_idx_S8) - (0.1/1d5) * n(1,patmo_idx_S8)
+    if (n(1,patmo_idx_NH3) > 0.1/1d5) then
+      dn(1,patmo_idx_NH3) = dn(1,patmo_idx_NH3) - (0.1/1d5) * n(1,patmo_idx_NH3)
     end if
     if (n(1,patmo_idx_H2O2) > 0.1/1d5) then
       dn(1,patmo_idx_H2O2) = dn(1,patmo_idx_H2O2) - (0.1/1d5) * n(1,patmo_idx_H2O2)
@@ -2022,6 +2096,9 @@ contains
     end if
     if (n(1,patmo_idx_CH3) > 0.1/1d5) then
       dn(1,patmo_idx_CH3) = dn(1,patmo_idx_CH3) - (0.1/1d5) * n(1,patmo_idx_CH3)
+    end if
+    if (n(1,patmo_idx_HCN) > 0.1/1d5) then
+      dn(1,patmo_idx_HCN) = dn(1,patmo_idx_HCN) - (0.1/1d5) * n(1,patmo_idx_HCN)
     end if
 
     !Volcanic emission
