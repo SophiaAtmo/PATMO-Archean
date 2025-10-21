@@ -1,5 +1,5 @@
 cellsNumber 	= 100
-cellThickness = 100000
+cellThickness = 1000
 photoBinsNumber = 6800
 network 	= tests/archean/archean.ntw
 wavelengMin = 120
