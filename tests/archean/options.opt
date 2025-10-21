@@ -2,19 +2,20 @@ cellsNumber 	= 100
 cellThickness = 100000
 photoBinsNumber = 6800
 network 	= tests/archean/archean.ntw
-#energyMin 	= 1.549802411501
-#energyMax	= 10.3320160766702
 wavelengMin = 120
 wavelengMax	= 800
 zenith_angle = 60.0
+# [48.19, 60.0, 75.52]
+TOA_para = 0.5
+# [0.666667,0.5,0.25]
 usePhotochemistry = T
 useHescape = F 
-useWaterRemoval = F 
+useWaterRemoval = F
 useAerosolformation = F 
 useGravitySettling = F
 constant_species = CO2, M
 #species:deposition_velocity
 drydep_species = CH4:0.1, O2:0.1, NH3:0.1, H2O2:0.1, HO2:0.1, CH2O:0.1, CHO:0.1, OH:0.1, O:0.1, H:0.1, CO:0.1, HOCO:0.1, CH3:0.1, HCN:0.1
 #species:emission_rate
-emission_species =  H2S : 3.85d9/1d5/11d0, SO2 : 10d0*3.85d9/1d5/11d0, CO : 3d9/1d5, H2 : 1d10/1d5, NH3 : 5.3d9/1d5
+emission_species = H2S : 3.85d9/1d5/11d0, SO2 : 10d0*3.85d9/1d5/11d0, CO : 3d9/1d5, H2 : 1d10/1d5, NH3 : 5.3d9/1d5
 
