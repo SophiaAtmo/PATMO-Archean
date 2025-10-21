@@ -650,6 +650,72 @@ contains
         + krate(:,432)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H2O2) &
         - krate(:,481)*n(:,patmo_idx_HO2)*n(:,patmo_idx_CO2)
 
+    dn(:,patmo_idx_H2O) = &
+        + krate(:,9)*n(:,patmo_idx_OH)*n(:,patmo_idx_HO2) &
+        - krate(:,10)*n(:,patmo_idx_O_1D)*n(:,patmo_idx_H2O) &
+        - krate(:,11)*n(:,patmo_idx_H2O)*n(:,patmo_idx_H) &
+        + krate(:,20)*n(:,patmo_idx_HNO3)*n(:,patmo_idx_OH)*n(:,patmo_idx_M) &
+        + krate(:,27)*n(:,patmo_idx_H)*n(:,patmo_idx_HO2) &
+        + krate(:,29)*n(:,patmo_idx_CH4)*n(:,patmo_idx_OH) &
+        + krate(:,33)*n(:,patmo_idx_CH3OOH)*n(:,patmo_idx_OH) &
+        + krate(:,34)*n(:,patmo_idx_CH3OOH)*n(:,patmo_idx_OH) &
+        + krate(:,36)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_OH) &
+        + krate(:,40)*n(:,patmo_idx_H2O2)*n(:,patmo_idx_OH) &
+        + krate(:,48)*n(:,patmo_idx_H2S)*n(:,patmo_idx_OH) &
+        + krate(:,51)*n(:,patmo_idx_H2S)*n(:,patmo_idx_HO2) &
+        - krate(:,71)*n(:,patmo_idx_SO3)*n(:,patmo_idx_H2O) &
+        + krate(:,87)*n(:,patmo_idx_OH)*n(:,patmo_idx_CHO) &
+        + krate(:,93)*n(:,patmo_idx_OH)*n(:,patmo_idx_H2) &
+        + krate(:,133)*n(:,patmo_idx_O2)*n(:,patmo_idx_CH2) &
+        - krate(:,143)*n(:,patmo_idx_H2O)*n(:,patmo_idx_CH) &
+        + krate(:,150)*n(:,patmo_idx_CH3OH)*n(:,patmo_idx_H) &
+        + krate(:,153)*n(:,patmo_idx_CH3OH)*n(:,patmo_idx_OH) &
+        + krate(:,154)*n(:,patmo_idx_CH3OH)*n(:,patmo_idx_OH) &
+        + krate(:,155)*n(:,patmo_idx_CH3OH)*n(:,patmo_idx_OH) &
+        + krate(:,164)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_OH) &
+        + krate(:,178)*n(:,patmo_idx_NH2)*n(:,patmo_idx_NO) &
+        + krate(:,181)*n(:,patmo_idx_NH3)*n(:,patmo_idx_OH) &
+        + krate(:,192)*n(:,patmo_idx_OH)*n(:,patmo_idx_NH2) &
+        + krate(:,201)*n(:,patmo_idx_HOCO)*n(:,patmo_idx_OH) &
+        + krate(:,202)*n(:,patmo_idx_HOCO)*n(:,patmo_idx_CH3) &
+        + krate(:,204)*n(:,patmo_idx_HOCO)*n(:,patmo_idx_H) &
+        + krate(:,220)*n(:,patmo_idx_HCN)*n(:,patmo_idx_OH) &
+        + krate(:,225)*n(:,patmo_idx_C2H2)*n(:,patmo_idx_OH) &
+        - krate(:,227)*n(:,patmo_idx_C2H)*n(:,patmo_idx_H2O) &
+        - krate(:,234)*n(:,patmo_idx_H2O) &
+        - krate(:,235)*n(:,patmo_idx_H2O) &
+        - krate(:,276)*n(:,patmo_idx_H2O)*n(:,patmo_idx_O2) &
+        + krate(:,277)*n(:,patmo_idx_OH)*n(:,patmo_idx_OH) &
+        + krate(:,278)*n(:,patmo_idx_OH)*n(:,patmo_idx_H2) &
+        - krate(:,287)*n(:,patmo_idx_NO3)*n(:,patmo_idx_H2O)*n(:,patmo_idx_M) &
+        - krate(:,294)*n(:,patmo_idx_O)*n(:,patmo_idx_H2O) &
+        - krate(:,296)*n(:,patmo_idx_CH3)*n(:,patmo_idx_H2O) &
+        - krate(:,300)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_OH)*n(:,patmo_idx_H2O) &
+        - krate(:,301)*n(:,patmo_idx_CH3O2)*n(:,patmo_idx_H2O) &
+        - krate(:,303)*n(:,patmo_idx_CHO)*n(:,patmo_idx_H2O) &
+        - krate(:,307)*n(:,patmo_idx_HO2)*n(:,patmo_idx_H2O) &
+        - krate(:,315)*n(:,patmo_idx_H2O)*n(:,patmo_idx_SH) &
+        - krate(:,318)*n(:,patmo_idx_H2O)*n(:,patmo_idx_HSO) &
+        + krate(:,338)*n(:,patmo_idx_H2SO4) &
+        - krate(:,354)*n(:,patmo_idx_H2O)*n(:,patmo_idx_CO) &
+        - krate(:,360)*n(:,patmo_idx_H)*n(:,patmo_idx_H2O) &
+        - krate(:,400)*n(:,patmo_idx_CO)*n(:,patmo_idx_H2O) &
+        + krate(:,410)*n(:,patmo_idx_H)*n(:,patmo_idx_CH2O) &
+        - krate(:,417)*n(:,patmo_idx_CH3)*n(:,patmo_idx_H2O) &
+        - krate(:,420)*n(:,patmo_idx_CH3O)*n(:,patmo_idx_H2O) &
+        - krate(:,421)*n(:,patmo_idx_CH2OH)*n(:,patmo_idx_H2O) &
+        - krate(:,422)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H2O)*n(:,patmo_idx_H) &
+        - krate(:,431)*n(:,patmo_idx_CH2O)*n(:,patmo_idx_H2O) &
+        - krate(:,445)*n(:,patmo_idx_N2)*n(:,patmo_idx_H2O) &
+        - krate(:,448)*n(:,patmo_idx_NH2)*n(:,patmo_idx_H2O) &
+        - krate(:,459)*n(:,patmo_idx_H2O)*n(:,patmo_idx_NH) &
+        - krate(:,468)*n(:,patmo_idx_CO2)*n(:,patmo_idx_H2O) &
+        - krate(:,469)*n(:,patmo_idx_H2O)*n(:,patmo_idx_CH2CO) &
+        - krate(:,471)*n(:,patmo_idx_H2O)*n(:,patmo_idx_CO) &
+        - krate(:,487)*n(:,patmo_idx_CN)*n(:,patmo_idx_H2O) &
+        - krate(:,492)*n(:,patmo_idx_C2H)*n(:,patmo_idx_H2O) &
+        + krate(:,494)*n(:,patmo_idx_C2H2)*n(:,patmo_idx_O2)
+
     dn(:,patmo_idx_H) = &
         - krate(:,11)*n(:,patmo_idx_H2O)*n(:,patmo_idx_H) &
         - krate(:,22)*n(:,patmo_idx_H)*n(:,patmo_idx_O3) &
@@ -2047,58 +2113,57 @@ contains
     end do
 
     !Chemical Species with constant concentration
-    dn(:,patmo_idx_H2O) = 0d0
     dn(:,patmo_idx_CO2) = 0d0
     dn(:,patmo_idx_M) = 0d0
 
     ! Dry Deposition: assumed a deposition rate of 0.1 cm/s
-    !dn(1,patmo_idx_A)=dn(1,patmo_idx_A) - 0.1/1.0d5*n(1,patmo_idx_A)
+    !dn(1,patmo_idx_A)=dn(1,patmo_idx_A) - 0.1/(layer_thickness(in cm))*n(1,patmo_idx_A)
     ! Fix the mixing ratio of CH4 and O2 at the bottom layer as a constant (Claire et al., 2014; Zahnle et al., 2006)
-    if (n(1,patmo_idx_CH4) > 0.1/1d5) then
-      dn(1,patmo_idx_CH4) = dn(1,patmo_idx_CH4) - (0.1/1d5) * n(1,patmo_idx_CH4)
+    if (n(1,patmo_idx_CH4) > 0.1/(1000*1d2)) then
+      dn(1,patmo_idx_CH4) = dn(1,patmo_idx_CH4) - (0.1/(1000*1d2)) * n(1,patmo_idx_CH4)
     end if
-    CH4Flux = -1d5 * dn(1, patmo_idx_CH4)
+    CH4Flux = -1000*1d2 * dn(1, patmo_idx_CH4)
     dn(1,patmo_idx_CH4) = 0d0
-    if (n(1,patmo_idx_O2) > 0.1/1d5) then
-      dn(1,patmo_idx_O2) = dn(1,patmo_idx_O2) - (0.1/1d5) * n(1,patmo_idx_O2)
+    if (n(1,patmo_idx_O2) > 0.1/(1000*1d2)) then
+      dn(1,patmo_idx_O2) = dn(1,patmo_idx_O2) - (0.1/(1000*1d2)) * n(1,patmo_idx_O2)
     end if
-    O2Flux = -1d5 * dn(1, patmo_idx_O2)
+    O2Flux = -1000*1d2 * dn(1, patmo_idx_O2)
     dn(1,patmo_idx_O2) = 0d0
-    if (n(1,patmo_idx_NH3) > 0.1/1d5) then
-      dn(1,patmo_idx_NH3) = dn(1,patmo_idx_NH3) - (0.1/1d5) * n(1,patmo_idx_NH3)
+    if (n(1,patmo_idx_NH3) > 0.1/(1000*1d2)) then
+      dn(1,patmo_idx_NH3) = dn(1,patmo_idx_NH3) - (0.1/(1000*1d2)) * n(1,patmo_idx_NH3)
     end if
-    if (n(1,patmo_idx_H2O2) > 0.1/1d5) then
-      dn(1,patmo_idx_H2O2) = dn(1,patmo_idx_H2O2) - (0.1/1d5) * n(1,patmo_idx_H2O2)
+    if (n(1,patmo_idx_H2O2) > 0.1/(1000*1d2)) then
+      dn(1,patmo_idx_H2O2) = dn(1,patmo_idx_H2O2) - (0.1/(1000*1d2)) * n(1,patmo_idx_H2O2)
     end if
-    if (n(1,patmo_idx_HO2) > 0.1/1d5) then
-      dn(1,patmo_idx_HO2) = dn(1,patmo_idx_HO2) - (0.1/1d5) * n(1,patmo_idx_HO2)
+    if (n(1,patmo_idx_HO2) > 0.1/(1000*1d2)) then
+      dn(1,patmo_idx_HO2) = dn(1,patmo_idx_HO2) - (0.1/(1000*1d2)) * n(1,patmo_idx_HO2)
     end if
-    if (n(1,patmo_idx_CH2O) > 0.1/1d5) then
-      dn(1,patmo_idx_CH2O) = dn(1,patmo_idx_CH2O) - (0.1/1d5) * n(1,patmo_idx_CH2O)
+    if (n(1,patmo_idx_CH2O) > 0.1/(1000*1d2)) then
+      dn(1,patmo_idx_CH2O) = dn(1,patmo_idx_CH2O) - (0.1/(1000*1d2)) * n(1,patmo_idx_CH2O)
     end if
-    if (n(1,patmo_idx_CHO) > 0.1/1d5) then
-      dn(1,patmo_idx_CHO) = dn(1,patmo_idx_CHO) - (0.1/1d5) * n(1,patmo_idx_CHO)
+    if (n(1,patmo_idx_CHO) > 0.1/(1000*1d2)) then
+      dn(1,patmo_idx_CHO) = dn(1,patmo_idx_CHO) - (0.1/(1000*1d2)) * n(1,patmo_idx_CHO)
     end if
-    if (n(1,patmo_idx_OH) > 0.1/1d5) then
-      dn(1,patmo_idx_OH) = dn(1,patmo_idx_OH) - (0.1/1d5) * n(1,patmo_idx_OH)
+    if (n(1,patmo_idx_OH) > 0.1/(1000*1d2)) then
+      dn(1,patmo_idx_OH) = dn(1,patmo_idx_OH) - (0.1/(1000*1d2)) * n(1,patmo_idx_OH)
     end if
-    if (n(1,patmo_idx_O) > 0.1/1d5) then
-      dn(1,patmo_idx_O) = dn(1,patmo_idx_O) - (0.1/1d5) * n(1,patmo_idx_O)
+    if (n(1,patmo_idx_O) > 0.1/(1000*1d2)) then
+      dn(1,patmo_idx_O) = dn(1,patmo_idx_O) - (0.1/(1000*1d2)) * n(1,patmo_idx_O)
     end if
-    if (n(1,patmo_idx_H) > 0.1/1d5) then
-      dn(1,patmo_idx_H) = dn(1,patmo_idx_H) - (0.1/1d5) * n(1,patmo_idx_H)
+    if (n(1,patmo_idx_H) > 0.1/(1000*1d2)) then
+      dn(1,patmo_idx_H) = dn(1,patmo_idx_H) - (0.1/(1000*1d2)) * n(1,patmo_idx_H)
     end if
-    if (n(1,patmo_idx_CO) > 0.1/1d5) then
-      dn(1,patmo_idx_CO) = dn(1,patmo_idx_CO) - (0.1/1d5) * n(1,patmo_idx_CO)
+    if (n(1,patmo_idx_CO) > 0.1/(1000*1d2)) then
+      dn(1,patmo_idx_CO) = dn(1,patmo_idx_CO) - (0.1/(1000*1d2)) * n(1,patmo_idx_CO)
     end if
-    if (n(1,patmo_idx_HOCO) > 0.1/1d5) then
-      dn(1,patmo_idx_HOCO) = dn(1,patmo_idx_HOCO) - (0.1/1d5) * n(1,patmo_idx_HOCO)
+    if (n(1,patmo_idx_HOCO) > 0.1/(1000*1d2)) then
+      dn(1,patmo_idx_HOCO) = dn(1,patmo_idx_HOCO) - (0.1/(1000*1d2)) * n(1,patmo_idx_HOCO)
     end if
-    if (n(1,patmo_idx_CH3) > 0.1/1d5) then
-      dn(1,patmo_idx_CH3) = dn(1,patmo_idx_CH3) - (0.1/1d5) * n(1,patmo_idx_CH3)
+    if (n(1,patmo_idx_CH3) > 0.1/(1000*1d2)) then
+      dn(1,patmo_idx_CH3) = dn(1,patmo_idx_CH3) - (0.1/(1000*1d2)) * n(1,patmo_idx_CH3)
     end if
-    if (n(1,patmo_idx_HCN) > 0.1/1d5) then
-      dn(1,patmo_idx_HCN) = dn(1,patmo_idx_HCN) - (0.1/1d5) * n(1,patmo_idx_HCN)
+    if (n(1,patmo_idx_HCN) > 0.1/(1000*1d2)) then
+      dn(1,patmo_idx_HCN) = dn(1,patmo_idx_HCN) - (0.1/(1000*1d2)) * n(1,patmo_idx_HCN)
     end if
 
     !Volcanic emission
@@ -2110,9 +2175,6 @@ contains
     dn(1,patmo_idx_H2) = dn(1,patmo_idx_H2) + 1d10/1d5
     dn(1,patmo_idx_NH3) = dn(1,patmo_idx_NH3) + 5.3d9/1d5
 
-    ! Water Removal
-    dn(:,patmo_idx_H2O) = dn(:,patmo_idx_H2O) - n(:,patmo_idx_H2O) * condenseH2O(:)
-
     ! Wet Deposition
     do j=12, 2, -1
       do i = 1, chemSpeciesNumber
@@ -2123,45 +2185,6 @@ contains
     do i = 1, chemSpeciesNumber
       dn(1, i) = dn(1, i) - wetdep(1, i) * n(1, i)
     end do
-
-    !aerosol formation
-    do i=13,34
-      if (va(i) <= n(i, patmo_idx_H2SO4) .AND. pa(i) >= n(i, patmo_idx_H2SO4)) then
-        dn(i, patmo_idx_H2SO4) = dn(i, patmo_idx_H2SO4) - (n(i, patmo_idx_H2SO4) - va(i))
-        dn(i, patmo_idx_SO4)   = dn(i, patmo_idx_SO4)   + (n(i, patmo_idx_H2SO4) - va(i))
-      end if
-    end do
-
-    ! Gravity Settling
-    do j = cellsNumber, 2, -1
-      dn(j    , patmo_idx_SO4) = dn(j    , patmo_idx_SO4) - gd(j) * n(j, patmo_idx_SO4)
-      dn(j - 1, patmo_idx_SO4) = dn(j - 1, patmo_idx_SO4) + gd(j) * n(j, patmo_idx_SO4)
-    end do
-    SO4SurFall = gd(1) * n(1, patmo_idx_SO4)
-    dn(1, patmo_idx_SO4) = dn(1, patmo_idx_SO4) - SO4SurFall
-    do j = cellsNumber, 2, -1
-      dn(j    , patmo_idx_S8) = dn(j    , patmo_idx_S8) - 2.62d-4 * n(j, patmo_idx_S8)
-      dn(j - 1, patmo_idx_S8) = dn(j - 1, patmo_idx_S8) + 2.62d-4 * n(j, patmo_idx_S8)
-    end do
-    S8SurFall = 2.62d-4 * n(1, patmo_idx_S8)
-    dn(1, patmo_idx_S8) = dn(1, patmo_idx_S8) - S8SurFall
-
-    ! Hydrogen Escape
-    if (n(cellsNumber, patmo_idx_H) > Hesc) then
-      dn(cellsNumber, patmo_idx_H) = dn(cellsNumber, patmo_idx_H) - Hesc
-      !print *, "triggered H escape"
-    else
-      n(cellsNumber, patmo_idx_H) = 0d0
-      dn(cellsNumber, patmo_idx_H) = 0d0
-    end if
-
-    if (n(cellsNumber, patmo_idx_H2) > H2esc) then
-      dn(cellsNumber, patmo_idx_H2) = dn(cellsNumber, patmo_idx_H2) - H2esc
-      !print *, "triggered H2 escape"
-    else
-      n(cellsNumber, patmo_idx_H2) = 0d0
-      dn(cellsNumber, patmo_idx_H2) = 0d0
-    end if
 
     !unroll chemistry
     dy(:) = 0d0

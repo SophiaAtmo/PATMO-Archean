@@ -138,7 +138,7 @@ contains
     implicit none
     integer,intent(in)::index
     real*8,intent(in)::tau(photoBinsNumber,cellsNumber)
-    real*8::integrateXsec(cellsNumber), dE, mu
+    real*8::integrateXsec(cellsNumber), dE, mu, coef
     integer::j
 
     ! !loop on cells (stride photobins)
@@ -151,10 +151,11 @@ contains
     dE = 0.1
     !mu =cosine(zenith_angle)
     mu = 0.500000
-
+    !Parameter of incident solar flux = coef (Cronin, 2014- DOI:10.1175/JAS-D-13-0392.1)
+    coef = 0.500000
     !loop on cells (stride photobins)
     do j=1,cellsNumber
-      integrateXsec(j) = sum(xsecAll(:,index)*photoFlux(:)*exp(-tau(:,j)/mu)*dE)
+      integrateXsec(j) = sum(xsecAll(:,index)*coef*photoFlux(:)*exp(-tau(:,j)/mu)*dE)
     end do
 
   end function integrateXsec

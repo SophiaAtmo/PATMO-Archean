@@ -115,7 +115,6 @@ contains
     call computeRates(TgasAll(:))
     call computePhotoRates(tauAll(:,:))
     call computeReverseRates(TgasAll(:))
-    call computeHescape() 
     !compute tot density
     !ntotAll(:) = sum(nall(:,1:chemSpeciesNumber),2) !Trieu commented
     ntotAll(:) = 0.0d0
@@ -584,16 +583,6 @@ contains
   end function patmo_getTotalMass
 
 !***************************
-function patmo_getTotalMassNuclei_C()
- use patmo_utils
- implicit none
- real*8::patmo_getTotalMassNuclei_C
-
-patmo_getTotalMassNuclei_C = getTotalMassNuclei_C() 
-
-end function
-
-!***************************
 function patmo_getTotalMassNuclei_S()
  use patmo_utils
  implicit none
@@ -614,12 +603,12 @@ patmo_getTotalMassNuclei_H = getTotalMassNuclei_H()
 end function
 
 !***************************
-function patmo_getTotalMassNuclei_M()
+function patmo_getTotalMassNuclei_C()
  use patmo_utils
  implicit none
- real*8::patmo_getTotalMassNuclei_M
+ real*8::patmo_getTotalMassNuclei_C
 
-patmo_getTotalMassNuclei_M = getTotalMassNuclei_M() 
+patmo_getTotalMassNuclei_C = getTotalMassNuclei_C() 
 
 end function
 
@@ -640,6 +629,16 @@ function patmo_getTotalMassNuclei_N()
  real*8::patmo_getTotalMassNuclei_N
 
 patmo_getTotalMassNuclei_N = getTotalMassNuclei_N() 
+
+end function
+
+!***************************
+function patmo_getTotalMassNuclei_M()
+ use patmo_utils
+ implicit none
+ real*8::patmo_getTotalMassNuclei_M
+
+patmo_getTotalMassNuclei_M = getTotalMassNuclei_M() 
 
 end function
 
@@ -1447,30 +1446,5 @@ end function
 
  end subroutine patmo_dumpAllNumberDensityDifference
 
- subroutine computeHescape()
-   use patmo_constants
-   use patmo_parameters
-   implicit none
-    
-   Hesc = 2.5d8 * &
-            (nAll(cellsNumber, patmo_idx_H) &
-            + 2d0 * nAll(cellsNumber, patmo_idx_H2) &
-            + 2d0 * nAll(cellsNumber, patmo_idx_H2O) &
-            + 4d0 * nAll(cellsNumber, patmo_idx_CH4)) &
-            / sum(nAll(cellsNumber,1:chemSpeciesNumber))
-   H2esc = 2.5d8 * &
-            (nAll(cellsNumber, patmo_idx_H2) &
-            + nAll(cellsNumber, patmo_idx_H2O)&
-            + 2d0 * nAll(cellsNumber, patmo_idx_CH4))&
-            / sum(nAll(cellsNumber,1:chemSpeciesNumber))
- end subroutine computeHescape
-
- subroutine patmo_dumpHescape(ifile, time)
-   use patmo_parameters
-   implicit none
-   integer,intent(in)::ifile
-   real*8, intent(in)::time
-   write (ifile, *) time, Hesc, H2esc
- end subroutine patmo_dumpHescape
 
 end module patmo
