@@ -1,5 +1,5 @@
 cellsNumber 	= 100
-cellThickness = 10000
+cellThickness = 100000
 photoBinsNumber = 6800
 network 	= tests/archean/archean.ntw
 #energyMin 	= 1.549802411501
