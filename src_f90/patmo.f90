@@ -123,19 +123,20 @@ contains
     call computeHescape() 
 #ENDIFPATMO
     !compute tot density
-    ntotAll(:) = 0.5*sum(nall(:,1:chemSpeciesNumber),2)
-
+    ntotAll(:) = 0.5*sum(nall(:,1:chemSpeciesNumber),2) !Trieu fixed
+    
     !compute mean molecular mass of the whole atmosphere
     ! (averaged between layers)
     m(:) = getSpeciesMass()
     meanMolecularMass = 0d0
     do i=1,cellsNumber
-       meanMolecularMass = meanMolecularMass &
+       meanMolecularMass = meanMolecularMass &       
             + sum(m(1:chemSpeciesNumber) &
             * nAll(i,1:chemSpeciesNumber)) &
             / ntotAll(i) / cellsNumber
     end do
 
+      
     !call the solver (DVODE_f90)
     !CALL DVODE_F90(fex, &
     !     neqAll, n(:), &
@@ -839,10 +840,11 @@ contains
     use patmo_commons
     use patmo_constants
     use patmo_parameters
+    
     implicit none
     character(len=*),intent(in)::fname
     integer::i
-
+        
     open(22,file=trim(fname),status="replace")
     write(22,*) "altitude/km#PATMO_DumpReactions"
     !loop on cells
