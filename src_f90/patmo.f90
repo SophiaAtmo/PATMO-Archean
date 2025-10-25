@@ -123,33 +123,20 @@ contains
     call computeHescape() 
 #ENDIFPATMO
     !compute tot density
-    !ntotAll(:) = sum(nall(:,1:chemSpeciesNumber),2) !Trieu commented
-    ntotAll(:) = 0.0d0
-    do j = 1, chemSpeciesNumber
-      if (j /= patmo_idx_M) then
-       ntotAll(:) = ntotAll(:) + nAll(:, j)
-      end if
-    end do                                           !Trieu commented
-
+    ntotAll(:) = 0.5*sum(nall(:,1:chemSpeciesNumber),2) !Trieu fixed
+    
     !compute mean molecular mass of the whole atmosphere
     ! (averaged between layers)
     m(:) = getSpeciesMass()
     meanMolecularMass = 0d0
     do i=1,cellsNumber
-    !   meanMolecularMass = meanMolecularMass &       !Trieu commented
-    !        + sum(m(1:chemSpeciesNumber) &
-    !        * nAll(i,1:chemSpeciesNumber)) &
-    !        / ntotAll(i) / cellsNumber
-       do j = 1, chemSpeciesNumber
-         if (j /= patmo_idx_M) then
-           meanMolecularMass = meanMolecularMass + m(j) * nAll(i,j) / ntotAll(i)
-         end if
-       end do                                         
+       meanMolecularMass = meanMolecularMass &       
+            + sum(m(1:chemSpeciesNumber) &
+            * nAll(i,1:chemSpeciesNumber)) &
+            / ntotAll(i) / cellsNumber
     end do
 
-    ! Average across all cells
-    meanMolecularMass = meanMolecularMass / cellsNumber  !Trieu commented
-    
+      
     !call the solver (DVODE_f90)
     !CALL DVODE_F90(fex, &
     !     neqAll, n(:), &
@@ -853,15 +840,11 @@ contains
     use patmo_commons
     use patmo_constants
     use patmo_parameters
-    use patmo_rates  !Trieu added
+    
     implicit none
     character(len=*),intent(in)::fname
     integer::i
-    real*8::n(cellsNumber,speciesNumber)  !Trieu added
-
-    call computeTotalDensityExcludingM(n) !Trieu added
-    nall(:,patmo_idx_M) = n(:, patmo_idx_M)  !Trieu added
-    
+        
     open(22,file=trim(fname),status="replace")
     write(22,*) "altitude/km#PATMO_DumpReactions"
     !loop on cells

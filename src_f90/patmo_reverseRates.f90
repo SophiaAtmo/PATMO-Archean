@@ -17,7 +17,7 @@ contains
     integer::i
 
     !total density per layer
-    ntot(:) = sum(nAll(:,1:chemSpeciesNumber),2)
+    ntot(:) = 0.5*sum(nAll(:,1:chemSpeciesNumber),2)
 
     !extrapolate lower and upper limits
     do i=1,cellsNumber
@@ -33,7 +33,7 @@ contains
 
 #PATMO_reverseRates
     do i=1,cellsNumber
-      krate(i,459) = 1.57d13*(Tgas(i)/298)*exp(-4883/Tgas(i))
+      krate(i,473) = 1.57d13*(Tgas(i)/298)*exp(-4883/Tgas(i))
     end do
 
   end subroutine computeReverseRates
